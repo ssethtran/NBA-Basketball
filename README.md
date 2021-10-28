@@ -1,6 +1,6 @@
 ## Setup
 ```bash
-git clone https://github.com/parham-sharaf/European-Vacation.git
-cd European-Vacation
+git clone https://github.com/ssushiseeth/NBA-Basketball.git
+cd NBA-Basketball
 git checkout main
 ```
