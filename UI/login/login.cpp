@@ -9,16 +9,12 @@ login::login(QWidget *parent) :
     this->setWindowTitle("Log In");
 
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:/Users/Hiep/NBA-Basketball/DB/user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
 
     if (!m_db.open())
-    {
         qDebug() << "Error: connection with database failed";
-    }
     else
-    {
         qDebug() << "Database: connection ok";
-    }
 
     isAdmin = false;
 }
@@ -42,18 +38,14 @@ void login::on_loginButton_clicked()
 
     query.exec() ? cout << "True\n" : cout << "False\n";
 
-    if (query.exec()) {
-        if (query.next()) {
+    while (query.next()) {
+        if (query.value(0) == username && query.value(1)== password) {
             isAdmin = true;
+            break;
         }
     }
 
-//    for (auto& group: usernameList) {
-//        if (QString::fromStdString(group.at(0)) == username && QString::fromStdString(group.at(1)) == password) {
-//            isAdmin = true;
-//            break;
-//        }
-//    }
+    isAdmin ? cout << "True\n" : cout << "False\n";
 
     if (isAdmin) {
         QAbstractButton *close = msgBox.addButton(tr("OK"), QMessageBox::AcceptRole);
