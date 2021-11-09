@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include <QDialog>
-#include <QSqlQuery>
+#include <QtSql>
 #include <QMessageBox>
 
 using namespace std;
@@ -28,7 +28,7 @@ private slots:
 private:
     Ui::login *ui;
     bool isAdmin;
-    QSqlQuery query;
+    QSqlDatabase m_db;
 };
 
 #endif // LOGIN_H
