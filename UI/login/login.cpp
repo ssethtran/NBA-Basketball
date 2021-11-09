@@ -36,16 +36,12 @@ void login::on_loginButton_clicked()
     QMessageBox msgBox(this);
     msgBox.setWindowTitle("Account Information");
 
-    query.exec() ? cout << "True\n" : cout << "False\n";
-
     while (query.next()) {
         if (query.value(0) == username && query.value(1)== password) {
             isAdmin = true;
             break;
         }
     }
-
-    isAdmin ? cout << "True\n" : cout << "False\n";
 
     if (isAdmin) {
         QAbstractButton *close = msgBox.addButton(tr("OK"), QMessageBox::AcceptRole);
