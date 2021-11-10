@@ -17,9 +17,9 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionLogin_triggered()
 {
     login log;
-    ui->tabWidget->setTabEnabled(0, log.getCred());
-    ui->tabWidget->setTabEnabled(1, !log.getCred());
-    ui->tabWidget->setCurrentIndex(log.getCred());
+//    ui->tabWidget->setTabEnabled(0, log.getCred());
+//    ui->tabWidget->setTabEnabled(1, !log.getCred());
+//    ui->tabWidget->setCurrentIndex(log.getCred());
 
     log.setModal(true);
     log.exec();
