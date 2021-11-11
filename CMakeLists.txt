@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(dbtest VERSION 0.1 LANGUAGES CXX)
+project(NBA-Basketball VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -19,42 +19,42 @@ set(PROJECT_SOURCES
         mainwindow.h mainwindow.cpp mainwindow.ui
         DB/Database/DbManager.cpp DB/Database/DbManager.h
         ManageTeam/ManageTeams.cpp ManageTeam/ManageTeams.h
-        ManageTeam/Team/Team.cpp ManageTeam/Team/Team.h
+        ManageTeam/Team/Team.h
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         orderedMap/orderedMap.h
-        )
+        UI/ModdedLabel/ModdedLabel.cpp UI/ModdedLabel/ModdedLabel.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(dbtest
+    qt_add_executable(NBA-Basketball
             MANUAL_FINALIZATION
             ${PROJECT_SOURCES}
             )
     # Define target properties for Android with Qt 6 as:
-    #    set_property(TARGET dbtest APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+    #    set_property(TARGET NBA-Basketball APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
     #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
     # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(dbtest SHARED
+        add_library(NBA-Basketball SHARED
                 ${PROJECT_SOURCES}
                 )
         # Define properties for Android with Qt 5 after find_package() calls as:
         #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(dbtest
+        add_executable(NBA-Basketball
                 ${PROJECT_SOURCES}
                 )
     endif()
 endif()
 
-target_link_libraries(dbtest PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(NBA-Basketball PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Sql)
 
-set_target_properties(dbtest PROPERTIES
+set_target_properties(NBA-Basketball PROPERTIES
         MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
         )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(dbtest)
+    qt_finalize_executable(NBA-Basketball)
 endif()

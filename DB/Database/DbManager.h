@@ -2,8 +2,7 @@
 // Created by Hiep on 11/9/2021.
 //
 
-#ifndef DBTEST_DBMANAGER_H
-#define DBTEST_DBMANAGER_H
+#pragma once
 #include <QtSql>
 #include "sqlite3/sqlite3.h"
 #include <QDebug>
@@ -19,6 +18,3 @@ public:
 private:
     QSqlDatabase m_db;
 };
-
-
-#endif //DBTEST_DBMANAGER_H

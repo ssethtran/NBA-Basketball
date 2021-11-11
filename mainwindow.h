@@ -2,10 +2,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
+#include <QTreeWidgetItemIterator
+#include <QLabel>
 #include "DB/Database/DbManager.h"
 #include "orderedMap/orderedMap.h"
 #include "ManageTeam/ManageTeams.h"
 #include "UI/login/login.h"
+#include "UI/ModdedLabel/ModdedLabel.h"
 #include <string>
 
 QT_BEGIN_NAMESPACE
@@ -19,10 +24,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void AlphabeticalAll();
+    void AlphabeticalTeamAll();
+    void AlphabeticalTeamEastern();
+    void AlphabeticalTeamSoutheastEastern();
+    void AlphabeticalCoach();
+    void AlphabeticalArena();
+    void SeatingCapSort();
 
 private slots:
     void on_actionLogin_triggered();
+    void on_sortComboBox_currentTextChanged(const QString &sortMethod);
 
 private:
     Ui::MainWindow *ui;
