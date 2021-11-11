@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
+#include <QLabel>
 #include "DB/Database/DbManager.h"
 #include "orderedMap/orderedMap.h"
 #include "ManageTeam/ManageTeams.h"
