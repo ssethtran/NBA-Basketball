@@ -36,10 +36,12 @@ void login::on_loginButton_clicked()
     QMessageBox msgBox(this);
     msgBox.setWindowTitle("Account Information");
 
-    while (query.next()) {
-        if (query.value(0) == username && query.value(1)== password) {
-            isAdmin = true;
-            break;
+    if (query.exec()) {
+        while (query.next()) {
+            if (query.value(0) == username && query.value(1) == password) {
+                isAdmin = true;
+                break;
+            }
         }
     }
 
