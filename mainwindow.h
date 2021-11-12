@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
-#include <QTreeWidgetItemIterator
+#include <QTreeWidgetItemIterator>
 #include <QLabel>
 #include "DB/Database/DbManager.h"
 #include "orderedMap/orderedMap.h"
