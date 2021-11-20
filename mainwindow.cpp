@@ -7,12 +7,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     teamManagement.ReadData();
-    AlphabeticalTeamAll();
 
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
     ui->teamsTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
     ui->teamsTreeWidget->setColumnWidth(0, 193);
     ui->teamsTreeWidget->setColumnWidth(1, 50);
+    AlphabeticalTeamAll();
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
 
 }
