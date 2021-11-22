@@ -7,7 +7,7 @@
 #include "Team/Team.h"
 #include <QSql>
 #include "../Db/Database/DbManager.h"
-#include "Graph.h"
+#include "ManageTeam/Graph/Graph.h"
 #include "../orderedMap/orderedMap.h"
 
 class ManageTeams
