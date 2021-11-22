@@ -5,6 +5,34 @@
 #include <QPoint>
 using namespace std;
 
+class Souvenir {
+public:
+    string souvenirName;
+    double cost;
+    int amountBought;
+    double amountSpent;
+
+    Souvenir(){
+        souvenirName = "";
+        cost = 0;
+        amountBought = 0;
+        amountSpent = 0;
+    }
+
+    Souvenir(string souvenirName, double cost):
+        souvenirName{souvenirName}, cost{cost}
+    {
+        amountBought = 0;
+        amountSpent = 0;
+    }
+
+    void purchase(int amt)
+    {
+        amountBought = amt;
+        amountSpent = amountBought * cost;
+    };
+};
+
 class Team{
 public:
     string conference;
@@ -15,6 +43,8 @@ public:
     int stadCap;
     int joinedLeague;
     string coach;
+    double distance;
+    vector<Souvenir> souvenirList;
 
     Team(){
         conference = "";
@@ -33,6 +63,21 @@ public:
     void printTeamInfo()
     {
         cout << team_name << "    " << arena_name << endl;
+    }
+
+    void setTeamName(string team_name)
+    {
+        this->team_name = team_name;
+    }
+
+    void addSouvenir(Souvenir toAdd)
+    {
+        souvenirList.push_back(toAdd);
+    }
+
+    void deleteSouvenir(int indexToDelete)
+    {
+        souvenirList.erase(souvenirList.begin() + indexToDelete, souvenirList.begin() + indexToDelete + 1);
     }
 
     friend bool operator == (Team& t1, Team& t2);

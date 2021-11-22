@@ -5,7 +5,9 @@
 #include <algorithm>
 #include <map>
 #include "Team/Team.h"
+#include <QSql>
 #include "../Db/Database/DbManager.h"
+#include "ManageTeam/Graph/Graph.h"
 #include "../orderedMap/orderedMap.h"
 
 class ManageTeams
@@ -15,10 +17,19 @@ public:
     void ReadData();
     void AddTeam(Team& newTeam);
     void RemoveTeam(Team& toRemove);
+    void ShortestPath();
+    mapADT<Team> &GetTravelPlan();
+    deque<Team*>& GetShortTravelPlan();
+    void setStartingTeam(const string& initial);
     [[nodiscard]] const mapADT<Team>& GetTeams() const;
+    void graphPrep();
 
 protected:
     DbManager teamManager;
-private:
-    mapADT<Team> TeamMap;
+public:
+    static mapADT<Team> TeamMap;
+    static deque<Team*> shortTravelPlan;
+    static mapADT<Team> travelPlan;
+    Graph g;
+    Team startingTeam;
 };

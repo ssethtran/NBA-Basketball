@@ -19,10 +19,13 @@ set(PROJECT_SOURCES
         mainwindow.h mainwindow.cpp mainwindow.ui
         DB/Database/DbManager.cpp DB/Database/DbManager.h
         ManageTeam/ManageTeams.cpp ManageTeam/ManageTeams.h
+        ManageTeam/Graph/Graph.h
         ManageTeam/Team/Team.h
         UI/login/login.h UI/login/login.cpp UI/login/login.ui
         orderedMap/orderedMap.h
-        UI/ModdedLabel/ModdedLabel.cpp UI/ModdedLabel/ModdedLabel.h)
+        UI/ModdedLabel/ModdedLabel.cpp UI/ModdedLabel/ModdedLabel.h
+        UI/ModdedLineEdit/moddedlineedit.cpp UI/ModdedLineEdit/moddedlineedit.h
+        UI/Map/Map.cpp UI/Map/Map.h ManageTeam/Graph/Graph.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(NBA-Basketball
