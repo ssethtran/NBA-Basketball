@@ -52,5 +52,6 @@ private:
     bool repurchase = false;
     ManageTeams teamManagement;
     vector<string> teamsToTravelTo;
+    vector<string> travelOrder;
 };
 #endif // MAINWINDOW_H

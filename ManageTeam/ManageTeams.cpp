@@ -50,6 +50,7 @@ void ManageTeams::ReadData() {
             TeamMap.search(*toSearch)->souvenirList.push_back(thisSouvenir);
         }
     }
+    graphPrep();
 }
 
 void ManageTeams::AddTeam(Team& newTeam){
@@ -90,6 +91,22 @@ void ManageTeams::RemoveTeam(Team &toRemove) {
 //        }
 //    }
 //}
+
+void ManageTeams::graphPrep() {
+    vector<string> iN(1, "");
+    for (auto & team : ManageTeams::TeamMap.GetTree())
+    {
+        if (team != NULL)
+            iN.push_back(team->team_name);
+    }
+    g = Graph(iN);
+    QSqlQuery distancesQuery("SELECT * from distances");
+    while (distancesQuery.next())
+    {
+        g.addEdge(distancesQuery.value(0).toString().toStdString(), distancesQuery.value(2).toString().toStdString(),
+                  distancesQuery.value(3).toDouble());
+    }
+}
 
 mapADT<Team> &ManageTeams::GetTravelPlan(){
     return travelPlan;

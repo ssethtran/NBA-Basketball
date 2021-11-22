@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->teamsTreeWidget->setColumnWidth(1, 50);
     AlphabeticalTeamAll();
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
+    connect(ui->teamsTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+
 
 }
 
@@ -648,10 +650,56 @@ void MainWindow::on_submitPlan_clicked()
         //ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
     }
     connect(ui->updatepurchases_pushButton, SIGNAL(clicked()), this, SLOT(updateSpent()));
+
+    // dijkstra's
+    double dijkstraTotalDist;
+    for (int i = 0; i < travelOrder.size() - 1; i++) {
+        teamManagement.g.dijkstra(travelOrder[i]);
+        cout << endl << endl;
+        for (int c = 0; c < teamManagement.g.dist.size(); c++)
+        {
+            // if last city to travel to == next in travel order
+            if (teamManagement.g.dist[c]->cities.size() > 0 &&
+                    teamManagement.g.dist[c]->cities[teamManagement.g.dist[c]->cities.size() - 1] == travelOrder[i + 1]) {
+                dijkstraTotalDist += teamManagement.g.dist[c]->distance;
+                QTreeWidgetItem* newPath = new QTreeWidgetItem;
+                newPath->setText(0, QString::fromStdString(teamManagement.g.dijkstraStart) + " to " + QString::fromStdString(teamManagement.g.dist[c]->cities[teamManagement.g.dist[c]->cities.size() - 1]));
+                int numInPath = 1;
+                for (int z = 0; z < teamManagement.g.dist[c]->cities.size(); z++)
+                {
+                    QTreeWidgetItem* nextInPath = new QTreeWidgetItem;
+                    if (newPath->childCount() == 0)
+                    {
+                        nextInPath->setText(0, QString::number(numInPath) + ". " + QString::fromStdString(teamManagement.g.dijkstraStart));
+                        z--;
+                    }
+                    else
+                        nextInPath->setText(0, QString::number(numInPath) + ". " + QString::fromStdString(teamManagement.g.dist[c]->cities[z]));
+                    numInPath++;
+                    newPath->addChild(nextInPath);
+                }
+                ui->djikstraWidget->addTopLevelItem(newPath);
+            }
+        }
+        teamManagement.g.dist.clear();
+    }
+    ui->djikstraDistTraveled_LineEdit->setText(QString::number(dijkstraTotalDist));
 }
 
-void MainWindow::itemChanged(QTreeWidgetItem *, int) {
-
+void MainWindow::itemChanged(QTreeWidgetItem * item, int col) {
+    if (item->checkState(0) == Qt::Checked){
+        travelOrder.push_back(item->text(0).toStdString());
+    }
+    else
+    {
+        for (int i = 0; i < travelOrder.size(); i++)
+        {
+            if (travelOrder[i] == item->text(0).toStdString()) {
+                travelOrder.erase(travelOrder.begin() + i);
+                break;
+            }
+        }
+    }
 }
 
 void MainWindow::updateSpent() {
@@ -712,7 +760,10 @@ void MainWindow::updateSpent() {
 void MainWindow::on_clearPlan_clicked() {
     repurchase = false;
     teamsToTravelTo.clear();
-    ui->totalDistanceTraveled_LineEdit->setText("");
+    ui->djikstraWidget->clear();
+    ui->recursiveWidget->clear();
+    ui->djikstraDistTraveled_LineEdit->clear();
+    ui->recursiveDistTraveled_LineEdit->clear();
     ui->totalspent_LineEdit->setText("");
     ui->planTreeWidget->clear();
 }
