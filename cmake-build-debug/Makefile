@@ -165,6 +165,30 @@ DB/Database/DbManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/DB/Database/DbManager.cpp.s
 .PHONY : DB/Database/DbManager.cpp.s
 
+ManageTeam/Graph/Graph.obj: ManageTeam/Graph/Graph.cpp.obj
+.PHONY : ManageTeam/Graph/Graph.obj
+
+# target to build an object file
+ManageTeam/Graph/Graph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.obj
+.PHONY : ManageTeam/Graph/Graph.cpp.obj
+
+ManageTeam/Graph/Graph.i: ManageTeam/Graph/Graph.cpp.i
+.PHONY : ManageTeam/Graph/Graph.i
+
+# target to preprocess a source file
+ManageTeam/Graph/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.i
+.PHONY : ManageTeam/Graph/Graph.cpp.i
+
+ManageTeam/Graph/Graph.s: ManageTeam/Graph/Graph.cpp.s
+.PHONY : ManageTeam/Graph/Graph.s
+
+# target to generate assembly for a file
+ManageTeam/Graph/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.s
+.PHONY : ManageTeam/Graph/Graph.cpp.s
+
 ManageTeam/ManageTeams.obj: ManageTeam/ManageTeams.cpp.obj
 .PHONY : ManageTeam/ManageTeams.obj
 
@@ -213,6 +237,30 @@ NBA-Basketball_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/NBA-Basketball_autogen/mocs_compilation.cpp.s
 .PHONY : NBA-Basketball_autogen/mocs_compilation.cpp.s
 
+UI/Map/Map.obj: UI/Map/Map.cpp.obj
+.PHONY : UI/Map/Map.obj
+
+# target to build an object file
+UI/Map/Map.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/Map/Map.cpp.obj
+.PHONY : UI/Map/Map.cpp.obj
+
+UI/Map/Map.i: UI/Map/Map.cpp.i
+.PHONY : UI/Map/Map.i
+
+# target to preprocess a source file
+UI/Map/Map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/Map/Map.cpp.i
+.PHONY : UI/Map/Map.cpp.i
+
+UI/Map/Map.s: UI/Map/Map.cpp.s
+.PHONY : UI/Map/Map.s
+
+# target to generate assembly for a file
+UI/Map/Map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/Map/Map.cpp.s
+.PHONY : UI/Map/Map.cpp.s
+
 UI/ModdedLabel/ModdedLabel.obj: UI/ModdedLabel/ModdedLabel.cpp.obj
 .PHONY : UI/ModdedLabel/ModdedLabel.obj
 
@@ -236,6 +284,30 @@ UI/ModdedLabel/ModdedLabel.s: UI/ModdedLabel/ModdedLabel.cpp.s
 UI/ModdedLabel/ModdedLabel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/ModdedLabel/ModdedLabel.cpp.s
 .PHONY : UI/ModdedLabel/ModdedLabel.cpp.s
+
+UI/ModdedLineEdit/moddedlineedit.obj: UI/ModdedLineEdit/moddedlineedit.cpp.obj
+.PHONY : UI/ModdedLineEdit/moddedlineedit.obj
+
+# target to build an object file
+UI/ModdedLineEdit/moddedlineedit.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/ModdedLineEdit/moddedlineedit.cpp.obj
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.obj
+
+UI/ModdedLineEdit/moddedlineedit.i: UI/ModdedLineEdit/moddedlineedit.cpp.i
+.PHONY : UI/ModdedLineEdit/moddedlineedit.i
+
+# target to preprocess a source file
+UI/ModdedLineEdit/moddedlineedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/ModdedLineEdit/moddedlineedit.cpp.i
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.i
+
+UI/ModdedLineEdit/moddedlineedit.s: UI/ModdedLineEdit/moddedlineedit.cpp.s
+.PHONY : UI/ModdedLineEdit/moddedlineedit.s
+
+# target to generate assembly for a file
+UI/ModdedLineEdit/moddedlineedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NBA-Basketball.dir\build.make CMakeFiles/NBA-Basketball.dir/UI/ModdedLineEdit/moddedlineedit.cpp.s
+.PHONY : UI/ModdedLineEdit/moddedlineedit.cpp.s
 
 UI/login/login.obj: UI/login/login.cpp.obj
 .PHONY : UI/login/login.obj
@@ -322,15 +394,24 @@ help:
 	@echo ... DB/Database/DbManager.obj
 	@echo ... DB/Database/DbManager.i
 	@echo ... DB/Database/DbManager.s
+	@echo ... ManageTeam/Graph/Graph.obj
+	@echo ... ManageTeam/Graph/Graph.i
+	@echo ... ManageTeam/Graph/Graph.s
 	@echo ... ManageTeam/ManageTeams.obj
 	@echo ... ManageTeam/ManageTeams.i
 	@echo ... ManageTeam/ManageTeams.s
 	@echo ... NBA-Basketball_autogen/mocs_compilation.obj
 	@echo ... NBA-Basketball_autogen/mocs_compilation.i
 	@echo ... NBA-Basketball_autogen/mocs_compilation.s
+	@echo ... UI/Map/Map.obj
+	@echo ... UI/Map/Map.i
+	@echo ... UI/Map/Map.s
 	@echo ... UI/ModdedLabel/ModdedLabel.obj
 	@echo ... UI/ModdedLabel/ModdedLabel.i
 	@echo ... UI/ModdedLabel/ModdedLabel.s
+	@echo ... UI/ModdedLineEdit/moddedlineedit.obj
+	@echo ... UI/ModdedLineEdit/moddedlineedit.i
+	@echo ... UI/ModdedLineEdit/moddedlineedit.s
 	@echo ... UI/login/login.obj
 	@echo ... UI/login/login.i
 	@echo ... UI/login/login.s

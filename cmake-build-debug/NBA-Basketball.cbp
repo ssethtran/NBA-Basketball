@@ -138,6 +138,12 @@
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/DB/Database/DbManager.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.cpp">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.h">
+			<Option target="NBA-Basketball"/>
+		</Unit>
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/ManageTeams.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
@@ -147,10 +153,22 @@
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Team/Team.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/Map/Map.cpp">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/Map/Map.h">
+			<Option target="NBA-Basketball"/>
+		</Unit>
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.cpp">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
 		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/login/login.cpp">
