@@ -1,0 +1,4 @@
+C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir
+C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball_autogen.dir
