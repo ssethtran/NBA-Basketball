@@ -221,3 +221,61 @@ void Graph::dijkstra(string start) {
         cout << "     Path distance: " << dist[i]->distance << endl;
     }
 }
+
+
+
+bool isValidEdge(int u, int v, vector<bool> inMST)
+{
+    if (u == v){
+        return false;
+    }
+    if (inMST[u] == false && inMST[v] == false){
+        return false;
+    }
+    else if (inMST[u] == true && inMST[v] == true){
+        return false;
+    }
+    return true;
+}
+
+int Graph::MST(int cityIndex, vector<string> returnedVectorOfNames)
+{
+    returnedVectorOfNames.clear();
+    vector<bool> inMST(v, false);
+
+    // Include first vertex in MST
+    inMST[cityIndex] = true;
+
+    // Keep adding edges while number of included
+    // edges does not become V-1.
+    int edge_count = 0;
+    int mincost = 0;
+    while (edge_count < v - 1) {
+
+        // Find minimum weight valid edge.
+        int min = INT_MAX;
+        int a = -1;
+        int b = -1;
+        for (int i = 0; i < v; i++) {
+            for (int j = 0; j < v; j++) {
+                if (adj[i][j] < min && adj[i][j] != 0) {
+                    if (isValidEdge(i, j, inMST)) {
+                        min = adj[i][j];
+                        a = i;
+                        b = j;
+                    }
+                }
+            }
+        }
+        if (a != -1 && b != -1) {
+            returnedVectorOfNames.push_back(cityNames[a]);
+            returnedVectorOfNames.push_back(cityNames[b]);
+            returnedVectorOfNames.push_back("");
+            edge_count++;
+            mincost = mincost + min;
+            inMST[b] = inMST[a] = true;
+        }
+    }
+    return mincost;
+
+}
