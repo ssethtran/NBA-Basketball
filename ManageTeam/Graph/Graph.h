@@ -40,4 +40,5 @@ public:
     void dijkstra(string start);
     vector<path*> dist;
     string dijkstraStart;
+    int MST(int cityIndex, vector<string>);
 };
