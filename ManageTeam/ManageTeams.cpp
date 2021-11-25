@@ -93,7 +93,7 @@ void ManageTeams::RemoveTeam(Team &toRemove) {
 //}
 
 void ManageTeams::graphPrep() {
-    vector<string> iN(1, "");
+    vector<string> iN(0, "");
     for (auto & team : ManageTeams::TeamMap.GetTree())
     {
         if (team != NULL)
