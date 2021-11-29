@@ -51,6 +51,9 @@ void ManageTeams::ReadData() {
         }
     }
     graphPrep();
+
+
+
 }
 
 void ManageTeams::AddTeam(Team& newTeam){
@@ -93,7 +96,7 @@ void ManageTeams::RemoveTeam(Team &toRemove) {
 //}
 
 void ManageTeams::graphPrep() {
-    vector<string> iN(1, "");
+    vector<string> iN(0, "");
     for (auto & team : ManageTeams::TeamMap.GetTree())
     {
         if (team != NULL)
@@ -106,6 +109,7 @@ void ManageTeams::graphPrep() {
         g.addEdge(distancesQuery.value(0).toString().toStdString(), distancesQuery.value(2).toString().toStdString(),
                   distancesQuery.value(3).toDouble());
     }
+
 }
 
 mapADT<Team> &ManageTeams::GetTravelPlan(){

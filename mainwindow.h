@@ -47,6 +47,8 @@ private slots:
     void on_clearPlan_clicked();
     void on_submitPlan_clicked();
 
+    void on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int column);
+
 private:
     Ui::MainWindow *ui;
     bool repurchase = false;

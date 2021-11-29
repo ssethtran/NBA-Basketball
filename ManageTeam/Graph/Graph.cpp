@@ -1,5 +1,10 @@
 #include "Graph.h"
 
+path::path(double dist)
+{
+    distance = dist;
+}
+
 // Function to fill the empty adjacency matrix
 Graph::Graph(vector<string> inputNames)
 {
@@ -44,7 +49,55 @@ void Graph::addEdge(string from, string to, double distance)
 }
 
 
-void Graph::BFS(string start)
+
+
+
+int Graph::DFS(string start, vector<string>& citiesOrder)
+{
+    int e = -1;
+    for(int i = 0; i < cityNames.size(); i++){
+        if(cityNames[i] == start){
+            e = i;
+        }
+    }
+    if(e==-1)
+        return -1;
+
+    citiesOrder.clear();
+    citiesOrder = vector<string>(0, "");
+    vector<bool> visited = vector<bool>(v, 0);
+    return actualDFS(e, visited, citiesOrder);
+}
+
+int Graph::actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrder)
+{
+
+    int distance = 0;
+    // Print the current node
+    citiesOrder.push_back(cityNames[start]);
+    // Set current node as visited
+    visited[start] = true;
+
+    // For every node of the graph
+    for (int i = 0; i < v; i++) {
+
+        // If some node is adjacent to the current node
+        // and it has not already been visited
+        if (adj[start][i] != 0 && (!visited[i])) {
+            distance += adj[start][i];
+            distance += actualDFS(i, visited, citiesOrder);
+        }
+    }
+    return distance;
+}
+
+
+
+
+
+
+
+int Graph::BFS(string start, vector<string>& passedCityNames)
 {
     // Visited vector to so that
     // a vertex is not visited more than once
@@ -57,7 +110,7 @@ void Graph::BFS(string start)
         }
     }
     if(e==-1)
-        return;
+        return -1;
 
 
     int distance = 0;
@@ -68,17 +121,17 @@ void Graph::BFS(string start)
     vector<int> q;
     vector<int> s;
     q.push_back(e);
+    passedCityNames.clear();
 
     // Set source as visited
     visited[e] = true;
 
     int vis;
-    cout << "Breadth First Search:" << endl << endl;
     while (!q.empty()) {
         vis = q[0];
 
         // Print the current node
-        cout << cityNames[vis] << endl;
+        passedCityNames.push_back(cityNames[vis]);
         q.erase(q.begin());
 
         // For every adjacent vertex to the current vertex
@@ -119,16 +172,17 @@ void Graph::BFS(string start)
 
     }
 
-    cout << endl << endl << "Discovery Edges: " << endl;
-    for(int i = 0; i < discoveryEdge.size(); i++){
-        cout << discoveryEdge[i] << endl;
-    }
-    cout << endl << endl << "Cross Edges: " << endl;
-    for(int i = 0; i < CrossEdge.size(); i++){
-        cout << CrossEdge[i] << endl;
-    }
+//    cout << endl << endl << "Discovery Edges: " << endl;
+//    for(int i = 0; i < discoveryEdge.size(); i++){
+//        cout << discoveryEdge[i] << endl;
+//    }
+//    cout << endl << endl << "Cross Edges: " << endl;
+//    for(int i = 0; i < CrossEdge.size(); i++){
+//        cout << CrossEdge[i] << endl;
+//    }
 
-    cout << endl << endl << "Distance Traveled: " << distance << endl;
+//    cout << endl << endl << "Distance Traveled: " << distance << endl;
+    return distance;
 }
 
 void Graph::dijkstra(string start) {
@@ -220,4 +274,88 @@ void Graph::dijkstra(string start) {
             cout << " ---> " << dist[i]->cities[c];
         cout << "     Path distance: " << dist[i]->distance << endl;
     }
+}
+
+
+
+
+
+bool isValidEdge(int u, int v, vector<bool> inMST)
+{
+    if (u == v){
+        return false;
+    }
+    if (inMST[u] == false && inMST[v] == false){
+        return false;
+    }
+    else if (inMST[u] == true && inMST[v] == true){
+        return false;
+    }
+    return true;
+}
+
+int Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
+{
+
+    int e = -1;
+    for(int i = 0; i < cityNames.size(); i++){
+        if(cityNames[i] == cityIndex){
+            e = i;
+        }
+    }
+    if(e==-1)
+        return -1;
+
+    returnedVectorOfNames.clear();
+    returnedVectorOfNames.push_back("");
+    vector<bool> inMST(v, false);
+
+    // Include first vertex in MST
+    inMST[e] = true;
+
+    // Keep adding edges while number of included
+    // edges does not become V-1.
+    int edge_count = 0;
+    int mincost = 0;
+    while (edge_count < v - 1) {
+
+        // Find minimum weight valid edge.
+        int min = INT_MAX;
+        int a = -1;
+        int b = -1;
+        for (int i = 0; i < v; i++) {
+            for (int j = 0; j < v; j++) {
+                if (adj[i][j] < min && adj[i][j] != 0) {
+                    if (isValidEdge(i, j, inMST)) {
+                        min = adj[i][j];
+                        a = i;
+                        b = j;
+                    }
+                }
+            }
+        }
+        if (a != -1 && b != -1) {
+            returnedVectorOfNames.push_back(cityNames[a]);
+            returnedVectorOfNames.push_back(cityNames[b]);
+            returnedVectorOfNames.push_back(std::to_string(min));
+            edge_count++;
+            mincost = mincost + min;
+            inMST[b] = inMST[a] = true;
+        }
+    }
+    return mincost;
+
+}
+
+void Graph::printGraph(){
+    for(int i = 0; i < v; i ++){
+        for(int j = 0; j < v; j++){
+            std::cout << adj[i][j] << " ";
+        }
+        std::cout << "\n";
+
+
+    }
+
+
 }
