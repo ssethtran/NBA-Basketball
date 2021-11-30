@@ -9,7 +9,7 @@ login::login(QWidget *parent) :
     this->setWindowTitle("Log In");
 
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
+    m_db.setDatabaseName("C:/Users/Charles Zhu/Desktop/NBA_Basketball/DB/user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
 
     if (!m_db.open())
         qDebug() << "Error: connection with database failed";

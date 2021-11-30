@@ -17,6 +17,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql REQUIRED)
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.h mainwindow.cpp mainwindow.ui
+        dialog.h dialog.cpp dialog.ui
         DB/Database/DbManager.cpp DB/Database/DbManager.h
         ManageTeam/ManageTeams.cpp ManageTeam/ManageTeams.h
         ManageTeam/Graph/Graph.h
@@ -26,6 +27,7 @@ set(PROJECT_SOURCES
         UI/ModdedLabel/ModdedLabel.cpp UI/ModdedLabel/ModdedLabel.h
         UI/ModdedLineEdit/moddedlineedit.cpp UI/ModdedLineEdit/moddedlineedit.h
         UI/Map/Map.cpp UI/Map/Map.h ManageTeam/Graph/Graph.cpp)
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(NBA-Basketball
