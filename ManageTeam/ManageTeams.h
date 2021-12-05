@@ -15,8 +15,8 @@ class ManageTeams
 public:
     ManageTeams();
     void ReadData();
-    void AddTeam(const Team& newTeam);
-    void RemoveTeam(const Team& toRemove);
+    void AddTeam(Team& newTeam);
+    void RemoveTeam(Team& toRemove);
     void ShortestPath();
     mapADT<Team>& GetTravelPlan();
     deque<Team*>& GetShortTravelPlan();

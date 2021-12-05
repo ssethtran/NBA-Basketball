@@ -74,11 +74,11 @@ void ManageTeams::graphPrep() {
 
 }
 
-void ManageTeams::AddTeam(const Team& newTeam){
+void ManageTeams::AddTeam(Team& newTeam){
     TeamMap.insert(newTeam);
 }
 
-void ManageTeams::RemoveTeam(const Team& toRemove) {
+void ManageTeams::RemoveTeam(Team& toRemove) {
     TeamMap.del(toRemove);
 }
 
