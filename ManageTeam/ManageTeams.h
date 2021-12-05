@@ -15,10 +15,10 @@ class ManageTeams
 public:
     ManageTeams();
     void ReadData();
-    void AddTeam(Team& newTeam);
-    void RemoveTeam(Team& toRemove);
+    void AddTeam(const Team& newTeam);
+    void RemoveTeam(const Team& toRemove);
     void ShortestPath();
-    mapADT<Team> &GetTravelPlan();
+    mapADT<Team>& GetTravelPlan();
     deque<Team*>& GetShortTravelPlan();
     void setStartingTeam(const string& initial);
     [[nodiscard]] const mapADT<Team>& GetTeams() const;

@@ -57,11 +57,28 @@ void ManageTeams::ReadData() {
     graphPrep();
 }
 
-void ManageTeams::AddTeam(Team& newTeam){
+void ManageTeams::graphPrep() {
+    vector<string> iN(0, "");
+    for (auto & team : ManageTeams::TeamMap.GetTree())
+    {
+        if (team != NULL)
+            iN.push_back(team->team_name);
+    }
+    g = Graph(iN);
+    QSqlQuery distancesQuery("SELECT * from distances");
+    while (distancesQuery.next())
+    {
+        g.addEdge(distancesQuery.value(0).toString().toStdString(), distancesQuery.value(2).toString().toStdString(),
+                  distancesQuery.value(3).toDouble());
+    }
+
+}
+
+void ManageTeams::AddTeam(const Team& newTeam){
     TeamMap.insert(newTeam);
 }
 
-void ManageTeams::RemoveTeam(Team &toRemove) {
+void ManageTeams::RemoveTeam(const Team& toRemove) {
     TeamMap.del(toRemove);
 }
 
@@ -95,23 +112,6 @@ void ManageTeams::RemoveTeam(Team &toRemove) {
 //        }
 //    }
 //}
-
-void ManageTeams::graphPrep() {
-    vector<string> iN(0, "");
-    for (auto & team : ManageTeams::TeamMap.GetTree())
-    {
-        if (team != NULL)
-            iN.push_back(team->team_name);
-    }
-    g = Graph(iN);
-    QSqlQuery distancesQuery("SELECT * from distances");
-    while (distancesQuery.next())
-    {
-        g.addEdge(distancesQuery.value(0).toString().toStdString(), distancesQuery.value(2).toString().toStdString(),
-                  distancesQuery.value(3).toDouble());
-    }
-
-}
 
 mapADT<Team> &ManageTeams::GetTravelPlan(){
     return travelPlan;
