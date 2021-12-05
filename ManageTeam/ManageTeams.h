@@ -6,12 +6,11 @@
 #include <map>
 #include "Team/Team.h"
 #include <QSql>
-#include "../Db/Database/DbManager.h"
+#include "../DB/Database/DbManager.h"
 #include "ManageTeam/Graph/Graph.h"
 #include "../orderedMap/orderedMap.h"
 
-class ManageTeams
-{
+class ManageTeams {
 public:
     ManageTeams();
     void ReadData();
@@ -26,6 +25,7 @@ public:
 
 protected:
     DbManager teamManager;
+
 public:
     static mapADT<Team> TeamMap;
     static deque<Team*> shortTravelPlan;
