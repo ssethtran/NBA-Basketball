@@ -79,16 +79,20 @@ void Admin::changeArena(const string& teamName, const string& arena) {
     cerr << "Changed arena of team, " << teamName << ", to the arena, " << arena << endl;
 }
 
-void Admin::readingAvailableTeams() {
+vector<string> Admin::readingAvailableTeams() {
+    readAvailableTeams.clear();
     QSqlQuery query("SELECT * FROM teamsInfo;");
     while (query.next())
         readAvailableTeams.push_back(query.value(2).toString().toStdString());
+    return readAvailableTeams;
 }
 
-void Admin::readingNewTeams() {
+vector<string> Admin::readingNewTeams() {
+    readNewTeams.clear();
     QSqlQuery query("SELECT * FROM expansion;");
     while (query.next())
         readNewTeams.push_back(query.value(2).toString().toStdString());
+    return readNewTeams;
 }
 
 vector<string> Admin::readingSouvenirs(const string& teamName) {

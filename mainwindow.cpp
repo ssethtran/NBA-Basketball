@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     teamManagement.ReadData();
 
-//    ui->tabWidget->setTabEnabled(1, false);
-//    ui->tabWidget->setTabEnabled(2, false);
+    ui->tabWidget->setTabEnabled(1, false);
+    ui->tabWidget->setTabEnabled(2, false);
 
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
     ui->teamsTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
@@ -22,11 +22,9 @@ MainWindow::MainWindow(QWidget *parent)
     //ADMIN=========================================================================================================
     bool flag = true;
     string currTeam;
-    admin.readingAvailableTeams();
-    admin.readingNewTeams();
-    for (const string &team: admin.readNewTeams) {
+    for (const string& team: admin.readingNewTeams()) {
         currTeam = team;
-        for (const string &teams: admin.readAvailableTeams) {
+        for (const string &teams: admin.readingAvailableTeams()) {
             if (team == teams) {
                 flag = false;
                 break;
@@ -41,7 +39,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //=====================CHANGE TRADITIONAL SOUVENIR PRICE=====================
     //Setting the combo box for the available teams
-    for (const string &team: admin.readAvailableTeams)
+    for (const string &team: admin.readingAvailableTeams())
         ui->changeSPriceTeamCB->addItem(QString::fromStdString(team));
 
     //Setting the combo box for the traditional souvenirs for the specified team
@@ -56,7 +54,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //=====================ADD TRADITIONAL SOUVENIR=====================
     //Setting the combo box for the available teams
-    for (const string &team: admin.readAvailableTeams)
+    for (const string &team: admin.readingAvailableTeams())
         ui->addSTeamCB->addItem(QString::fromStdString(team));
 
     //Setting "Add Traditional Souvenir" button functionality
@@ -64,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //=====================DELETE TRADITIONAL SOUVENIR=====================
     //Setting the combo box for the available teams
-    for (const string &team: admin.readAvailableTeams)
+    for (const string &team: admin.readingAvailableTeams())
         ui->delSTeamCB->addItem(QString::fromStdString(team));
 
     //Setting the combo box for the traditional souvenirs for the specified team
@@ -79,7 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //=====================CHANGE ARENA=====================
     //Setting the combo box for the available teams
-    for (const string &team: admin.readAvailableTeams)
+    for (const string &team: admin.readingAvailableTeams())
         ui->changeArenaTeamCB->addItem(QString::fromStdString(team));
 
     //Setting the combo box for the available arenas
@@ -105,12 +103,9 @@ void MainWindow::adminNewTeam() {
 
     bool flag = true;
     string currTeam;
-    admin.readingAvailableTeams();
-    admin.readingNewTeams();
-
-    for (const string& team : admin.readNewTeams) {
+    for (const string& team : admin.readingNewTeams()) {
         currTeam = team;
-        for (const string& teams : admin.readAvailableTeams) {
+        for (const string& teams : admin.readingAvailableTeams()) {
             if (team == teams) {
                 flag = false;
                 break;
@@ -118,10 +113,9 @@ void MainWindow::adminNewTeam() {
         }
         break;
     }
-
     if (flag) ui->addTeamCBox->addItem(QString::fromStdString(currTeam));
 
-    for (auto& group : admin.readAvailableTeams) {
+    for (auto& group : admin.readingAvailableTeams()) {
         ui->changeSPriceTeamCB->addItem(QString::fromStdString(group));
         ui->addSTeamCB->addItem(QString::fromStdString(group));
         ui->delSTeamCB->addItem(QString::fromStdString(group));
