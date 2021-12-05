@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/staticLib.dir/staticlib1.cpp.obj"
-  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/staticLib.dir/staticlib2.cpp.obj"
+  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/staticLib.dir/staticlib1.cpp.obj"
+  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/staticLib.dir/staticlib2.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

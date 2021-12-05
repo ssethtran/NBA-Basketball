@@ -44,10 +44,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order
+CMAKE_BINARY_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/static_link_order_test.dir/clean
 CMakeFiles/objLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\objLib.dir\build.make CMakeFiles/objLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\objLib.dir\build.make CMakeFiles/objLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=1 "Built target objLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=1 "Built target objLib"
 .PHONY : CMakeFiles/objLib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/objLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/objLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 0
 .PHONY : CMakeFiles/objLib.dir/rule
 
 # Convenience name for target.
@@ -110,14 +110,14 @@ CMakeFiles/objLib.dir/clean:
 CMakeFiles/staticLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\staticLib.dir\build.make CMakeFiles/staticLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\staticLib.dir\build.make CMakeFiles/staticLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=2,3,4 "Built target staticLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=2,3,4 "Built target staticLib"
 .PHONY : CMakeFiles/staticLib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/staticLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/staticLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 0
 .PHONY : CMakeFiles/staticLib.dir/rule
 
 # Convenience name for target.
@@ -133,18 +133,18 @@ CMakeFiles/staticLib.dir/clean:
 # Target rules for target CMakeFiles/static_link_order_test.dir
 
 # All Build rule for target.
-CMakeFiles/static_link_order_test.dir/all: CMakeFiles/staticLib.dir/all
 CMakeFiles/static_link_order_test.dir/all: CMakeFiles/objLib.dir/all
+CMakeFiles/static_link_order_test.dir/all: CMakeFiles/staticLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\static_link_order_test.dir\build.make CMakeFiles/static_link_order_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\static_link_order_test.dir\build.make CMakeFiles/static_link_order_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=5,6 "Built target static_link_order_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=5,6 "Built target static_link_order_test"
 .PHONY : CMakeFiles/static_link_order_test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/static_link_order_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/static_link_order_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" 0
 .PHONY : CMakeFiles/static_link_order_test.dir/rule
 
 # Convenience name for target.

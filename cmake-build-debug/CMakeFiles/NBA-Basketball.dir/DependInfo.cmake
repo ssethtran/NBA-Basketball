@@ -8,16 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Hiep/NBA-Basketball/DB/Database/DbManager.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/DB/Database/DbManager.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/ManageTeam/ManageTeams.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/ManageTeam/ManageTeams.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/mocs_compilation.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/NBA-Basketball_autogen/mocs_compilation.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/UI/Map/Map.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/Map/Map.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/ModdedLabel/ModdedLabel.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/ModdedLineEdit/moddedlineedit.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/UI/login/login.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/login/login.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/main.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/main.cpp.obj"
-  "C:/Users/Hiep/NBA-Basketball/mainwindow.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/mainwindow.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/Admin/Admin.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/Admin/Admin.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/DB/Database/DbManager.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/DB/Database/DbManager.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/ManageTeam/Graph/Graph.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/ManageTeam/ManageTeams.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/ManageTeam/ManageTeams.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/mocs_compilation.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/NBA-Basketball_autogen/mocs_compilation.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/Map/Map.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/Map/Map.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/ModdedLabel/ModdedLabel.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/ModdedLabel/ModdedLabel.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/ModdedLineEdit/moddedlineedit.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/login/login.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/UI/login/login.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/main.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/main.cpp.obj"
+  "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/mainwindow.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir/mainwindow.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

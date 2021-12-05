@@ -13,7 +13,6 @@
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
-#include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -46,7 +45,7 @@ public:
     QAction *actionLogin;
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
-    QGridLayout *gridLayout;
+    QGridLayout *gridLayout_22;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QLabel *label_13;
@@ -55,10 +54,22 @@ public:
     QLineEdit *djikstraDistTraveled_LineEdit;
     QHBoxLayout *horizontalLayout_5;
     QSpacerItem *horizontalSpacer_5;
-    QLabel *label_16;
-    QSpacerItem *horizontalSpacer_6;
-    QLabel *label_17;
-    QLineEdit *bfsDistTraveled;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label_14;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *label_12;
+    QLineEdit *recursiveDistTraveled_LineEdit;
+    QTreeWidget *recursiveWidget;
+    QTreeWidget *djikstraWidget;
+    QTabWidget *tabWidget_2;
+    QWidget *MSTtab;
+    QGridLayout *gridLayout;
+    QTreeWidget *recursiveWidget_2;
+    QWidget *BFStab;
+    QTreeWidget *recursiveWidget_3;
+    QWidget *DFStab;
+    QTreeWidget *recursiveWidget_4;
     QTabWidget *tabWidget;
     QWidget *traveller;
     QGridLayout *gridLayout_11;
@@ -81,53 +92,48 @@ public:
     QGridLayout *gridLayout_8;
     QLabel *label_9;
     QLabel *label_10;
-    QComboBox *delFoodCityComboBox;
-    QComboBox *delTradFoodComboBox;
-    QPushButton *delFoodButton;
+    QComboBox *delSTeamCB;
+    QComboBox *delSSCB;
+    QPushButton *deleteSButton;
     QGroupBox *groupBox;
     QWidget *layoutWidget1;
     QGridLayout *gridLayout_10;
-    QComboBox *newCityComboBox;
-    QPushButton *addCityButton;
+    QComboBox *addTeamCBox;
+    QPushButton *addTeamButton;
     QGroupBox *groupBox_3;
     QWidget *layoutWidget2;
     QGridLayout *gridLayout_7;
+    QPushButton *addSButton;
     QGridLayout *gridLayout_2;
-    QLabel *label_6;
-    QLabel *label_7;
     QLabel *label_8;
-    QComboBox *addFoodCityComboBox;
-    QLineEdit *newFoodLineEdit;
-    QDoubleSpinBox *addFoodPriceDoubleSpinBox;
-    QPushButton *addFoodButton;
+    QLineEdit *addSLE;
+    QLabel *label_6;
+    QComboBox *addSTeamCB;
+    QLabel *label_7;
+    QLineEdit *addSPriceLE;
     QGroupBox *groupBox_2;
     QWidget *layoutWidget3;
     QGridLayout *gridLayout_6;
     QGridLayout *gridLayout_5;
-    QLabel *label_4;
-    QLabel *label_5;
     QLabel *label_11;
-    QComboBox *cityComboBox;
-    QComboBox *tradFoodComboBox;
-    QDoubleSpinBox *priceDoubleSpinBox;
-    QPushButton *changeFoodPriceButton;
+    QLabel *label_16;
+    QComboBox *changeSPriceTeamCB;
+    QLabel *label_17;
+    QLineEdit *changeSPricePLE;
+    QComboBox *changeSPriceSCB;
+    QPushButton *changeSPriceButton;
     QPushButton *adminSubmit;
-    QTreeWidget *djikstraWidget;
-    QTreeWidget *bfsTreeWidget;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer_3;
-    QLabel *label_14;
-    QSpacerItem *horizontalSpacer_2;
-    QLabel *label_12;
-    QLineEdit *recursiveDistTraveled_LineEdit;
-    QHBoxLayout *horizontalLayout_7;
-    QSpacerItem *horizontalSpacer_9;
-    QLabel *label_20;
-    QSpacerItem *horizontalSpacer_10;
-    QLabel *label_21;
-    QLineEdit *dfsDistTraveled;
-    QTreeWidget *recursiveWidget;
-    QTreeWidget *dfsTreeWidget;
+    QWidget *tab;
+    QPushButton *arenaSubmit;
+    QGroupBox *groupBox_5;
+    QWidget *layoutWidget_2;
+    QGridLayout *gridLayout_12;
+    QGridLayout *gridLayout_13;
+    QLabel *label_18;
+    QLabel *label_19;
+    QComboBox *changeArenaTeamCB;
+    QComboBox *changeArenaACB;
+    QPushButton *changeArenaButton;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -136,7 +142,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1256, 683);
+        MainWindow->resize(1295, 683);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -165,8 +171,8 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setEnabled(true);
-        gridLayout = new QGridLayout(centralwidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout_22 = new QGridLayout(centralwidget);
+        gridLayout_22->setObjectName(QString::fromUtf8("gridLayout_22"));
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -203,7 +209,7 @@ public:
         horizontalLayout_3->addWidget(djikstraDistTraveled_LineEdit);
 
 
-        gridLayout->addLayout(horizontalLayout_3, 0, 0, 1, 1);
+        gridLayout_22->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
@@ -211,42 +217,128 @@ public:
 
         horizontalLayout_5->addItem(horizontalSpacer_5);
 
-        label_16 = new QLabel(centralwidget);
-        label_16->setObjectName(QString::fromUtf8("label_16"));
-        sizePolicy.setHeightForWidth(label_16->sizePolicy().hasHeightForWidth());
-        label_16->setSizePolicy(sizePolicy);
 
-        horizontalLayout_5->addWidget(label_16);
+        gridLayout_22->addLayout(horizontalLayout_5, 0, 1, 1, 1);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_5->addItem(horizontalSpacer_6);
+        horizontalLayout_4->addItem(horizontalSpacer_3);
 
-        label_17 = new QLabel(centralwidget);
-        label_17->setObjectName(QString::fromUtf8("label_17"));
-        sizePolicy.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
-        label_17->setSizePolicy(sizePolicy);
+        label_14 = new QLabel(centralwidget);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        sizePolicy.setHeightForWidth(label_14->sizePolicy().hasHeightForWidth());
+        label_14->setSizePolicy(sizePolicy);
 
-        horizontalLayout_5->addWidget(label_17);
+        horizontalLayout_4->addWidget(label_14);
 
-        bfsDistTraveled = new QLineEdit(centralwidget);
-        bfsDistTraveled->setObjectName(QString::fromUtf8("bfsDistTraveled"));
-        sizePolicy1.setHeightForWidth(bfsDistTraveled->sizePolicy().hasHeightForWidth());
-        bfsDistTraveled->setSizePolicy(sizePolicy1);
-        bfsDistTraveled->setReadOnly(true);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_5->addWidget(bfsDistTraveled);
+        horizontalLayout_4->addItem(horizontalSpacer_2);
+
+        label_12 = new QLabel(centralwidget);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        sizePolicy.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy);
+
+        horizontalLayout_4->addWidget(label_12);
+
+        recursiveDistTraveled_LineEdit = new QLineEdit(centralwidget);
+        recursiveDistTraveled_LineEdit->setObjectName(QString::fromUtf8("recursiveDistTraveled_LineEdit"));
+        sizePolicy1.setHeightForWidth(recursiveDistTraveled_LineEdit->sizePolicy().hasHeightForWidth());
+        recursiveDistTraveled_LineEdit->setSizePolicy(sizePolicy1);
+        recursiveDistTraveled_LineEdit->setReadOnly(true);
+
+        horizontalLayout_4->addWidget(recursiveDistTraveled_LineEdit);
 
 
-        gridLayout->addLayout(horizontalLayout_5, 0, 1, 1, 1);
+        gridLayout_22->addLayout(horizontalLayout_4, 2, 0, 1, 1);
+
+        recursiveWidget = new QTreeWidget(centralwidget);
+        recursiveWidget->headerItem()->setText(0, QString());
+        recursiveWidget->setObjectName(QString::fromUtf8("recursiveWidget"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(recursiveWidget->sizePolicy().hasHeightForWidth());
+        recursiveWidget->setSizePolicy(sizePolicy2);
+        recursiveWidget->setMinimumSize(QSize(400, 0));
+        recursiveWidget->setAutoFillBackground(true);
+        recursiveWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+
+        gridLayout_22->addWidget(recursiveWidget, 3, 0, 1, 1);
+
+        djikstraWidget = new QTreeWidget(centralwidget);
+        djikstraWidget->headerItem()->setText(0, QString());
+        djikstraWidget->setObjectName(QString::fromUtf8("djikstraWidget"));
+        sizePolicy2.setHeightForWidth(djikstraWidget->sizePolicy().hasHeightForWidth());
+        djikstraWidget->setSizePolicy(sizePolicy2);
+        djikstraWidget->setMinimumSize(QSize(400, 0));
+        djikstraWidget->setAutoFillBackground(true);
+        djikstraWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+
+        gridLayout_22->addWidget(djikstraWidget, 1, 0, 1, 1);
+
+        tabWidget_2 = new QTabWidget(centralwidget);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(tabWidget_2->sizePolicy().hasHeightForWidth());
+        tabWidget_2->setSizePolicy(sizePolicy3);
+        MSTtab = new QWidget();
+        MSTtab->setObjectName(QString::fromUtf8("MSTtab"));
+        gridLayout = new QGridLayout(MSTtab);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        recursiveWidget_2 = new QTreeWidget(MSTtab);
+        recursiveWidget_2->headerItem()->setText(0, QString());
+        recursiveWidget_2->setObjectName(QString::fromUtf8("recursiveWidget_2"));
+        sizePolicy2.setHeightForWidth(recursiveWidget_2->sizePolicy().hasHeightForWidth());
+        recursiveWidget_2->setSizePolicy(sizePolicy2);
+        recursiveWidget_2->setMinimumSize(QSize(400, 0));
+        recursiveWidget_2->setAutoFillBackground(true);
+        recursiveWidget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+
+        gridLayout->addWidget(recursiveWidget_2, 0, 0, 1, 1);
+
+        tabWidget_2->addTab(MSTtab, QString());
+        BFStab = new QWidget();
+        BFStab->setObjectName(QString::fromUtf8("BFStab"));
+        recursiveWidget_3 = new QTreeWidget(BFStab);
+        recursiveWidget_3->headerItem()->setText(0, QString());
+        recursiveWidget_3->setObjectName(QString::fromUtf8("recursiveWidget_3"));
+        recursiveWidget_3->setGeometry(QRect(-1, 10, 411, 233));
+        sizePolicy2.setHeightForWidth(recursiveWidget_3->sizePolicy().hasHeightForWidth());
+        recursiveWidget_3->setSizePolicy(sizePolicy2);
+        recursiveWidget_3->setMinimumSize(QSize(400, 0));
+        recursiveWidget_3->setAutoFillBackground(true);
+        recursiveWidget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        tabWidget_2->addTab(BFStab, QString());
+        DFStab = new QWidget();
+        DFStab->setObjectName(QString::fromUtf8("DFStab"));
+        recursiveWidget_4 = new QTreeWidget(DFStab);
+        recursiveWidget_4->headerItem()->setText(0, QString());
+        recursiveWidget_4->setObjectName(QString::fromUtf8("recursiveWidget_4"));
+        recursiveWidget_4->setGeometry(QRect(-1, 10, 411, 233));
+        sizePolicy2.setHeightForWidth(recursiveWidget_4->sizePolicy().hasHeightForWidth());
+        recursiveWidget_4->setSizePolicy(sizePolicy2);
+        recursiveWidget_4->setMinimumSize(QSize(400, 0));
+        recursiveWidget_4->setAutoFillBackground(true);
+        recursiveWidget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        tabWidget_2->addTab(DFStab, QString());
+
+        gridLayout_22->addWidget(tabWidget_2, 1, 1, 1, 1);
 
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Expanding);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
-        tabWidget->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy3);
         traveller = new QWidget();
         traveller->setObjectName(QString::fromUtf8("traveller"));
         gridLayout_11 = new QGridLayout(traveller);
@@ -305,8 +397,8 @@ public:
         __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
         teamsTreeWidget->setHeaderItem(__qtreewidgetitem);
         teamsTreeWidget->setObjectName(QString::fromUtf8("teamsTreeWidget"));
-        sizePolicy2.setHeightForWidth(teamsTreeWidget->sizePolicy().hasHeightForWidth());
-        teamsTreeWidget->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(teamsTreeWidget->sizePolicy().hasHeightForWidth());
+        teamsTreeWidget->setSizePolicy(sizePolicy3);
         teamsTreeWidget->setMinimumSize(QSize(400, 0));
         teamsTreeWidget->setAutoFillBackground(true);
         teamsTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
@@ -344,11 +436,11 @@ public:
         planTreeWidget = new QTreeWidget(traveller);
         planTreeWidget->headerItem()->setText(0, QString());
         planTreeWidget->setObjectName(QString::fromUtf8("planTreeWidget"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
-        planTreeWidget->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(planTreeWidget->sizePolicy().hasHeightForWidth());
+        planTreeWidget->setSizePolicy(sizePolicy4);
         planTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
 "QHeaderView::section { background-color: rgb(255, 243, 222); };"));
 
@@ -359,10 +451,10 @@ public:
         admin->setObjectName(QString::fromUtf8("admin"));
         groupBox_4 = new QGroupBox(admin);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
-        groupBox_4->setGeometry(QRect(10, 390, 441, 131));
+        groupBox_4->setGeometry(QRect(10, 390, 401, 131));
         layoutWidget = new QWidget(groupBox_4);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 30, 421, 91));
+        layoutWidget->setGeometry(QRect(10, 30, 381, 91));
         gridLayout_9 = new QGridLayout(layoutWidget);
         gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
         gridLayout_9->setContentsMargins(0, 0, 0, 0);
@@ -370,320 +462,252 @@ public:
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
         label_9 = new QLabel(layoutWidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
-        label_9->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
+        label_9->setSizePolicy(sizePolicy5);
         label_9->setAlignment(Qt::AlignCenter);
 
         gridLayout_8->addWidget(label_9, 0, 0, 1, 1);
 
         label_10 = new QLabel(layoutWidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        sizePolicy4.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
-        label_10->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
+        label_10->setSizePolicy(sizePolicy5);
         label_10->setAlignment(Qt::AlignCenter);
 
         gridLayout_8->addWidget(label_10, 0, 1, 1, 1);
 
-        delFoodCityComboBox = new QComboBox(layoutWidget);
-        delFoodCityComboBox->setObjectName(QString::fromUtf8("delFoodCityComboBox"));
+        delSTeamCB = new QComboBox(layoutWidget);
+        delSTeamCB->setObjectName(QString::fromUtf8("delSTeamCB"));
 
-        gridLayout_8->addWidget(delFoodCityComboBox, 1, 0, 1, 1);
+        gridLayout_8->addWidget(delSTeamCB, 1, 0, 1, 1);
 
-        delTradFoodComboBox = new QComboBox(layoutWidget);
-        delTradFoodComboBox->setObjectName(QString::fromUtf8("delTradFoodComboBox"));
+        delSSCB = new QComboBox(layoutWidget);
+        delSSCB->setObjectName(QString::fromUtf8("delSSCB"));
 
-        gridLayout_8->addWidget(delTradFoodComboBox, 1, 1, 1, 1);
+        gridLayout_8->addWidget(delSSCB, 1, 1, 1, 1);
 
 
         gridLayout_9->addLayout(gridLayout_8, 0, 0, 1, 1);
 
-        delFoodButton = new QPushButton(layoutWidget);
-        delFoodButton->setObjectName(QString::fromUtf8("delFoodButton"));
-        delFoodButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+        deleteSButton = new QPushButton(layoutWidget);
+        deleteSButton->setObjectName(QString::fromUtf8("deleteSButton"));
+        deleteSButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
-        gridLayout_9->addWidget(delFoodButton, 1, 0, 1, 1);
+        gridLayout_9->addWidget(deleteSButton, 1, 0, 1, 1);
 
         groupBox = new QGroupBox(admin);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(11, 11, 441, 61));
+        groupBox->setGeometry(QRect(10, 10, 401, 61));
         layoutWidget1 = new QWidget(groupBox);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(70, 26, 301, 31));
+        layoutWidget1->setGeometry(QRect(50, 20, 301, 41));
         gridLayout_10 = new QGridLayout(layoutWidget1);
         gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
         gridLayout_10->setContentsMargins(0, 0, 0, 0);
-        newCityComboBox = new QComboBox(layoutWidget1);
-        newCityComboBox->setObjectName(QString::fromUtf8("newCityComboBox"));
-        QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(newCityComboBox->sizePolicy().hasHeightForWidth());
-        newCityComboBox->setSizePolicy(sizePolicy5);
-        newCityComboBox->setLayoutDirection(Qt::LeftToRight);
+        addTeamCBox = new QComboBox(layoutWidget1);
+        addTeamCBox->setObjectName(QString::fromUtf8("addTeamCBox"));
+        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(addTeamCBox->sizePolicy().hasHeightForWidth());
+        addTeamCBox->setSizePolicy(sizePolicy6);
+        addTeamCBox->setLayoutDirection(Qt::LeftToRight);
 
-        gridLayout_10->addWidget(newCityComboBox, 0, 0, 1, 1);
+        gridLayout_10->addWidget(addTeamCBox, 0, 0, 1, 1);
 
-        addCityButton = new QPushButton(layoutWidget1);
-        addCityButton->setObjectName(QString::fromUtf8("addCityButton"));
-        addCityButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+        addTeamButton = new QPushButton(layoutWidget1);
+        addTeamButton->setObjectName(QString::fromUtf8("addTeamButton"));
+        addTeamButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
-        gridLayout_10->addWidget(addCityButton, 0, 1, 1, 1);
+        gridLayout_10->addWidget(addTeamButton, 0, 1, 1, 1);
 
         groupBox_3 = new QGroupBox(admin);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
-        groupBox_3->setGeometry(QRect(10, 240, 441, 141));
+        groupBox_3->setGeometry(QRect(10, 240, 401, 141));
         layoutWidget2 = new QWidget(groupBox_3);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(11, 32, 421, 101));
+        layoutWidget2->setGeometry(QRect(10, 30, 381, 101));
         gridLayout_7 = new QGridLayout(layoutWidget2);
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
+        addSButton = new QPushButton(layoutWidget2);
+        addSButton->setObjectName(QString::fromUtf8("addSButton"));
+        addSButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+
+        gridLayout_7->addWidget(addSButton, 1, 0, 1, 1);
+
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        label_6 = new QLabel(layoutWidget2);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        sizePolicy4.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
-        label_6->setSizePolicy(sizePolicy4);
-        label_6->setAlignment(Qt::AlignCenter);
-
-        gridLayout_2->addWidget(label_6, 0, 0, 1, 1);
-
-        label_7 = new QLabel(layoutWidget2);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-        sizePolicy4.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
-        label_7->setSizePolicy(sizePolicy4);
-        label_7->setAlignment(Qt::AlignCenter);
-
-        gridLayout_2->addWidget(label_7, 0, 1, 1, 1);
-
         label_8 = new QLabel(layoutWidget2);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        sizePolicy4.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
-        label_8->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
+        label_8->setSizePolicy(sizePolicy5);
         label_8->setAlignment(Qt::AlignCenter);
 
         gridLayout_2->addWidget(label_8, 0, 2, 1, 1);
 
-        addFoodCityComboBox = new QComboBox(layoutWidget2);
-        addFoodCityComboBox->setObjectName(QString::fromUtf8("addFoodCityComboBox"));
+        addSLE = new QLineEdit(layoutWidget2);
+        addSLE->setObjectName(QString::fromUtf8("addSLE"));
+        sizePolicy6.setHeightForWidth(addSLE->sizePolicy().hasHeightForWidth());
+        addSLE->setSizePolicy(sizePolicy6);
 
-        gridLayout_2->addWidget(addFoodCityComboBox, 1, 0, 1, 1);
+        gridLayout_2->addWidget(addSLE, 1, 1, 1, 1);
 
-        newFoodLineEdit = new QLineEdit(layoutWidget2);
-        newFoodLineEdit->setObjectName(QString::fromUtf8("newFoodLineEdit"));
-        sizePolicy5.setHeightForWidth(newFoodLineEdit->sizePolicy().hasHeightForWidth());
-        newFoodLineEdit->setSizePolicy(sizePolicy5);
+        label_6 = new QLabel(layoutWidget2);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        sizePolicy5.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
+        label_6->setSizePolicy(sizePolicy5);
+        label_6->setAlignment(Qt::AlignCenter);
 
-        gridLayout_2->addWidget(newFoodLineEdit, 1, 1, 1, 1);
+        gridLayout_2->addWidget(label_6, 0, 0, 1, 1);
 
-        addFoodPriceDoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        addFoodPriceDoubleSpinBox->setObjectName(QString::fromUtf8("addFoodPriceDoubleSpinBox"));
+        addSTeamCB = new QComboBox(layoutWidget2);
+        addSTeamCB->setObjectName(QString::fromUtf8("addSTeamCB"));
 
-        gridLayout_2->addWidget(addFoodPriceDoubleSpinBox, 1, 2, 1, 1);
+        gridLayout_2->addWidget(addSTeamCB, 1, 0, 1, 1);
+
+        label_7 = new QLabel(layoutWidget2);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        sizePolicy5.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
+        label_7->setSizePolicy(sizePolicy5);
+        label_7->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label_7, 0, 1, 1, 1);
+
+        addSPriceLE = new QLineEdit(layoutWidget2);
+        addSPriceLE->setObjectName(QString::fromUtf8("addSPriceLE"));
+        sizePolicy6.setHeightForWidth(addSPriceLE->sizePolicy().hasHeightForWidth());
+        addSPriceLE->setSizePolicy(sizePolicy6);
+
+        gridLayout_2->addWidget(addSPriceLE, 1, 2, 1, 1);
 
 
         gridLayout_7->addLayout(gridLayout_2, 0, 0, 1, 1);
 
-        addFoodButton = new QPushButton(layoutWidget2);
-        addFoodButton->setObjectName(QString::fromUtf8("addFoodButton"));
-        addFoodButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
-
-        gridLayout_7->addWidget(addFoodButton, 1, 0, 1, 1);
-
         groupBox_2 = new QGroupBox(admin);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(10, 80, 441, 151));
+        groupBox_2->setGeometry(QRect(10, 80, 401, 151));
         layoutWidget3 = new QWidget(groupBox_2);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(10, 30, 421, 111));
+        layoutWidget3->setGeometry(QRect(10, 30, 381, 111));
         gridLayout_6 = new QGridLayout(layoutWidget3);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        label_4 = new QLabel(layoutWidget3);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        sizePolicy4.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
-        label_4->setSizePolicy(sizePolicy4);
-        label_4->setAlignment(Qt::AlignCenter);
-
-        gridLayout_5->addWidget(label_4, 0, 0, 1, 1);
-
-        label_5 = new QLabel(layoutWidget3);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        sizePolicy4.setHeightForWidth(label_5->sizePolicy().hasHeightForWidth());
-        label_5->setSizePolicy(sizePolicy4);
-        label_5->setAlignment(Qt::AlignCenter);
-
-        gridLayout_5->addWidget(label_5, 0, 1, 1, 1);
-
         label_11 = new QLabel(layoutWidget3);
         label_11->setObjectName(QString::fromUtf8("label_11"));
-        sizePolicy4.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
-        label_11->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
+        label_11->setSizePolicy(sizePolicy5);
         label_11->setAlignment(Qt::AlignCenter);
 
         gridLayout_5->addWidget(label_11, 0, 2, 1, 1);
 
-        cityComboBox = new QComboBox(layoutWidget3);
-        cityComboBox->setObjectName(QString::fromUtf8("cityComboBox"));
+        label_16 = new QLabel(layoutWidget3);
+        label_16->setObjectName(QString::fromUtf8("label_16"));
+        sizePolicy5.setHeightForWidth(label_16->sizePolicy().hasHeightForWidth());
+        label_16->setSizePolicy(sizePolicy5);
+        label_16->setAlignment(Qt::AlignCenter);
 
-        gridLayout_5->addWidget(cityComboBox, 1, 0, 1, 1);
+        gridLayout_5->addWidget(label_16, 0, 0, 1, 1);
 
-        tradFoodComboBox = new QComboBox(layoutWidget3);
-        tradFoodComboBox->setObjectName(QString::fromUtf8("tradFoodComboBox"));
+        changeSPriceTeamCB = new QComboBox(layoutWidget3);
+        changeSPriceTeamCB->setObjectName(QString::fromUtf8("changeSPriceTeamCB"));
 
-        gridLayout_5->addWidget(tradFoodComboBox, 1, 1, 1, 1);
+        gridLayout_5->addWidget(changeSPriceTeamCB, 1, 0, 1, 1);
 
-        priceDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
-        priceDoubleSpinBox->setObjectName(QString::fromUtf8("priceDoubleSpinBox"));
+        label_17 = new QLabel(layoutWidget3);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+        sizePolicy5.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
+        label_17->setSizePolicy(sizePolicy5);
+        label_17->setAlignment(Qt::AlignCenter);
 
-        gridLayout_5->addWidget(priceDoubleSpinBox, 1, 2, 1, 1);
+        gridLayout_5->addWidget(label_17, 0, 1, 1, 1);
+
+        changeSPricePLE = new QLineEdit(layoutWidget3);
+        changeSPricePLE->setObjectName(QString::fromUtf8("changeSPricePLE"));
+        sizePolicy6.setHeightForWidth(changeSPricePLE->sizePolicy().hasHeightForWidth());
+        changeSPricePLE->setSizePolicy(sizePolicy6);
+
+        gridLayout_5->addWidget(changeSPricePLE, 1, 2, 1, 1);
+
+        changeSPriceSCB = new QComboBox(layoutWidget3);
+        changeSPriceSCB->setObjectName(QString::fromUtf8("changeSPriceSCB"));
+
+        gridLayout_5->addWidget(changeSPriceSCB, 1, 1, 1, 1);
 
 
         gridLayout_6->addLayout(gridLayout_5, 0, 0, 1, 1);
 
-        changeFoodPriceButton = new QPushButton(layoutWidget3);
-        changeFoodPriceButton->setObjectName(QString::fromUtf8("changeFoodPriceButton"));
-        changeFoodPriceButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+        changeSPriceButton = new QPushButton(layoutWidget3);
+        changeSPriceButton->setObjectName(QString::fromUtf8("changeSPriceButton"));
+        changeSPriceButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
-        gridLayout_6->addWidget(changeFoodPriceButton, 1, 0, 1, 1);
+        gridLayout_6->addWidget(changeSPriceButton, 1, 0, 1, 1);
 
         adminSubmit = new QPushButton(admin);
         adminSubmit->setObjectName(QString::fromUtf8("adminSubmit"));
-        adminSubmit->setGeometry(QRect(10, 540, 441, 31));
+        adminSubmit->setGeometry(QRect(10, 540, 401, 31));
         adminSubmit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
         tabWidget->addTab(admin, QString());
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        arenaSubmit = new QPushButton(tab);
+        arenaSubmit->setObjectName(QString::fromUtf8("arenaSubmit"));
+        arenaSubmit->setGeometry(QRect(10, 160, 401, 31));
+        arenaSubmit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
+        groupBox_5 = new QGroupBox(tab);
+        groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
+        groupBox_5->setGeometry(QRect(10, 10, 401, 131));
+        layoutWidget_2 = new QWidget(groupBox_5);
+        layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(10, 30, 381, 91));
+        gridLayout_12 = new QGridLayout(layoutWidget_2);
+        gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
+        gridLayout_12->setContentsMargins(0, 0, 0, 0);
+        gridLayout_13 = new QGridLayout();
+        gridLayout_13->setObjectName(QString::fromUtf8("gridLayout_13"));
+        label_18 = new QLabel(layoutWidget_2);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+        sizePolicy5.setHeightForWidth(label_18->sizePolicy().hasHeightForWidth());
+        label_18->setSizePolicy(sizePolicy5);
+        label_18->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(tabWidget, 0, 2, 4, 1);
+        gridLayout_13->addWidget(label_18, 0, 0, 1, 1);
 
-        djikstraWidget = new QTreeWidget(centralwidget);
-        djikstraWidget->headerItem()->setText(0, QString());
-        djikstraWidget->setObjectName(QString::fromUtf8("djikstraWidget"));
-        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Expanding);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(djikstraWidget->sizePolicy().hasHeightForWidth());
-        djikstraWidget->setSizePolicy(sizePolicy6);
-        djikstraWidget->setMinimumSize(QSize(400, 0));
-        djikstraWidget->setAutoFillBackground(true);
-        djikstraWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        label_19 = new QLabel(layoutWidget_2);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+        sizePolicy5.setHeightForWidth(label_19->sizePolicy().hasHeightForWidth());
+        label_19->setSizePolicy(sizePolicy5);
+        label_19->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(djikstraWidget, 1, 0, 1, 1);
+        gridLayout_13->addWidget(label_19, 0, 1, 1, 1);
 
-        bfsTreeWidget = new QTreeWidget(centralwidget);
-        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem();
-        __qtreewidgetitem1->setText(0, QString::fromUtf8("BFS from LA Lakers"));
-        bfsTreeWidget->setHeaderItem(__qtreewidgetitem1);
-        bfsTreeWidget->setObjectName(QString::fromUtf8("bfsTreeWidget"));
-        sizePolicy6.setHeightForWidth(bfsTreeWidget->sizePolicy().hasHeightForWidth());
-        bfsTreeWidget->setSizePolicy(sizePolicy6);
-        bfsTreeWidget->setMinimumSize(QSize(400, 0));
-        bfsTreeWidget->setAutoFillBackground(true);
-        bfsTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        changeArenaTeamCB = new QComboBox(layoutWidget_2);
+        changeArenaTeamCB->setObjectName(QString::fromUtf8("changeArenaTeamCB"));
 
-        gridLayout->addWidget(bfsTreeWidget, 1, 1, 1, 1);
+        gridLayout_13->addWidget(changeArenaTeamCB, 1, 0, 1, 1);
 
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        changeArenaACB = new QComboBox(layoutWidget_2);
+        changeArenaACB->setObjectName(QString::fromUtf8("changeArenaACB"));
 
-        horizontalLayout_4->addItem(horizontalSpacer_3);
-
-        label_14 = new QLabel(centralwidget);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        sizePolicy.setHeightForWidth(label_14->sizePolicy().hasHeightForWidth());
-        label_14->setSizePolicy(sizePolicy);
-
-        horizontalLayout_4->addWidget(label_14);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_4->addItem(horizontalSpacer_2);
-
-        label_12 = new QLabel(centralwidget);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        sizePolicy.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
-        label_12->setSizePolicy(sizePolicy);
-
-        horizontalLayout_4->addWidget(label_12);
-
-        recursiveDistTraveled_LineEdit = new QLineEdit(centralwidget);
-        recursiveDistTraveled_LineEdit->setObjectName(QString::fromUtf8("recursiveDistTraveled_LineEdit"));
-        sizePolicy1.setHeightForWidth(recursiveDistTraveled_LineEdit->sizePolicy().hasHeightForWidth());
-        recursiveDistTraveled_LineEdit->setSizePolicy(sizePolicy1);
-        recursiveDistTraveled_LineEdit->setReadOnly(true);
-
-        horizontalLayout_4->addWidget(recursiveDistTraveled_LineEdit);
+        gridLayout_13->addWidget(changeArenaACB, 1, 1, 1, 1);
 
 
-        gridLayout->addLayout(horizontalLayout_4, 2, 0, 1, 1);
+        gridLayout_12->addLayout(gridLayout_13, 0, 0, 1, 1);
 
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        changeArenaButton = new QPushButton(layoutWidget_2);
+        changeArenaButton->setObjectName(QString::fromUtf8("changeArenaButton"));
+        changeArenaButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
-        horizontalLayout_7->addItem(horizontalSpacer_9);
+        gridLayout_12->addWidget(changeArenaButton, 1, 0, 1, 1);
 
-        label_20 = new QLabel(centralwidget);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        sizePolicy.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
-        label_20->setSizePolicy(sizePolicy);
+        tabWidget->addTab(tab, QString());
 
-        horizontalLayout_7->addWidget(label_20);
-
-        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_7->addItem(horizontalSpacer_10);
-
-        label_21 = new QLabel(centralwidget);
-        label_21->setObjectName(QString::fromUtf8("label_21"));
-        sizePolicy.setHeightForWidth(label_21->sizePolicy().hasHeightForWidth());
-        label_21->setSizePolicy(sizePolicy);
-
-        horizontalLayout_7->addWidget(label_21);
-
-        dfsDistTraveled = new QLineEdit(centralwidget);
-        dfsDistTraveled->setObjectName(QString::fromUtf8("dfsDistTraveled"));
-        sizePolicy1.setHeightForWidth(dfsDistTraveled->sizePolicy().hasHeightForWidth());
-        dfsDistTraveled->setSizePolicy(sizePolicy1);
-        dfsDistTraveled->setReadOnly(true);
-
-        horizontalLayout_7->addWidget(dfsDistTraveled);
-
-
-        gridLayout->addLayout(horizontalLayout_7, 2, 1, 1, 1);
-
-        recursiveWidget = new QTreeWidget(centralwidget);
-        recursiveWidget->headerItem()->setText(0, QString());
-        recursiveWidget->setObjectName(QString::fromUtf8("recursiveWidget"));
-        sizePolicy6.setHeightForWidth(recursiveWidget->sizePolicy().hasHeightForWidth());
-        recursiveWidget->setSizePolicy(sizePolicy6);
-        recursiveWidget->setMinimumSize(QSize(400, 0));
-        recursiveWidget->setAutoFillBackground(true);
-        recursiveWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-
-        gridLayout->addWidget(recursiveWidget, 3, 0, 1, 1);
-
-        dfsTreeWidget = new QTreeWidget(centralwidget);
-        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem();
-        __qtreewidgetitem2->setText(0, QString::fromUtf8("DFS From Orlando Magic"));
-        dfsTreeWidget->setHeaderItem(__qtreewidgetitem2);
-        dfsTreeWidget->setObjectName(QString::fromUtf8("dfsTreeWidget"));
-        sizePolicy6.setHeightForWidth(dfsTreeWidget->sizePolicy().hasHeightForWidth());
-        dfsTreeWidget->setSizePolicy(sizePolicy6);
-        dfsTreeWidget->setMinimumSize(QSize(400, 0));
-        dfsTreeWidget->setAutoFillBackground(true);
-        dfsTreeWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-
-        gridLayout->addWidget(dfsTreeWidget, 3, 1, 1, 1);
+        gridLayout_22->addWidget(tabWidget, 0, 2, 4, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -691,7 +715,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1256, 22));
+        menubar->setGeometry(QRect(0, 0, 1295, 25));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -701,7 +725,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -722,8 +747,11 @@ public:
         actionCreate_New_Account->setText(QCoreApplication::translate("MainWindow", "Create New Account", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "Djikstra", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
-        label_16->setText(QString());
-        label_17->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "Recursion", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(MSTtab), QCoreApplication::translate("MainWindow", "MST", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(BFStab), QCoreApplication::translate("MainWindow", "BFS", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(DFStab), QCoreApplication::translate("MainWindow", "DFS", nullptr));
         totalspent_LineEdit->setText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "Total Spent (USD)", nullptr));
         updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
@@ -739,28 +767,30 @@ public:
         sortComboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Year Joined League", nullptr));
 
         tabWidget->setTabText(tabWidget->indexOf(traveller), QCoreApplication::translate("MainWindow", "Traveler", nullptr));
-        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Delete Traditional Foods", nullptr));
-        label_9->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
-        delFoodButton->setText(QCoreApplication::translate("MainWindow", "Delete Traditional Food", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Delete Traditional Souvenirs", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Souvenir:", nullptr));
+        deleteSButton->setText(QCoreApplication::translate("MainWindow", "Delete Traditional Souvenir", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Add New Team", nullptr));
-        addCityButton->setText(QCoreApplication::translate("MainWindow", "Add City", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Add Traditional Foods", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
+        addTeamButton->setText(QCoreApplication::translate("MainWindow", "Add Team", nullptr));
+        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Add Traditional Souvenirs", nullptr));
+        addSButton->setText(QCoreApplication::translate("MainWindow", "Add Traditional Souvenir", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
-        addFoodButton->setText(QCoreApplication::translate("MainWindow", "Add Traditional Food", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Change Traditional Food Prices", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "City:", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "Traditional Food:", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Souvenir:", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Change Traditional Souvenir Prices", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Price (USD):", nullptr));
-        changeFoodPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Food Price", nullptr));
+        label_16->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_17->setText(QCoreApplication::translate("MainWindow", "Souvenir:", nullptr));
+        changeSPriceButton->setText(QCoreApplication::translate("MainWindow", "Change Traditional Souvenir Price", nullptr));
         adminSubmit->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
-        label_14->setText(QCoreApplication::translate("MainWindow", "Recursion", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
-        label_20->setText(QString());
-        label_21->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
+        arenaSubmit->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
+        groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "Change Arenas", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_19->setText(QCoreApplication::translate("MainWindow", "Arena:", nullptr));
+        changeArenaButton->setText(QCoreApplication::translate("MainWindow", "Change Arena", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Arena", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 

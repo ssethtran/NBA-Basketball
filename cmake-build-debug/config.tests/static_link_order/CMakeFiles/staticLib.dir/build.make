@@ -43,10 +43,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -55,7 +55,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order
+CMAKE_BINARY_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/staticLib.dir/depend.make
@@ -70,7 +70,7 @@ include CMakeFiles/staticLib.dir/flags.make
 
 CMakeFiles/staticLib.dir/staticlib1.cpp.obj: CMakeFiles/staticLib.dir/flags.make
 CMakeFiles/staticLib.dir/staticlib1.cpp.obj: C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/staticLib.dir/staticlib1.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/staticLib.dir/staticlib1.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\staticLib.dir\staticlib1.cpp.obj -c C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order\staticlib1.cpp
 
 CMakeFiles/staticLib.dir/staticlib1.cpp.i: cmake_force
@@ -83,7 +83,7 @@ CMakeFiles/staticLib.dir/staticlib1.cpp.s: cmake_force
 
 CMakeFiles/staticLib.dir/staticlib2.cpp.obj: CMakeFiles/staticLib.dir/flags.make
 CMakeFiles/staticLib.dir/staticlib2.cpp.obj: C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/staticlib2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/staticLib.dir/staticlib2.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/staticLib.dir/staticlib2.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\staticLib.dir\staticlib2.cpp.obj -c C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order\staticlib2.cpp
 
 CMakeFiles/staticLib.dir/staticlib2.cpp.i: cmake_force
@@ -106,7 +106,7 @@ libstaticLib.a: CMakeFiles/staticLib.dir/staticlib1.cpp.obj
 libstaticLib.a: CMakeFiles/staticLib.dir/staticlib2.cpp.obj
 libstaticLib.a: CMakeFiles/staticLib.dir/build.make
 libstaticLib.a: CMakeFiles/staticLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libstaticLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libstaticLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\staticLib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\staticLib.dir\link.txt --verbose=$(VERBOSE)
 
@@ -119,6 +119,6 @@ CMakeFiles/staticLib.dir/clean:
 .PHONY : CMakeFiles/staticLib.dir/clean
 
 CMakeFiles/staticLib.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order C:\Users\Hiep\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles\staticLib.dir\DependInfo.cmake
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order C:\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\config.tests\static_link_order "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\config.tests\static_link_order\CMakeFiles\staticLib.dir\DependInfo.cmake"
 .PHONY : CMakeFiles/staticLib.dir/depend
 

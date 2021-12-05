@@ -3,10 +3,12 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+    , ui(new Ui::MainWindow) {
     ui->setupUi(this);
     teamManagement.ReadData();
+
+//    ui->tabWidget->setTabEnabled(1, false);
+//    ui->tabWidget->setTabEnabled(2, false);
 
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
     ui->teamsTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
@@ -14,9 +16,78 @@ MainWindow::MainWindow(QWidget *parent)
     ui->teamsTreeWidget->setColumnWidth(1, 50);
     AlphabeticalTeamAll();
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
-    connect(ui->teamsTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
+    connect(ui->teamsTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem * , int)), this,
+            SLOT(itemChanged(QTreeWidgetItem * , int)));
 
+    //ADMIN=========================================================================================================
+    bool flag = true;
+    string currTeam;
+    admin.readingAvailableTeams();
+    admin.readingNewTeams();
+    for (const string &team: admin.readNewTeams) {
+        currTeam = team;
+        for (const string &teams: admin.readAvailableTeams) {
+            if (team == teams) {
+                flag = false;
+                break;
+            }
+        }
+        break;
+    }
+    if (flag) ui->addTeamCBox->addItem(QString::fromStdString(currTeam));
 
+    //Setting "Add Team" button functionality
+    connect(ui->addTeamButton, SIGNAL(clicked()), this, SLOT(adminNewTeam()));
+
+    //=====================CHANGE TRADITIONAL SOUVENIR PRICE=====================
+    //Setting the combo box for the available teams
+    for (const string &team: admin.readAvailableTeams)
+        ui->changeSPriceTeamCB->addItem(QString::fromStdString(team));
+
+    //Setting the combo box for the traditional souvenirs for the specified team
+    for (const string &souvenirs: admin.readingSouvenirs(ui->changeSPriceTeamCB->currentText().toStdString()))
+        ui->changeSPriceSCB->addItem(QString::fromStdString(souvenirs));
+
+    //Connecting the "Teams" combo box to the "Souvenir" combo box
+    connect(ui->changeSPriceTeamCB, SIGNAL(currentTextChanged(const QString)), this, SLOT(updateChangePriceSCB()));
+
+    //Setting "Change Traditional Food Price" button functionality
+    connect(ui->changeSPriceButton, SIGNAL(clicked()), this, SLOT(adminChangePrice()));
+
+    //=====================ADD TRADITIONAL SOUVENIR=====================
+    //Setting the combo box for the available teams
+    for (const string &team: admin.readAvailableTeams)
+        ui->addSTeamCB->addItem(QString::fromStdString(team));
+
+    //Setting "Add Traditional Souvenir" button functionality
+    connect(ui->addSButton, SIGNAL(clicked()), this, SLOT(adminAddSouvenir()));
+
+    //=====================DELETE TRADITIONAL SOUVENIR=====================
+    //Setting the combo box for the available teams
+    for (const string &team: admin.readAvailableTeams)
+        ui->delSTeamCB->addItem(QString::fromStdString(team));
+
+    //Setting the combo box for the traditional souvenirs for the specified team
+    for (const string &souvenir: admin.readingSouvenirs(ui->delSTeamCB->currentText().toStdString()))
+        ui->delSSCB->addItem(QString::fromStdString(souvenir));
+
+    //Setting "Delete Traditional Souvenir" button functionality
+    connect(ui->deleteSButton, SIGNAL(clicked()), this, SLOT(adminDeleteSouvenir()));
+
+    //Connecting the "Teams" combo box to the "Souvenir" combo box
+    connect(ui->delSTeamCB, SIGNAL(currentTextChanged(const QString)), this, SLOT(updateDelSCB()));
+
+    //=====================CHANGE ARENA=====================
+    //Setting the combo box for the available teams
+    for (const string &team: admin.readAvailableTeams)
+        ui->changeArenaTeamCB->addItem(QString::fromStdString(team));
+
+    //Setting the combo box for the available arenas
+    for (const string &arena: admin.readingArenas())
+        ui->changeArenaACB->addItem(QString::fromStdString(arena));
+
+    //Setting "Change Arena" button functionality
+    connect(ui->changeArenaButton, SIGNAL(clicked()), this, SLOT(adminChangeArena()));
 }
 
 MainWindow::~MainWindow()
@@ -24,12 +95,121 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_actionLogin_triggered()
-{
+void MainWindow::adminNewTeam() {
+    admin.addNewTeam();
+
+    ui->addTeamCBox->clear();
+    ui->changeSPriceTeamCB->clear();
+    ui->addSTeamCB->clear();
+    ui->delSTeamCB->clear();
+
+    bool flag = true;
+    string currTeam;
+    admin.readingAvailableTeams();
+    admin.readingNewTeams();
+
+    for (const string& team : admin.readNewTeams) {
+        currTeam = team;
+        for (const string& teams : admin.readAvailableTeams) {
+            if (team == teams) {
+                flag = false;
+                break;
+            }
+        }
+        break;
+    }
+
+    if (flag) ui->addTeamCBox->addItem(QString::fromStdString(currTeam));
+
+    for (auto& group : admin.readAvailableTeams) {
+        ui->changeSPriceTeamCB->addItem(QString::fromStdString(group));
+        ui->addSTeamCB->addItem(QString::fromStdString(group));
+        ui->delSTeamCB->addItem(QString::fromStdString(group));
+    }
+}
+
+void MainWindow::adminChangePrice() {
+    team = ui->changeSPriceTeamCB->currentText().toStdString();
+    souvenir = ui->changeSPriceSCB->currentText().toStdString();
+    price = ui->changeSPricePLE->text().toStdString();
+
+    admin.changePrice(team, souvenir, price);
+}
+
+void MainWindow::updateChangePriceSCB() {
+    ui->changeSPriceSCB->clear();
+    for (const string& souvenirs : admin.readingSouvenirs(ui->changeSPriceTeamCB->currentText().toStdString()))
+        ui->changeSPriceSCB->addItem(QString::fromStdString(souvenirs));
+
+//    cerr << "cow" << endl;
+}
+
+void MainWindow::adminAddSouvenir() {
+    team = ui->addSTeamCB->currentText().toStdString();
+    souvenir = ui->addSLE->displayText().toStdString();
+    price = ui->addSPriceLE->text().toStdString();
+
+    if (!souvenir.empty() && !price.empty())
+        admin.addNewSouvenir(team, souvenir, price);
+
+    ui->delSSCB->clear();
+    for (const string& souvenir : admin.readingSouvenirs(ui->delSTeamCB->currentText().toStdString()))
+        ui->delSSCB->addItem(QString::fromStdString(souvenir));
+
+    ui->changeSPriceSCB->clear();
+    for (const string& souvenir : admin.readingSouvenirs(ui->changeSPriceTeamCB->currentText().toStdString()))
+        ui->changeSPriceSCB->addItem(QString::fromStdString(souvenir));
+}
+
+void MainWindow::adminDeleteSouvenir() {
+    team = ui->delSTeamCB->currentText().toStdString();
+    souvenir = ui->delSSCB->currentText().toStdString();
+
+    admin.removeSouvenir(team, souvenir);
+
+    ui->delSSCB->clear();
+    for (const string& souvenir : admin.readingSouvenirs(ui->delSTeamCB->currentText().toStdString()))
+        ui->delSSCB->addItem(QString::fromStdString(souvenir));
+
+    ui->changeSPriceSCB->clear();
+    for (const string& souvenir : admin.readingSouvenirs(ui->changeSPriceTeamCB->currentText().toStdString()))
+        ui->changeSPriceSCB->addItem(QString::fromStdString(souvenir));
+}
+
+void MainWindow::updateDelSCB() {
+    ui->delSSCB->clear();
+    for (const string& souvenir : admin.readingSouvenirs(ui->delSTeamCB->currentText().toStdString()))
+        ui->delSSCB->addItem(QString::fromStdString(souvenir));
+
+//    cerr << "turkey" << endl;
+}
+
+void MainWindow::adminChangeArena() {
+    admin.changeArena(ui->changeArenaTeamCB->currentText().toStdString(), ui->changeArenaACB->currentText().toStdString());
+}
+
+void MainWindow::on_adminSubmit_clicked() {
+//    teamManagement.ReadData();
+    ui->tabWidget->setTabEnabled(0, true);
+    ui->tabWidget->setTabEnabled(1, false);
+    ui->tabWidget->setTabEnabled(2, false);
+    ui->tabWidget->setCurrentIndex(false);
+}
+
+void MainWindow::on_arenaSubmit_clicked() {
+//    teamManagement.ReadData();
+    ui->tabWidget->setTabEnabled(0, true);
+    ui->tabWidget->setTabEnabled(1, false);
+    ui->tabWidget->setTabEnabled(2, false);
+    ui->tabWidget->setCurrentIndex(false);
+}
+
+void MainWindow::on_actionLogin_triggered() {
     login log;
-//    ui->tabWidget->setTabEnabled(0, log.getCred());
-//    ui->tabWidget->setTabEnabled(1, !log.getCred());
-//    ui->tabWidget->setCurrentIndex(log.getCred());
+    ui->tabWidget->setTabEnabled(0, log.getCred());
+    ui->tabWidget->setTabEnabled(1, !log.getCred());
+    ui->tabWidget->setTabEnabled(2, !log.getCred());
+    ui->tabWidget->setCurrentIndex(log.getCred());
 
     log.setModal(true);
     log.exec();
@@ -816,10 +996,4 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
         temp->setText(0, QString::fromStdString(DFScities[i]));
         ui->recursiveWidget_4->addTopLevelItem(temp);
     }
-
-/*
-*/
-
-
 }
-

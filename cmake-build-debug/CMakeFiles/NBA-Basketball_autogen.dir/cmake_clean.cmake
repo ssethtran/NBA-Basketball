@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/NBA-Basketball_autogen"
+  "NBA-Basketball_autogen/include/ui_login.h"
+  "NBA-Basketball_autogen/include/ui_mainwindow.h"
   "NBA-Basketball_autogen/mocs_compilation.cpp"
 )
 

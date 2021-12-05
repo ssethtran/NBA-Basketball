@@ -1,4 +1,4 @@
-C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir
-C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Hiep/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball_autogen.dir
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball.dir
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball_autogen.dir

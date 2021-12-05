@@ -18,8 +18,12 @@ ManageTeams::ManageTeams() {
 }
 
 void ManageTeams::ReadData() {
-    //euroCities.clear();
-//    dataManager.printTeams();
+    g.dist.clear();
+    TeamMap.GetTree().clear();
+    for (int i = 0; i < TeamMap.GetTree().size(); i++) {
+        if (TeamMap.GetTree()[i] != nullptr)
+            TeamMap.GetTree()[i]->souvenirList.clear();
+    }
 
     QSqlQuery query("SELECT * FROM teamsInfo");
     while (query.next())
@@ -51,9 +55,6 @@ void ManageTeams::ReadData() {
         }
     }
     graphPrep();
-
-
-
 }
 
 void ManageTeams::AddTeam(Team& newTeam){

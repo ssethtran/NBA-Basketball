@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/NBA-Basketball_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/NBA-Basketball_autogen.dir/ParseCache.txt"
   "NBA-Basketball_autogen"
+  "CMakeFiles/NBA-Basketball.dir/Admin/Admin.cpp.obj"
   "CMakeFiles/NBA-Basketball.dir/DB/Database/DbManager.cpp.obj"
   "CMakeFiles/NBA-Basketball.dir/ManageTeam/Graph/Graph.cpp.obj"
   "CMakeFiles/NBA-Basketball.dir/ManageTeam/ManageTeams.cpp.obj"

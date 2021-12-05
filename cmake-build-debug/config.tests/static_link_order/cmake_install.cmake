@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

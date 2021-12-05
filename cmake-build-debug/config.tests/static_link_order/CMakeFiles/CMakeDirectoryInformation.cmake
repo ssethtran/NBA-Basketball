@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/config.tests/static_link_order")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/config.tests/static_link_order")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -25,7 +25,8 @@ set(PROJECT_SOURCES
         orderedMap/orderedMap.h
         UI/ModdedLabel/ModdedLabel.cpp UI/ModdedLabel/ModdedLabel.h
         UI/ModdedLineEdit/moddedlineedit.cpp UI/ModdedLineEdit/moddedlineedit.h
-        UI/Map/Map.cpp UI/Map/Map.h ManageTeam/Graph/Graph.cpp)
+        UI/Map/Map.cpp UI/Map/Map.h ManageTeam/Graph/Graph.cpp
+        Admin/Admin.h Admin/Admin.cpp)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(NBA-Basketball

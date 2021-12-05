@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp" "C:/Users/Hiep/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/objLib.dir/objlib.cpp.obj"
+  "C:/Qt/6.2.1/mingw81_64/lib/cmake/Qt6/config.tests/static_link_order/objlib.cpp" "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/config.tests/static_link_order/CMakeFiles/objLib.dir/objlib.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
