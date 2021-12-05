@@ -28,6 +28,7 @@ void ManageTeams::ReadData() {
     //===============================================================
 
     //Inputting data from databases===================================
+    cout << "INSERTING TEAMS INTO TeamMap...\n\n";
     QSqlQuery query("SELECT * FROM teamsInfo");
     while (query.next()) {
         //Creating a new team based off each entry in the database
@@ -35,15 +36,15 @@ void ManageTeams::ReadData() {
                                   query.value(3).toString().toStdString(), query.value(4).toString().toStdString(), query.value(5).toInt(),
                                   query.value(6).toInt(), query.value(7).toString().toStdString());
         TeamMap.insert(*team); //inserting Team into the TeamMap
-        cout << "Inserting team into TeamMap...\nTEAM INSERTED:\n";
+        cout << "TEAM INSERTED:\n";
         //Searching for the inserted Team in the TeamMap
         if ((TeamMap.search(*team)))
             TeamMap.search(*team)->printTeamInfo(); //if it's found, it would print the team's information out
         else
-            cout << "NULL\n"; //if it's not found, it would print out NULL
+            cout << "NULL\n\n"; //if it's not found, it would print out NULL
     }
 
-    cout << "PRINTING OUT SOUVENIRS...\n";
+    cout << "PRINTING OUT SOUVENIRS...\n\n";
     QSqlQuery souvenirsQuery1("SELECT * FROM teamsInfo");
     while (souvenirsQuery1.next()) {
         QSqlQuery souvenirsQuery2("SELECT * FROM souvenirs WHERE team_name IS '" + souvenirsQuery1.value(2).toString() + "';");
