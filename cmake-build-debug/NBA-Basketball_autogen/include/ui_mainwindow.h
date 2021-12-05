@@ -46,8 +46,6 @@ public:
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
     QGridLayout *gridLayout_22;
-    QHBoxLayout *horizontalLayout_5;
-    QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QLabel *label_13;
@@ -173,15 +171,6 @@ public:
         centralwidget->setEnabled(true);
         gridLayout_22 = new QGridLayout(centralwidget);
         gridLayout_22->setObjectName(QString::fromUtf8("gridLayout_22"));
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_5->addItem(horizontalSpacer_5);
-
-
-        gridLayout_22->addLayout(horizontalLayout_5, 0, 1, 1, 1);
-
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -685,7 +674,7 @@ public:
         recursiveWidget_3 = new QTreeWidget(BFStab);
         recursiveWidget_3->headerItem()->setText(0, QString());
         recursiveWidget_3->setObjectName(QString::fromUtf8("recursiveWidget_3"));
-        recursiveWidget_3->setGeometry(QRect(10, 10, 400, 211));
+        recursiveWidget_3->setGeometry(QRect(10, 10, 400, 571));
         sizePolicy2.setHeightForWidth(recursiveWidget_3->sizePolicy().hasHeightForWidth());
         recursiveWidget_3->setSizePolicy(sizePolicy2);
         recursiveWidget_3->setMinimumSize(QSize(400, 0));
@@ -698,7 +687,7 @@ public:
         recursiveWidget_4 = new QTreeWidget(DFStab);
         recursiveWidget_4->headerItem()->setText(0, QString());
         recursiveWidget_4->setObjectName(QString::fromUtf8("recursiveWidget_4"));
-        recursiveWidget_4->setGeometry(QRect(10, 10, 401, 211));
+        recursiveWidget_4->setGeometry(QRect(10, 10, 401, 571));
         sizePolicy2.setHeightForWidth(recursiveWidget_4->sizePolicy().hasHeightForWidth());
         recursiveWidget_4->setSizePolicy(sizePolicy2);
         recursiveWidget_4->setMinimumSize(QSize(400, 0));
@@ -707,7 +696,7 @@ public:
 "QHeaderView::section { background-color: rgb(255, 243, 222); };"));
         tabWidget_2->addTab(DFStab, QString());
 
-        gridLayout_22->addWidget(tabWidget_2, 1, 1, 1, 1);
+        gridLayout_22->addWidget(tabWidget_2, 0, 1, 4, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
@@ -725,7 +714,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
 
 
