@@ -46,30 +46,21 @@ public:
     QAction *actionCreate_New_Account;
     QWidget *centralwidget;
     QGridLayout *gridLayout_22;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QLabel *label_13;
     QSpacerItem *horizontalSpacer;
     QLabel *label_15;
     QLineEdit *djikstraDistTraveled_LineEdit;
-    QHBoxLayout *horizontalLayout_5;
-    QSpacerItem *horizontalSpacer_5;
+    QTreeWidget *recursiveWidget;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_3;
     QLabel *label_14;
     QSpacerItem *horizontalSpacer_2;
     QLabel *label_12;
     QLineEdit *recursiveDistTraveled_LineEdit;
-    QTreeWidget *recursiveWidget;
-    QTreeWidget *djikstraWidget;
-    QTabWidget *tabWidget_2;
-    QWidget *MSTtab;
-    QGridLayout *gridLayout;
-    QTreeWidget *recursiveWidget_2;
-    QWidget *BFStab;
-    QTreeWidget *recursiveWidget_3;
-    QWidget *DFStab;
-    QTreeWidget *recursiveWidget_4;
     QTabWidget *tabWidget;
     QWidget *traveller;
     QGridLayout *gridLayout_11;
@@ -134,6 +125,15 @@ public:
     QComboBox *changeArenaTeamCB;
     QComboBox *changeArenaACB;
     QPushButton *changeArenaButton;
+    QTreeWidget *djikstraWidget;
+    QTabWidget *tabWidget_2;
+    QWidget *MSTtab;
+    QGridLayout *gridLayout;
+    QTreeWidget *recursiveWidget_2;
+    QWidget *BFStab;
+    QTreeWidget *recursiveWidget_3;
+    QWidget *DFStab;
+    QTreeWidget *recursiveWidget_4;
     QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuAccount;
@@ -173,6 +173,15 @@ public:
         centralwidget->setEnabled(true);
         gridLayout_22 = new QGridLayout(centralwidget);
         gridLayout_22->setObjectName(QString::fromUtf8("gridLayout_22"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_5);
+
+
+        gridLayout_22->addLayout(horizontalLayout_5, 0, 1, 1, 1);
+
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
@@ -211,14 +220,20 @@ public:
 
         gridLayout_22->addLayout(horizontalLayout_3, 0, 0, 1, 1);
 
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        recursiveWidget = new QTreeWidget(centralwidget);
+        recursiveWidget->headerItem()->setText(0, QString());
+        recursiveWidget->setObjectName(QString::fromUtf8("recursiveWidget"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(recursiveWidget->sizePolicy().hasHeightForWidth());
+        recursiveWidget->setSizePolicy(sizePolicy2);
+        recursiveWidget->setMinimumSize(QSize(400, 0));
+        recursiveWidget->setAutoFillBackground(true);
+        recursiveWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
 
-        horizontalLayout_5->addItem(horizontalSpacer_5);
-
-
-        gridLayout_22->addLayout(horizontalLayout_5, 0, 1, 1, 1);
+        gridLayout_22->addWidget(recursiveWidget, 3, 0, 1, 1);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -255,88 +270,11 @@ public:
 
         gridLayout_22->addLayout(horizontalLayout_4, 2, 0, 1, 1);
 
-        recursiveWidget = new QTreeWidget(centralwidget);
-        recursiveWidget->headerItem()->setText(0, QString());
-        recursiveWidget->setObjectName(QString::fromUtf8("recursiveWidget"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Expanding);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(recursiveWidget->sizePolicy().hasHeightForWidth());
-        recursiveWidget->setSizePolicy(sizePolicy2);
-        recursiveWidget->setMinimumSize(QSize(400, 0));
-        recursiveWidget->setAutoFillBackground(true);
-        recursiveWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-
-        gridLayout_22->addWidget(recursiveWidget, 3, 0, 1, 1);
-
-        djikstraWidget = new QTreeWidget(centralwidget);
-        djikstraWidget->headerItem()->setText(0, QString());
-        djikstraWidget->setObjectName(QString::fromUtf8("djikstraWidget"));
-        sizePolicy2.setHeightForWidth(djikstraWidget->sizePolicy().hasHeightForWidth());
-        djikstraWidget->setSizePolicy(sizePolicy2);
-        djikstraWidget->setMinimumSize(QSize(400, 0));
-        djikstraWidget->setAutoFillBackground(true);
-        djikstraWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-
-        gridLayout_22->addWidget(djikstraWidget, 1, 0, 1, 1);
-
-        tabWidget_2 = new QTabWidget(centralwidget);
-        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Expanding);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(tabWidget_2->sizePolicy().hasHeightForWidth());
-        tabWidget_2->setSizePolicy(sizePolicy3);
-        MSTtab = new QWidget();
-        MSTtab->setObjectName(QString::fromUtf8("MSTtab"));
-        gridLayout = new QGridLayout(MSTtab);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        recursiveWidget_2 = new QTreeWidget(MSTtab);
-        recursiveWidget_2->headerItem()->setText(0, QString());
-        recursiveWidget_2->setObjectName(QString::fromUtf8("recursiveWidget_2"));
-        sizePolicy2.setHeightForWidth(recursiveWidget_2->sizePolicy().hasHeightForWidth());
-        recursiveWidget_2->setSizePolicy(sizePolicy2);
-        recursiveWidget_2->setMinimumSize(QSize(400, 0));
-        recursiveWidget_2->setAutoFillBackground(true);
-        recursiveWidget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-
-        gridLayout->addWidget(recursiveWidget_2, 0, 0, 1, 1);
-
-        tabWidget_2->addTab(MSTtab, QString());
-        BFStab = new QWidget();
-        BFStab->setObjectName(QString::fromUtf8("BFStab"));
-        recursiveWidget_3 = new QTreeWidget(BFStab);
-        recursiveWidget_3->headerItem()->setText(0, QString());
-        recursiveWidget_3->setObjectName(QString::fromUtf8("recursiveWidget_3"));
-        recursiveWidget_3->setGeometry(QRect(-1, 10, 411, 233));
-        sizePolicy2.setHeightForWidth(recursiveWidget_3->sizePolicy().hasHeightForWidth());
-        recursiveWidget_3->setSizePolicy(sizePolicy2);
-        recursiveWidget_3->setMinimumSize(QSize(400, 0));
-        recursiveWidget_3->setAutoFillBackground(true);
-        recursiveWidget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-        tabWidget_2->addTab(BFStab, QString());
-        DFStab = new QWidget();
-        DFStab->setObjectName(QString::fromUtf8("DFStab"));
-        recursiveWidget_4 = new QTreeWidget(DFStab);
-        recursiveWidget_4->headerItem()->setText(0, QString());
-        recursiveWidget_4->setObjectName(QString::fromUtf8("recursiveWidget_4"));
-        recursiveWidget_4->setGeometry(QRect(-1, 10, 411, 233));
-        sizePolicy2.setHeightForWidth(recursiveWidget_4->sizePolicy().hasHeightForWidth());
-        recursiveWidget_4->setSizePolicy(sizePolicy2);
-        recursiveWidget_4->setMinimumSize(QSize(400, 0));
-        recursiveWidget_4->setAutoFillBackground(true);
-        recursiveWidget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
-"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-        tabWidget_2->addTab(DFStab, QString());
-
-        gridLayout_22->addWidget(tabWidget_2, 1, 1, 1, 1);
-
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         sizePolicy3.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
         tabWidget->setSizePolicy(sizePolicy3);
         traveller = new QWidget();
@@ -709,6 +647,68 @@ public:
 
         gridLayout_22->addWidget(tabWidget, 0, 2, 4, 1);
 
+        djikstraWidget = new QTreeWidget(centralwidget);
+        djikstraWidget->headerItem()->setText(0, QString());
+        djikstraWidget->setObjectName(QString::fromUtf8("djikstraWidget"));
+        sizePolicy2.setHeightForWidth(djikstraWidget->sizePolicy().hasHeightForWidth());
+        djikstraWidget->setSizePolicy(sizePolicy2);
+        djikstraWidget->setMinimumSize(QSize(400, 0));
+        djikstraWidget->setAutoFillBackground(true);
+        djikstraWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+
+        gridLayout_22->addWidget(djikstraWidget, 1, 0, 1, 1);
+
+        tabWidget_2 = new QTabWidget(centralwidget);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        sizePolicy3.setHeightForWidth(tabWidget_2->sizePolicy().hasHeightForWidth());
+        tabWidget_2->setSizePolicy(sizePolicy3);
+        MSTtab = new QWidget();
+        MSTtab->setObjectName(QString::fromUtf8("MSTtab"));
+        gridLayout = new QGridLayout(MSTtab);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        recursiveWidget_2 = new QTreeWidget(MSTtab);
+        recursiveWidget_2->headerItem()->setText(0, QString());
+        recursiveWidget_2->setObjectName(QString::fromUtf8("recursiveWidget_2"));
+        sizePolicy2.setHeightForWidth(recursiveWidget_2->sizePolicy().hasHeightForWidth());
+        recursiveWidget_2->setSizePolicy(sizePolicy2);
+        recursiveWidget_2->setMinimumSize(QSize(400, 0));
+        recursiveWidget_2->setAutoFillBackground(true);
+        recursiveWidget_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+
+        gridLayout->addWidget(recursiveWidget_2, 0, 0, 1, 1);
+
+        tabWidget_2->addTab(MSTtab, QString());
+        BFStab = new QWidget();
+        BFStab->setObjectName(QString::fromUtf8("BFStab"));
+        recursiveWidget_3 = new QTreeWidget(BFStab);
+        recursiveWidget_3->headerItem()->setText(0, QString());
+        recursiveWidget_3->setObjectName(QString::fromUtf8("recursiveWidget_3"));
+        recursiveWidget_3->setGeometry(QRect(10, 10, 400, 211));
+        sizePolicy2.setHeightForWidth(recursiveWidget_3->sizePolicy().hasHeightForWidth());
+        recursiveWidget_3->setSizePolicy(sizePolicy2);
+        recursiveWidget_3->setMinimumSize(QSize(400, 0));
+        recursiveWidget_3->setAutoFillBackground(true);
+        recursiveWidget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        tabWidget_2->addTab(BFStab, QString());
+        DFStab = new QWidget();
+        DFStab->setObjectName(QString::fromUtf8("DFStab"));
+        recursiveWidget_4 = new QTreeWidget(DFStab);
+        recursiveWidget_4->headerItem()->setText(0, QString());
+        recursiveWidget_4->setObjectName(QString::fromUtf8("recursiveWidget_4"));
+        recursiveWidget_4->setGeometry(QRect(10, 10, 401, 211));
+        sizePolicy2.setHeightForWidth(recursiveWidget_4->sizePolicy().hasHeightForWidth());
+        recursiveWidget_4->setSizePolicy(sizePolicy2);
+        recursiveWidget_4->setMinimumSize(QSize(400, 0));
+        recursiveWidget_4->setAutoFillBackground(true);
+        recursiveWidget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
+"QHeaderView::section { background-color: rgb(255, 243, 222); };"));
+        tabWidget_2->addTab(DFStab, QString());
+
+        gridLayout_22->addWidget(tabWidget_2, 1, 1, 1, 1);
+
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -725,8 +725,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget_2->setCurrentIndex(2);
         tabWidget->setCurrentIndex(2);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -749,9 +749,6 @@ public:
         label_15->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Recursion", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(MSTtab), QCoreApplication::translate("MainWindow", "MST", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(BFStab), QCoreApplication::translate("MainWindow", "BFS", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(DFStab), QCoreApplication::translate("MainWindow", "DFS", nullptr));
         totalspent_LineEdit->setText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "Total Spent (USD)", nullptr));
         updatepurchases_pushButton->setText(QCoreApplication::translate("MainWindow", "Update Purchases", nullptr));
@@ -791,6 +788,9 @@ public:
         label_19->setText(QCoreApplication::translate("MainWindow", "Arena:", nullptr));
         changeArenaButton->setText(QCoreApplication::translate("MainWindow", "Change Arena", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Arena", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(MSTtab), QCoreApplication::translate("MainWindow", "MST", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(BFStab), QCoreApplication::translate("MainWindow", "BFS", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(DFStab), QCoreApplication::translate("MainWindow", "DFS", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 

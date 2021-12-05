@@ -564,7 +564,6 @@ C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 
   C:/Qt/6.2.1/mingw81_64/include/QtWidgets/qwidget.h \
   C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/Admin/Admin.h \
   C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/DB/Database/DbManager.h \
-  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/Db/Database/DbManager.h \
   C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/ManageTeam/Graph/Graph.h \
   C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/ManageTeam/ManageTeams.h \
   C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/ManageTeam/Team/Team.h \

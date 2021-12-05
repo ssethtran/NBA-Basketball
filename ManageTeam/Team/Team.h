@@ -35,7 +35,7 @@ public:
     };
 
     void printSouvenir() const {
-        cout << "Souvenir: " << souvenirName << "\nCost: " << cost << "\n\n";
+        cout << "Souvenir: " << souvenirName << "\nCost: $" << cost << "\n\n";
     }
 };
 
@@ -49,6 +49,7 @@ public:
     int stadiumCap;
     int joinedLeague;
     string coach;
+    int distance{};
     vector<Souvenir> souvenirList;
 
     Team(){
@@ -59,6 +60,7 @@ public:
         arena_name = "";
         stadiumCap = 0;
         joinedLeague = 0;
+        distance = 0;
         coach = "";
     }
 

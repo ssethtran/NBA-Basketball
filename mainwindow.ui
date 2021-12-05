@@ -24,6 +24,23 @@
     <bool>true</bool>
    </property>
    <layout class="QGridLayout" name="gridLayout_22">
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
@@ -93,22 +110,33 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
+    <item row="3" column="0">
+     <widget class="QTreeWidget" name="recursiveWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </column>
+     </widget>
     </item>
     <item row="2" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -178,188 +206,6 @@
        </widget>
       </item>
      </layout>
-    </item>
-    <item row="3" column="0">
-     <widget class="QTreeWidget" name="recursiveWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true"/>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QTreeWidget" name="djikstraWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true"/>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QTabWidget" name="tabWidget_2">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="currentIndex">
-       <number>2</number>
-      </property>
-      <widget class="QWidget" name="MSTtab">
-       <attribute name="title">
-        <string>MST</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
-         <widget class="QTreeWidget" name="recursiveWidget_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>400</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="autoFillBackground">
-           <bool>true</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-          </property>
-          <column>
-           <property name="text">
-            <string notr="true"/>
-           </property>
-          </column>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="BFStab">
-       <attribute name="title">
-        <string>BFS</string>
-       </attribute>
-       <widget class="QTreeWidget" name="recursiveWidget_3">
-        <property name="geometry">
-         <rect>
-          <x>-1</x>
-          <y>10</y>
-          <width>411</width>
-          <height>233</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>400</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="autoFillBackground">
-         <bool>true</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-        </property>
-        <column>
-         <property name="text">
-          <string notr="true"/>
-         </property>
-        </column>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="DFStab">
-       <attribute name="title">
-        <string>DFS</string>
-       </attribute>
-       <widget class="QTreeWidget" name="recursiveWidget_4">
-        <property name="geometry">
-         <rect>
-          <x>-1</x>
-          <y>10</y>
-          <width>411</width>
-          <height>233</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>400</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="autoFillBackground">
-         <bool>true</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-        </property>
-        <column>
-         <property name="text">
-          <string notr="true"/>
-         </property>
-        </column>
-       </widget>
-      </widget>
-     </widget>
     </item>
     <item row="0" column="2" rowspan="4">
      <widget class="QTabWidget" name="tabWidget">
@@ -1027,6 +873,160 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </item>
          </layout>
         </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTreeWidget" name="djikstraWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true"/>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="3">
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="MSTtab">
+       <attribute name="title">
+        <string>MST</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="recursiveWidget_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="BFStab">
+       <attribute name="title">
+        <string>BFS</string>
+       </attribute>
+       <widget class="QTreeWidget" name="recursiveWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>400</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+        </column>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="DFStab">
+       <attribute name="title">
+        <string>DFS</string>
+       </attribute>
+       <widget class="QTreeWidget" name="recursiveWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>401</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+        </column>
        </widget>
       </widget>
      </widget>
