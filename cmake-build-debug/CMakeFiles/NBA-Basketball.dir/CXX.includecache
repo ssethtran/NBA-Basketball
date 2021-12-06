@@ -3442,6 +3442,10 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/Admin/Admin.cpp
+Admin.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/Admin/Admin.h
+
 C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/Admin/Admin.h
 ../ManageTeam/ManageTeams.h
 C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/ManageTeam/ManageTeams.h
@@ -3522,6 +3526,66 @@ QDialog
 QtSql
 -
 QMessageBox
+-
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/EWIEGA46WW/moc_mainwindow.cpp
+memory
+-
+../../../mainwindow.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/mainwindow.h
+QtGui/qtextcursor.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/I4YZB3GBVK/moc_moddedlineedit.cpp
+memory
+-
+../../../UI/ModdedLineEdit/moddedlineedit.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/SGBM7QTVRA/moc_ModdedLabel.cpp
+memory
+-
+../../../UI/ModdedLabel/ModdedLabel.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h
+QtGui/qtextcursor.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/SOFTFQEKRY/moc_login.cpp
+memory
+-
+../../../UI/login/login.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/UI/login/login.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/mocs_compilation.cpp
+SGBM7QTVRA/moc_ModdedLabel.cpp
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/SGBM7QTVRA/moc_ModdedLabel.cpp
+I4YZB3GBVK/moc_moddedlineedit.cpp
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/I4YZB3GBVK/moc_moddedlineedit.cpp
+SOFTFQEKRY/moc_login.cpp
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/SOFTFQEKRY/moc_login.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/EWIEGA46WW/moc_mainwindow.cpp
+
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/main.cpp
+mainwindow.h
+C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/mainwindow.h
+QApplication
 -
 
 C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/mainwindow.cpp

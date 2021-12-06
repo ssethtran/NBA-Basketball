@@ -5,13 +5,13 @@
 #include "Admin.h"
 
 void Admin::addNewTeam() {
-    QSqlQuery query("SELECT * FROM expansion;");
+    QSqlQuery query("SELECT * FROM expansion");
     while (query.next()) {
         //Inserting new team information into the teamsInfo database
         QSqlQuery query1;
         query1.prepare("INSERT INTO teamsInfo (conference, division, team_name, location, arena_name,"
                     "stadium_capacity, joined_league, coach) VALUES (:conference, :division, :team_name,"
-                    ":location, :arena_name, :stadium_capacity, :joined_league, :coach);");
+                    ":location, :arena_name, :stadium_capacity, :joined_league, :coach)");
         query1.bindValue(":conference", query.value(0).toString());
         query1.bindValue(":division", query.value(1).toString());
         query1.bindValue(":team_name", query.value(2).toString());
@@ -23,31 +23,31 @@ void Admin::addNewTeam() {
         query1.exec();
     }
 
-    QSqlQuery query2("SELECT * FROM seattleSouvenirs;");
+    QSqlQuery query2("SELECT * FROM seattleSouvenirs");
     while (query2.next()) {
         //Inserting new team souvenirs into the souvenirs database
         QSqlQuery query3;
         query3.exec("INSERT INTO souvenirs (team_name, item_name, cost) VALUES ('" + query2.value(0).toString()
-                    + "', '" + query2.value(1).toString() + "', '" + query2.value(2).toString() + "');");
+                    + "', '" + query2.value(1).toString() + "', '" + query2.value(2).toString() + "')");
     }
 
-    QSqlQuery query4("SELECT * FROM seattleDistances;");
+    QSqlQuery query4("SELECT * FROM seattleDistances");
     while (query4.next()) {
         //Inserting new team distances into the distances database
         QSqlQuery query5;
         query5.exec("INSERT INTO distances (beginning_team_name, beginning_arena, ending_team_name, distance)"
                     "VALUES ('" + query4.value(0).toString() + "', '" + query4.value(1).toString() + "', '" +
-                    query4.value(2).toString() + "', '" + query4.value(3).toString() + "');");
+                    query4.value(2).toString() + "', '" + query4.value(3).toString() + "')");
     }
 
-    cerr << "Added to Database\n";
+    cerr << "Added to team to Database\n";
 }
 
 void Admin::changePrice(const string& teamName, const string& souvenir, const string& cost) {
     QSqlQuery query;
     query.exec("UPDATE souvenirs SET cost = " + QString::fromStdString(cost) +
     " WHERE team_name IS '" + QString::fromStdString(teamName) + "' AND item_name IS '" +
-    QString::fromStdString(souvenir) + "';");
+    QString::fromStdString(souvenir) + "'");
 
     cerr << "Changed price of " << souvenir << ", from team " << teamName << ", to $" << cost << endl;
 
@@ -55,7 +55,7 @@ void Admin::changePrice(const string& teamName, const string& souvenir, const st
 
 void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const string& cost) {
     QSqlQuery query;
-    query.prepare("INSERT INTO souvenirs (team_name, item_name, cost) VALUES (:teamName, :souvenir, :cost);");
+    query.prepare("INSERT INTO souvenirs (team_name, item_name, cost) VALUES (:teamName, :souvenir, :cost)");
     query.bindValue(":teamName", QString::fromStdString(teamName));
     query.bindValue(":souvenir", QString::fromStdString(souvenir));
     query.bindValue(":cost", QString::fromStdString(cost));
@@ -66,22 +66,31 @@ void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const
 
 void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
     QSqlQuery query;
-    query.exec("DELETE FROM souvenirs WHERE team_name IS '" + QString::fromStdString(teamName) + "' AND item_name IS '" + QString::fromStdString(souvenir) + "';");
+    query.exec("DELETE FROM souvenirs WHERE team_name IS '" + QString::fromStdString(teamName) + "' AND item_name IS '" + QString::fromStdString(souvenir) + "'");
 
     cerr << "Removed the souvenir, " << souvenir << ", from team, " << teamName << endl;
 }
 
-void Admin::changeArena(const string& teamName, const string& arena) {
+void Admin::changeArena(const string& teamName, const string& arena, const string& capacity) {
     QSqlQuery query;
-    query.exec("UPDATE teamsInfo SET arena = " + QString::fromStdString(arena) +
-               " WHERE team_name IS '" + QString::fromStdString(teamName) + "';");
+    query.exec("UPDATE teamsInfo SET arena_name = '" + QString::fromStdString(arena) +
+               "' WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
 
-    cerr << "Changed arena of team, " << teamName << ", to the arena, " << arena << endl;
+    QSqlQuery query1;
+    query1.exec("UPDATE teamsInfo SET stadium_capacity = " + QString::fromStdString(capacity) +
+                " WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
+
+//    QSqlQuery query;
+//    query.exec("UPDATE souvenirs SET cost = " + QString::fromStdString(cost) +
+//               " WHERE team_name IS '" + QString::fromStdString(teamName) + "' AND item_name IS '" +
+//               QString::fromStdString(souvenir) + "'");
+
+    cerr << "Changed arena of team, " << teamName << ", to the arena, " << arena << ", and capacity to " << capacity << endl;
 }
 
 vector<string> Admin::readingAvailableTeams() {
     readAvailableTeams.clear();
-    QSqlQuery query("SELECT * FROM teamsInfo;");
+    QSqlQuery query("SELECT * FROM teamsInfo");
     while (query.next())
         readAvailableTeams.push_back(query.value(2).toString().toStdString());
     return readAvailableTeams;
@@ -89,7 +98,7 @@ vector<string> Admin::readingAvailableTeams() {
 
 vector<string> Admin::readingNewTeams() {
     readNewTeams.clear();
-    QSqlQuery query("SELECT * FROM expansion;");
+    QSqlQuery query("SELECT * FROM expansion");
     while (query.next())
         readNewTeams.push_back(query.value(2).toString().toStdString());
     return readNewTeams;
@@ -97,24 +106,8 @@ vector<string> Admin::readingNewTeams() {
 
 vector<string> Admin::readingSouvenirs(const string& teamName) {
     readSouvenirs.clear();
-    QSqlQuery query("SELECT * FROM souvenirs WHERE team_name IS '" + QString::fromStdString(teamName) + "';");
+    QSqlQuery query("SELECT * FROM souvenirs WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
     while (query.next())
         readSouvenirs.push_back(query.value(1).toString().toStdString());
     return readSouvenirs;
-}
-
-vector<string> Admin::readingArenas() {
-    readArenas.clear();
-    QSqlQuery query("SELECT * FROM teamsInfo;");
-    while (query.next()) {
-        bool flag = true;
-        for (const string& arena : readArenas) {
-            if (query.value(4).toString().toStdString() == arena) {
-                flag = false;
-                break;
-            }
-        }
-        if (flag) readArenas.push_back(query.value(4).toString().toStdString());
-    }
-    return readArenas;
 }

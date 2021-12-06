@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     teamManagement.ReadData();
 
-    ui->tabWidget->setTabEnabled(1, false);
-    ui->tabWidget->setTabEnabled(2, false);
+//    ui->tabWidget->setTabEnabled(1, false);
+//    ui->tabWidget->setTabEnabled(2, false);
 
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
     ui->teamsTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
@@ -79,10 +79,6 @@ MainWindow::MainWindow(QWidget *parent)
     //Setting the combo box for the available teams
     for (const string &team: admin.readingAvailableTeams())
         ui->changeArenaTeamCB->addItem(QString::fromStdString(team));
-
-    //Setting the combo box for the available arenas
-    for (const string &arena: admin.readingArenas())
-        ui->changeArenaACB->addItem(QString::fromStdString(arena));
 
     //Setting "Change Arena" button functionality
     connect(ui->changeArenaButton, SIGNAL(clicked()), this, SLOT(adminChangeArena()));
@@ -179,7 +175,10 @@ void MainWindow::updateDelSCB() {
 }
 
 void MainWindow::adminChangeArena() {
-    admin.changeArena(ui->changeArenaTeamCB->currentText().toStdString(), ui->changeArenaACB->currentText().toStdString());
+    string arena = ui->changeArenaALE->text().toStdString();
+    string capacity = ui->changeArenaCLE->text().toStdString();
+    if (!capacity.empty())
+        admin.changeArena(ui->changeArenaTeamCB->currentText().toStdString(), arena, capacity);
 }
 
 void MainWindow::on_adminSubmit_clicked() {

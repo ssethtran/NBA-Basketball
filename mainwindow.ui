@@ -199,7 +199,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="traveller">
        <attribute name="title">
@@ -768,7 +768,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>160</y>
+          <y>180</y>
           <width>401</width>
           <height>31</height>
          </rect>
@@ -786,11 +786,11 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           <x>10</x>
           <y>10</y>
           <width>401</width>
-          <height>131</height>
+          <height>151</height>
          </rect>
         </property>
         <property name="title">
-         <string>Change Arenas</string>
+         <string>Change Arena</string>
         </property>
         <widget class="QWidget" name="layoutWidget_2">
          <property name="geometry">
@@ -798,14 +798,30 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
            <x>10</x>
            <y>30</y>
            <width>381</width>
-           <height>91</height>
+           <height>111</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_12">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_13">
-            <item row="0" column="0">
+            <item row="0" column="2">
              <widget class="QLabel" name="label_18">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Capacity:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_19">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -820,8 +836,11 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
               </property>
              </widget>
             </item>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="changeArenaTeamCB"/>
+            </item>
             <item row="0" column="1">
-             <widget class="QLabel" name="label_19">
+             <widget class="QLabel" name="label_20">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -836,11 +855,25 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QComboBox" name="changeArenaTeamCB"/>
+            <item row="1" column="2">
+             <widget class="QLineEdit" name="changeArenaCLE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QComboBox" name="changeArenaACB"/>
+             <widget class="QLineEdit" name="changeArenaALE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

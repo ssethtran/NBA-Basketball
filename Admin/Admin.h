@@ -16,15 +16,13 @@ public:
     void changePrice(const string& teamName, const string& souvenir, const string& cost);
     void addNewSouvenir(const string& teamName, const string& souvenir, const string& cost);
     void removeSouvenir(const string& teamName, const string& souvenir);
-    void changeArena(const string& teamName, const string& arena);
+    void changeArena(const string& teamName, const string& arena, const string& capacity);
     vector<string> readingAvailableTeams();
     vector<string> readingNewTeams();
     vector<string> readingSouvenirs(const string& teamName);
-    vector<string> readingArenas();
 
 private:
     vector<string> readNewTeams;
     vector<string> readAvailableTeams;
     vector<string> readSouvenirs;
-    vector<string> readArenas;
 };
