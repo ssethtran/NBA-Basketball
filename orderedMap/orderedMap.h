@@ -16,7 +16,6 @@ class mapADT{
 private:
     vector<T *> tree;
 
-
     int inOrderSearchForDelete(int &toReturn, int index){
         if(tree[index*2+2] == nullptr){
             if(tree[index*2+1] != nullptr){

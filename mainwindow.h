@@ -50,6 +50,7 @@ public slots:
     void adminDeleteSouvenir();
     void updateDelSCB();
     void adminChangeArena();
+    void adminChangeCapacity();
 
 private slots:
     void on_actionLogin_triggered();

@@ -86,10 +86,18 @@ MainWindow::MainWindow(QWidget *parent)
     //=====================CHANGE ARENA=====================
     //Setting the combo box for the available teams
     for (const string &team: admin.readingAvailableTeams())
-        ui->changeArenaTeamCB->addItem(QString::fromStdString(team));
+        ui->changeArenaTCB->addItem(QString::fromStdString(team));
 
     //Setting "Change Arena" button functionality
     connect(ui->changeArenaButton, SIGNAL(clicked()), this, SLOT(adminChangeArena()));
+
+    //=====================CHANGE CAPACITY=====================
+    //Setting the combo box for the available teams
+    for (const string &team: admin.readingAvailableTeams())
+        ui->changeCapacityTCB->addItem(QString::fromStdString(team));
+
+    //Setting "Change Capacity" button functionality
+    connect(ui->changeCapacityButton, SIGNAL(clicked()), this, SLOT(adminChangeCapacity()));
 }
 
 MainWindow::~MainWindow()
@@ -138,8 +146,6 @@ void MainWindow::updateChangePriceSCB() {
     ui->changeSPriceSCB->clear();
     for (const string& souvenirs : admin.readingSouvenirs(ui->changeSPriceTeamCB->currentText().toStdString()))
         ui->changeSPriceSCB->addItem(QString::fromStdString(souvenirs));
-
-//    cerr << "cow" << endl;
 }
 
 void MainWindow::adminAddSouvenir() {
@@ -178,15 +184,18 @@ void MainWindow::updateDelSCB() {
     ui->delSSCB->clear();
     for (const string& souvenir : admin.readingSouvenirs(ui->delSTeamCB->currentText().toStdString()))
         ui->delSSCB->addItem(QString::fromStdString(souvenir));
-
-//    cerr << "turkey" << endl;
 }
 
 void MainWindow::adminChangeArena() {
     string arena = ui->changeArenaALE->text().toStdString();
-    string capacity = ui->changeArenaCLE->text().toStdString();
-    if (!arena.empty() && !capacity.empty())
-        admin.changeArena(ui->changeArenaTeamCB->currentText().toStdString(), arena, capacity);
+    if (!arena.empty())
+        admin.changeArena(ui->changeArenaTCB->currentText().toStdString(), arena);
+}
+
+void MainWindow::adminChangeCapacity() {
+    string capacity = ui->changeCapacityCLE->text().toStdString();
+    if (!capacity.empty())
+        admin.changeCapacity(ui->changeCapacityTCB->currentText().toStdString(), capacity);
 }
 
 void MainWindow::on_adminSubmit_clicked() {

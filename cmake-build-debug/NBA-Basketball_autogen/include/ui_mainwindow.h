@@ -117,12 +117,19 @@ public:
     QGridLayout *gridLayout_12;
     QGridLayout *gridLayout_13;
     QLabel *label_18;
+    QComboBox *changeArenaTCB;
     QLabel *label_19;
-    QComboBox *changeArenaTeamCB;
-    QLabel *label_20;
-    QLineEdit *changeArenaCLE;
     QLineEdit *changeArenaALE;
     QPushButton *changeArenaButton;
+    QGroupBox *groupBox_6;
+    QWidget *layoutWidget_4;
+    QGridLayout *gridLayout_17;
+    QGridLayout *gridLayout_18;
+    QLabel *label_22;
+    QLabel *label_23;
+    QComboBox *changeCapacityTCB;
+    QLineEdit *changeCapacityCLE;
+    QPushButton *changeCapacityButton;
     QTreeWidget *djikstraWidget;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_3;
@@ -569,14 +576,14 @@ public:
         tab->setObjectName(QString::fromUtf8("tab"));
         arenaSubmit = new QPushButton(tab);
         arenaSubmit->setObjectName(QString::fromUtf8("arenaSubmit"));
-        arenaSubmit->setGeometry(QRect(10, 180, 401, 31));
+        arenaSubmit->setGeometry(QRect(10, 310, 401, 31));
         arenaSubmit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)"));
         groupBox_5 = new QGroupBox(tab);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
-        groupBox_5->setGeometry(QRect(10, 10, 401, 151));
+        groupBox_5->setGeometry(QRect(10, 10, 401, 131));
         layoutWidget_2 = new QWidget(groupBox_5);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(10, 30, 381, 111));
+        layoutWidget_2->setGeometry(QRect(10, 30, 381, 91));
         gridLayout_12 = new QGridLayout(layoutWidget_2);
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
         gridLayout_12->setContentsMargins(0, 0, 0, 0);
@@ -588,7 +595,12 @@ public:
         label_18->setSizePolicy(sizePolicy4);
         label_18->setAlignment(Qt::AlignCenter);
 
-        gridLayout_13->addWidget(label_18, 0, 2, 1, 1);
+        gridLayout_13->addWidget(label_18, 0, 0, 1, 1);
+
+        changeArenaTCB = new QComboBox(layoutWidget_2);
+        changeArenaTCB->setObjectName(QString::fromUtf8("changeArenaTCB"));
+
+        gridLayout_13->addWidget(changeArenaTCB, 1, 0, 1, 1);
 
         label_19 = new QLabel(layoutWidget_2);
         label_19->setObjectName(QString::fromUtf8("label_19"));
@@ -596,27 +608,7 @@ public:
         label_19->setSizePolicy(sizePolicy4);
         label_19->setAlignment(Qt::AlignCenter);
 
-        gridLayout_13->addWidget(label_19, 0, 0, 1, 1);
-
-        changeArenaTeamCB = new QComboBox(layoutWidget_2);
-        changeArenaTeamCB->setObjectName(QString::fromUtf8("changeArenaTeamCB"));
-
-        gridLayout_13->addWidget(changeArenaTeamCB, 1, 0, 1, 1);
-
-        label_20 = new QLabel(layoutWidget_2);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        sizePolicy4.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
-        label_20->setSizePolicy(sizePolicy4);
-        label_20->setAlignment(Qt::AlignCenter);
-
-        gridLayout_13->addWidget(label_20, 0, 1, 1, 1);
-
-        changeArenaCLE = new QLineEdit(layoutWidget_2);
-        changeArenaCLE->setObjectName(QString::fromUtf8("changeArenaCLE"));
-        sizePolicy5.setHeightForWidth(changeArenaCLE->sizePolicy().hasHeightForWidth());
-        changeArenaCLE->setSizePolicy(sizePolicy5);
-
-        gridLayout_13->addWidget(changeArenaCLE, 1, 2, 1, 1);
+        gridLayout_13->addWidget(label_19, 0, 1, 1, 1);
 
         changeArenaALE = new QLineEdit(layoutWidget_2);
         changeArenaALE->setObjectName(QString::fromUtf8("changeArenaALE"));
@@ -633,6 +625,54 @@ public:
         changeArenaButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
 
         gridLayout_12->addWidget(changeArenaButton, 1, 0, 1, 1);
+
+        groupBox_6 = new QGroupBox(tab);
+        groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
+        groupBox_6->setGeometry(QRect(10, 160, 401, 131));
+        layoutWidget_4 = new QWidget(groupBox_6);
+        layoutWidget_4->setObjectName(QString::fromUtf8("layoutWidget_4"));
+        layoutWidget_4->setGeometry(QRect(10, 30, 381, 91));
+        gridLayout_17 = new QGridLayout(layoutWidget_4);
+        gridLayout_17->setObjectName(QString::fromUtf8("gridLayout_17"));
+        gridLayout_17->setContentsMargins(0, 0, 0, 0);
+        gridLayout_18 = new QGridLayout();
+        gridLayout_18->setObjectName(QString::fromUtf8("gridLayout_18"));
+        label_22 = new QLabel(layoutWidget_4);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        sizePolicy4.setHeightForWidth(label_22->sizePolicy().hasHeightForWidth());
+        label_22->setSizePolicy(sizePolicy4);
+        label_22->setAlignment(Qt::AlignCenter);
+
+        gridLayout_18->addWidget(label_22, 0, 0, 1, 1);
+
+        label_23 = new QLabel(layoutWidget_4);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        sizePolicy4.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
+        label_23->setSizePolicy(sizePolicy4);
+        label_23->setAlignment(Qt::AlignCenter);
+
+        gridLayout_18->addWidget(label_23, 0, 1, 1, 1);
+
+        changeCapacityTCB = new QComboBox(layoutWidget_4);
+        changeCapacityTCB->setObjectName(QString::fromUtf8("changeCapacityTCB"));
+
+        gridLayout_18->addWidget(changeCapacityTCB, 1, 0, 1, 1);
+
+        changeCapacityCLE = new QLineEdit(layoutWidget_4);
+        changeCapacityCLE->setObjectName(QString::fromUtf8("changeCapacityCLE"));
+        sizePolicy5.setHeightForWidth(changeCapacityCLE->sizePolicy().hasHeightForWidth());
+        changeCapacityCLE->setSizePolicy(sizePolicy5);
+
+        gridLayout_18->addWidget(changeCapacityCLE, 1, 1, 1, 1);
+
+
+        gridLayout_17->addLayout(gridLayout_18, 0, 0, 1, 1);
+
+        changeCapacityButton = new QPushButton(layoutWidget_4);
+        changeCapacityButton->setObjectName(QString::fromUtf8("changeCapacityButton"));
+        changeCapacityButton->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))"));
+
+        gridLayout_17->addWidget(changeCapacityButton, 1, 0, 1, 1);
 
         tabWidget->addTab(tab, QString());
 
@@ -756,7 +796,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1295, 22));
+        menubar->setGeometry(QRect(0, 0, 1295, 25));
         menuAccount = new QMenu(menubar);
         menuAccount->setObjectName(QString::fromUtf8("menuAccount"));
         MainWindow->setMenuBar(menubar);
@@ -766,7 +806,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
         tabWidget_2->setCurrentIndex(0);
 
 
@@ -824,10 +864,13 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(admin), QCoreApplication::translate("MainWindow", "Maintenance", nullptr));
         arenaSubmit->setText(QCoreApplication::translate("MainWindow", "Implement Changes", nullptr));
         groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "Change Arena", nullptr));
-        label_18->setText(QCoreApplication::translate("MainWindow", "Capacity:", nullptr));
-        label_19->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
-        label_20->setText(QCoreApplication::translate("MainWindow", "Arena:", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_19->setText(QCoreApplication::translate("MainWindow", "Arena:", nullptr));
         changeArenaButton->setText(QCoreApplication::translate("MainWindow", "Change Arena", nullptr));
+        groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Change Capacity", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "Team:", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "Capacity:", nullptr));
+        changeCapacityButton->setText(QCoreApplication::translate("MainWindow", "Change Capacity", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Arena", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Recursion", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));

@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" -E rm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball"
+CMAKE_SOURCE_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug"
 
 # Utility rule file for NBA-Basketball_autogen.
 
@@ -66,8 +66,8 @@ include CMakeFiles/NBA-Basketball_autogen.dir/compiler_depend.make
 include CMakeFiles/NBA-Basketball_autogen.dir/progress.make
 
 CMakeFiles/NBA-Basketball_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target NBA-Basketball"
-	"C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" -E cmake_autogen "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball_autogen.dir/AutogenInfo.json" Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target NBA-Basketball"
+	"C:\Program Files\JetBrains\CLion 2021.3\bin\cmake\win\bin\cmake.exe" -E cmake_autogen "C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/cmake-build-debug/CMakeFiles/NBA-Basketball_autogen.dir/AutogenInfo.json" Debug
 
 NBA-Basketball_autogen: CMakeFiles/NBA-Basketball_autogen
 NBA-Basketball_autogen: CMakeFiles/NBA-Basketball_autogen.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/NBA-Basketball_autogen.dir/clean:
 .PHONY : CMakeFiles/NBA-Basketball_autogen.dir/clean
 
 CMakeFiles/NBA-Basketball_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball\cmake-build-debug" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball\cmake-build-debug" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\NBA-Basketball\cmake-build-debug\CMakeFiles\NBA-Basketball_autogen.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug" "C:\Users\4ktra\OneDrive\Desktop\College Work\CS 1D Homework\CS 1D Project 2\NBA Basketball Project\NBA-Basketball\cmake-build-debug\CMakeFiles\NBA-Basketball_autogen.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/NBA-Basketball_autogen.dir/depend
 

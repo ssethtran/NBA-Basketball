@@ -6,7 +6,7 @@
 
 void Admin::addNewTeam() {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -57,7 +57,7 @@ void Admin::addNewTeam() {
 
 void Admin::changePrice(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -79,7 +79,7 @@ void Admin::changePrice(const string& teamName, const string& souvenir, const st
 
 void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -102,7 +102,7 @@ void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const
 
 void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -119,9 +119,9 @@ void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
     cerr << "Removed the souvenir, " << souvenir << ", from team, " << teamName << endl;
 }
 
-void Admin::changeArena(const string& teamName, const string& arena, const string& capacity) {
+void Admin::changeArena(const string& teamName, const string& arena) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -136,11 +136,27 @@ void Admin::changeArena(const string& teamName, const string& arena, const strin
     query.exec("UPDATE teamsInfo SET arena_name = '" + QString::fromStdString(arena) +
                "' WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
 
-    QSqlQuery query1;
-    query1.exec("UPDATE teamsInfo SET stadium_capacity = " + QString::fromStdString(capacity) +
+    cerr << "Changed arena of team, " << teamName << ", to the arena, " << arena << endl;
+}
+
+void Admin::changeCapacity(const string& teamName, const string& capacity) {
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
+    QSqlQuery query;
+    query.exec("UPDATE teamsInfo SET stadium_capacity = " + QString::fromStdString(capacity) +
                 " WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
 
-    cerr << "Changed arena of team, " << teamName << ", to the arena, " << arena << ", and capacity to " << capacity << endl;
+    cerr << "Changed arena of team, " << teamName << ", to the capacity, " << capacity << endl;
 }
 
 vector<string> Admin::readingAvailableTeams() {
