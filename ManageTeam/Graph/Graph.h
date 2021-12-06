@@ -33,12 +33,12 @@ public:
     // Function to insert a new edge
     void addEdge(string start, string e, double input);
   
-    int DFS(string start, vector<string>& citiesOrder);
-    int actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrder);
-    int BFS(string start, vector<string>& input);
+    double DFS(string start, vector<string>& citiesOrder);
+    double actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrder);
+    double BFS(string start, vector<string>& input);
     void dijkstra(string start);
     vector<path*> dist;
     string dijkstraStart;
-    int MST(string cityIndex, vector<string>&);
+    double MST(string cityIndex, vector<string>&);
     void printGraph();
 };
