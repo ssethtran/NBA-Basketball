@@ -53,7 +53,8 @@ void Graph::addEdge(string from, string to, double distance)
 
 
 
-int Graph::DFS(string start, vector<string>& citiesOrder)
+
+double Graph::DFS(string start, vector<string>& citiesOrder)
 {
     int e = -1;
     for(int i = 0; i < cityNames.size(); i++){
@@ -70,29 +71,62 @@ int Graph::DFS(string start, vector<string>& citiesOrder)
     return actualDFS(e, visited, citiesOrder);
 }
 
-int Graph::actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrder)
+double Graph::actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrder)
 {
 
-    int distance = 0;
+    double distance = 0;
     // Print the current node
     citiesOrder.push_back(cityNames[start]);
     // Set current node as visited
     visited[start] = true;
 
     // For every node of the graph
+    vector<int> makeOrdered;
+    vector<int> ordered;
+
     for (int i = 0; i < v; i++) {
 
         // If some node is adjacent to the current node
         // and it has not already been visited
-        if (adj[start][i] != 0 && (!visited[i])) {
-            distance += adj[start][i];
-            distance += actualDFS(i, visited, citiesOrder);
+        if (adj[start][i] != -1 && (!visited[i])) {
+
+            makeOrdered.push_back(i);
         }
     }
+
+
+    if(makeOrdered.size() > 0)
+        ordered.push_back(makeOrdered[0]);
+    for(int i = 1; i < makeOrdered.size(); i++){
+
+        int j = 0;
+        while(adj[start][makeOrdered[i]] > adj[start][makeOrdered[j]] && j < ordered.size()){
+            j++;
+        }
+            ordered.insert(ordered.begin() + j, makeOrdered[i]);
+
+
+
+
+    }
+    for(int i = 0; i < ordered.size(); i++){
+        if(!visited[ordered[i]]){
+        distance += adj[start][ordered[i]];
+        distance += actualDFS(ordered[i], visited, citiesOrder);
+        }
+    }
+
+
     return distance;
 }
 
-int Graph::BFS(string start, vector<string>& passedCityNames)
+
+
+
+
+
+
+double Graph::BFS(string start, vector<string>& passedCityNames)
 {
     // Visited vector to so that
     // a vertex is not visited more than once
@@ -108,10 +142,8 @@ int Graph::BFS(string start, vector<string>& passedCityNames)
         return -1;
 
 
-    int distance = 0;
+    double distance = 0;
     vector<bool> visited(v, false);
-    vector<string> discoveryEdge;
-    vector<string> CrossEdge;
 
     vector<int> q;
     vector<int> s;
@@ -131,7 +163,7 @@ int Graph::BFS(string start, vector<string>& passedCityNames)
 
         // For every adjacent vertex to the current vertex
         for (int i = 0; i < v; i++) {
-            if (adj[vis][i] != 0 && (!visited[i])) {
+            if (adj[vis][i] != -1 && (!visited[i])) {
                 s.push_back(i);
                 // // Push the adjacent node to the queue
                 // q.push_back(i);
@@ -139,8 +171,6 @@ int Graph::BFS(string start, vector<string>& passedCityNames)
 
                 // Set
                 visited[i] = true;
-            }else if(adj[vis][i] != 0 && (visited[i])){
-                CrossEdge.push_back("From " + cityNames[vis] + " to " + cityNames[i]);
             }
         }
 
@@ -160,23 +190,11 @@ int Graph::BFS(string start, vector<string>& passedCityNames)
         for(int i = 0; i < s.size(); i++){
             distance += adj[vis][s[i]];
             q.push_back(s[i]);
-            discoveryEdge.push_back("From " + cityNames[vis] + " to " + cityNames[s[i]]);
         }
         s.clear();
 
 
     }
-
-//    cout << endl << endl << "Discovery Edges: " << endl;
-//    for(int i = 0; i < discoveryEdge.size(); i++){
-//        cout << discoveryEdge[i] << endl;
-//    }
-//    cout << endl << endl << "Cross Edges: " << endl;
-//    for(int i = 0; i < CrossEdge.size(); i++){
-//        cout << CrossEdge[i] << endl;
-//    }
-
-//    cout << endl << endl << "Distance Traveled: " << distance << endl;
     return distance;
 }
 
@@ -290,7 +308,8 @@ bool isValidEdge(int u, int v, vector<bool> inMST)
     return true;
 }
 
-int Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
+
+double Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
 {
 
     int e = -1;
@@ -312,16 +331,16 @@ int Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
     // Keep adding edges while number of included
     // edges does not become V-1.
     int edge_count = 0;
-    int mincost = 0;
+    double mincost = 0;
     while (edge_count < v - 1) {
 
         // Find minimum weight valid edge.
-        int min = INT_MAX;
+        double min = INT_MAX;
         int a = -1;
         int b = -1;
         for (int i = 0; i < v; i++) {
             for (int j = 0; j < v; j++) {
-                if (adj[i][j] < min && adj[i][j] != 0) {
+                if (adj[i][j] < min && adj[i][j] != -1) {
                     if (isValidEdge(i, j, inMST)) {
                         min = adj[i][j];
                         a = i;
