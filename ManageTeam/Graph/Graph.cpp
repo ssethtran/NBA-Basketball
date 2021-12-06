@@ -31,21 +31,21 @@ Graph::Graph()
 void Graph::addEdge(string from, string to, double distance)
 {
     int start = -1;
-    int e = -1;
+    int z = -1;
     for(int i = 0; i < cityNames.size(); i++){
         if(cityNames[i] == from){
             start = i;
         }
         if(cityNames[i] == to){
-            e = i;
+            z = i;
         }
     }
-    if(start == -1 || e == -1)
+    if(start == -1 || z == -1)
         return;
 
     // Considering a bidirectional edge
-    adj[start][e] = distance;
-    adj[e][start] = distance;
+    adj[start][z] = distance;
+    adj[z][start] = distance;
 }
 
 
@@ -90,12 +90,6 @@ int Graph::actualDFS(int start, vector<bool>& visited, vector<string>& citiesOrd
     }
     return distance;
 }
-
-
-
-
-
-
 
 int Graph::BFS(string start, vector<string>& passedCityNames)
 {
@@ -238,7 +232,7 @@ void Graph::dijkstra(string start) {
         }
 
         // 'i' is used to get all adjacent vertices of a vertex
-        for (int i = 1; i < v; ++i) {
+        for (int i = 0; i < v; ++i) {
             // Get vertex label and weight of current adjacent
             // of u.
             if (adj[uIndex][i] != 0) {

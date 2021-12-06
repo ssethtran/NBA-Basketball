@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 #include <QPoint>
-
 using namespace std;
 
 class Souvenir {
@@ -14,7 +13,7 @@ public:
     int amountBought;
     double amountSpent;
 
-    Souvenir() {
+    Souvenir(){
         souvenirName = "";
         cost = 0;
         amountBought = 0;
@@ -22,7 +21,7 @@ public:
     }
 
     Souvenir(string souvenirName, double cost):
-        souvenirName{std::move(souvenirName)}, cost{cost}
+        souvenirName{souvenirName}, cost{cost}
     {
         amountBought = 0;
         amountSpent = 0;
@@ -46,10 +45,10 @@ public:
     string team_name;
     string location;
     string arena_name;
-    int stadiumCap;
+    int stadCap;
     int joinedLeague;
     string coach;
-    int distance{};
+    double distance;
     vector<Souvenir> souvenirList;
 
     Team(){
@@ -58,47 +57,51 @@ public:
         team_name = "";
         location = "";
         arena_name = "";
-        stadiumCap = 0;
+        stadCap = 0;
         joinedLeague = 0;
-        distance = 0;
         coach = "";
+        distance = 0.0;
     }
-
-    Team(string conference, string division, string team_name, string location, string arena_name, int stadiumCap,
+    Team(string conference, string division, string team_name, string location, string arena_name, int stadCap,
          int joinedLeague, string coach) :
-            conference{std::move(conference)}, division{std::move(division)}, team_name{std::move(team_name)},
-            location{std::move(location)}, arena_name{std::move(arena_name)}, stadiumCap{stadiumCap},
-            joinedLeague{joinedLeague}, coach{std::move(coach)} {};
-
-    void printTeamInfo() const {
-        cout << "Team: " << team_name << "\nArena: " << arena_name << "\n\n";
+            conference{conference}, division{division}, team_name{team_name}, location{location}, arena_name{arena_name},
+            stadCap{stadCap}, joinedLeague{joinedLeague}, coach{coach} {
+        distance = 0;
+    };
+    void printTeamInfo()
+    {
+        cout << team_name << "    " << arena_name << endl;
     }
 
-    void setTeamName(string teamName) {
-        team_name = std::move(teamName);
+    void setTeamName(string team_name)
+    {
+        this->team_name = team_name;
     }
 
-    void addSouvenir(const Souvenir& toAdd) {
+    void addSouvenir(Souvenir toAdd)
+    {
         souvenirList.push_back(toAdd);
     }
 
-    void deleteSouvenir(int indexToDelete) {
+    void deleteSouvenir(int indexToDelete)
+    {
         souvenirList.erase(souvenirList.begin() + indexToDelete, souvenirList.begin() + indexToDelete + 1);
     }
 
     friend bool operator == (Team& t1, Team& t2);
 
-    bool operator > (const Team& team2) const{
+    bool operator > (const Team& team2){
         if(team_name > team2.team_name){
             return true;
         }
         return false;
     }
 
-    bool operator < (const Team& team2) const{
+    bool operator < (const Team& team2){
         if(team_name < team2.team_name){
             return true;
         }
         return false;
     }
+
 };

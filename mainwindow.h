@@ -16,6 +16,7 @@
 #include "UI/Map/Map.h"
 #include "Admin/Admin.h"
 #include <string>
+#include <locale>
 #include <vector>
 
 QT_BEGIN_NAMESPACE
@@ -36,6 +37,7 @@ public:
     void AlphabeticalArena();
     void SeatingCapSort();
     void JoinedLeagueSort();
+    void ShortestPath(string nextInPath);
 
 public slots:
     void itemChanged(QTreeWidgetItem*, int);
@@ -64,8 +66,8 @@ private:
     Ui::MainWindow *ui;
     bool repurchase = false;
     ManageTeams teamManagement;
-    vector<string> teamsToTravelTo;
     vector<string> travelOrder;
+    double recursiveTotalDist = 0.0;
     Admin admin;
     string team;
     string souvenir;

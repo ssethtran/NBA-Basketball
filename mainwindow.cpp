@@ -3,21 +3,23 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow) {
+    , ui(new Ui::MainWindow)
+{
     ui->setupUi(this);
     teamManagement.ReadData();
-
-//    ui->tabWidget->setTabEnabled(1, false);
-//    ui->tabWidget->setTabEnabled(2, false);
+    ui->totalSeatCap_LineEdit->setText(QString::number(teamManagement.totalSeatCap));
+    ui->totalSeatCap_LineEdit->setReadOnly(true);
 
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
     ui->teamsTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
     ui->teamsTreeWidget->setColumnWidth(0, 193);
     ui->teamsTreeWidget->setColumnWidth(1, 50);
     AlphabeticalTeamAll();
+
+    ui->submitPlan->setDisabled(true);
+    ui->updatepurchases_pushButton->setDisabled(true);
     connect(ui->clearPlan, SIGNAL(clicked()), this, SLOT(on_clearPlan_clicked()), Qt::UniqueConnection);
-    connect(ui->teamsTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem * , int)), this,
-            SLOT(itemChanged(QTreeWidgetItem * , int)));
+    connect(ui->teamsTreeWidget, SIGNAL(itemChanged(QTreeWidgetItem*, int)), this, SLOT(itemChanged(QTreeWidgetItem*, int)));
 
     //ADMIN=========================================================================================================
     bool flag = true;
@@ -211,57 +213,57 @@ void MainWindow::on_actionLogin_triggered() {
 void MainWindow::AlphabeticalTeamAll() {
     ui->teamsTreeWidget->clear();
 
-    for (auto& team : teamManagement.GetTeams().GetTree())
+    for (auto & team : teamManagement.GetTeams().GetTree())
     {
-        if (team != nullptr) {
+        if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* conferenceVal = new QLabel;
+            QLabel* conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
+            QTreeWidgetItem* conference = new QTreeWidgetItem;
             conference->setText(0,"Conference:");
             teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel* divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
+            QTreeWidgetItem* division = new QTreeWidgetItem;
             division->setText(0,"Division:");
             teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel* locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
+            QTreeWidgetItem* location = new QTreeWidgetItem;
             location->setText(0,"Location:");
             teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            QLabel* arena_nameVal = new QLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
             teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            teams->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            QLabel* stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem* stadCap = new QTreeWidgetItem;
+            stadCap->setText(0,"Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new QLabel;
+            QLabel* joinedLeagueVal = new QLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
+            QTreeWidgetItem* joinedLeague = new QTreeWidgetItem;
             joinedLeague->setText(0,"Joined League:");
             teams->addChild(joinedLeague);
             ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
 
-            auto* coachVal = new QLabel;
+            QLabel* coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
+            QTreeWidgetItem* coach = new QTreeWidgetItem;
             coach->setText(0,"Coach:");
             teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
@@ -277,57 +279,57 @@ void MainWindow::AlphabeticalTeamAll() {
 void MainWindow::AlphabeticalTeamEastern() {
     ui->teamsTreeWidget->clear();
 
-    for (auto& team : teamManagement.GetTeams().GetTree())
+    for (auto & team : teamManagement.GetTeams().GetTree())
     {
-        if (team != nullptr && team->conference == "Eastern") {
+        if (team != NULL && team->conference == "Eastern") {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* conferenceVal = new QLabel;
+            QLabel* conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
+            QTreeWidgetItem* conference = new QTreeWidgetItem;
             conference->setText(0,"Conference:");
             teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel* divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
+            QTreeWidgetItem* division = new QTreeWidgetItem;
             division->setText(0,"Division:");
             teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel* locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
+            QTreeWidgetItem* location = new QTreeWidgetItem;
             location->setText(0,"Location:");
             teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            QLabel* arena_nameVal = new QLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
             teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            teams->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            QLabel* stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem* stadCap = new QTreeWidgetItem;
+            stadCap->setText(0,"Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new QLabel;
+            QLabel* joinedLeagueVal = new QLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
+            QTreeWidgetItem* joinedLeague = new QTreeWidgetItem;
             joinedLeague->setText(0,"Joined League:");
             teams->addChild(joinedLeague);
             ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
 
-            auto* coachVal = new QLabel;
+            QLabel* coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
+            QTreeWidgetItem* coach = new QTreeWidgetItem;
             coach->setText(0,"Coach:");
             teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
@@ -343,57 +345,57 @@ void MainWindow::AlphabeticalTeamEastern() {
 void MainWindow::AlphabeticalTeamSoutheastEastern() {
     ui->teamsTreeWidget->clear();
 
-    for (auto& team : teamManagement.GetTeams().GetTree())
+    for (auto & team : teamManagement.GetTeams().GetTree())
     {
-        if (team != nullptr && team->conference == "Eastern" && team->division == "Southeast") {
+        if (team != NULL && team->conference == "Eastern" && team->division == "Southeast") {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* conferenceVal = new QLabel;
+            QLabel* conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
+            QTreeWidgetItem* conference = new QTreeWidgetItem;
             conference->setText(0,"Conference:");
             teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel* divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
+            QTreeWidgetItem* division = new QTreeWidgetItem;
             division->setText(0,"Division:");
             teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel* locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
+            QTreeWidgetItem* location = new QTreeWidgetItem;
             location->setText(0,"Location:");
             teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            QLabel* arena_nameVal = new QLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
             teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            teams->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            QLabel* stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem* stadCap = new QTreeWidgetItem;
+            stadCap->setText(0,"Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new QLabel;
+            QLabel* joinedLeagueVal = new QLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
+            QTreeWidgetItem* joinedLeague = new QTreeWidgetItem;
             joinedLeague->setText(0,"Joined League:");
             teams->addChild(joinedLeague);
             ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
 
-            auto* coachVal = new QLabel;
+            QLabel* coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
+            QTreeWidgetItem* coach = new QTreeWidgetItem;
             coach->setText(0,"Coach:");
             teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
@@ -408,194 +410,231 @@ void MainWindow::AlphabeticalTeamSoutheastEastern() {
 
 void MainWindow::AlphabeticalCoach() {
     ui->teamsTreeWidget->clear();
-    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Coaches" << "Info on Teams");
 
-    for (auto& team : teamManagement.GetTeams().GetTree())
-    {
-        if (team != nullptr) {
-            auto *coaches = new QTreeWidgetItem;
-            coaches->setText(0, QString::fromStdString(team->coach));
+    bool flag = false;
+    for (auto &team: teamManagement.GetTeams().GetTree()) {
+        if (team != NULL) {
+            auto *teams = new QTreeWidgetItem;
+            teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* team_nameVal = new QLabel;
-            team_nameVal->setText(QString::fromStdString(team->team_name));
-            auto* team_name = new QTreeWidgetItem;
-            team_name->setText(0,"Team Name:");
-            coaches->addChild(team_name);
-            ui->teamsTreeWidget->setItemWidget(team_name, 1, team_nameVal);
-
-            auto* conferenceVal = new QLabel;
+            QLabel *conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
-            conference->setText(0,"Conference:");
-            coaches->addChild(conference);
+            QTreeWidgetItem *conference = new QTreeWidgetItem;
+            conference->setText(0, "Conference:");
+            teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel *divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
-            division->setText(0,"Division:");
-            coaches->addChild(division);
+            QTreeWidgetItem *division = new QTreeWidgetItem;
+            division->setText(0, "Division:");
+            teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel *locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
-            location->setText(0,"Location:");
-            coaches->addChild(location);
+            QTreeWidgetItem *location = new QTreeWidgetItem;
+            location->setText(0, "Location:");
+            teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            ModdedLabel* arena_nameVal = new ModdedLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            arena_nameVal->updateAccessibleName();
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
-            coaches->addChild(arena_name);
+            teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            coaches->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            QLabel *stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem *stadCap = new QTreeWidgetItem;
+            stadCap->setText(0, "Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new QLabel;
+            QLabel *joinedLeagueVal = new QLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
-            joinedLeague->setText(0,"Joined League:");
-            coaches->addChild(joinedLeague);
-            ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
+            QTreeWidgetItem *joinedLeague = new QTreeWidgetItem;
+            joinedLeague->setText(0, "Joined League:");
+            teams->addChild(joinedLeague);
+            ui->teamsTreeWidget->setItemWidget(joinedLeague, 1, joinedLeagueVal);
 
-            coaches->setData(0, Qt::CheckStateRole, Qt::Unchecked);
-            coaches->setFlags(coaches->flags() | Qt::ItemIsUserCheckable);
-            ui->teamsTreeWidget->addTopLevelItem(coaches);
+            ModdedLabel *coachVal = new ModdedLabel;
+            coachVal->setText(QString::fromStdString(team->coach));
+            coachVal->updateAccessibleName();
+            QTreeWidgetItem *coach = new QTreeWidgetItem;
+            coach->setText(0, "Coach:");
+            teams->addChild(coach);
+            ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
+
+            teams->setData(0, Qt::CheckStateRole, Qt::Unchecked);
+            teams->setFlags(teams->flags() | Qt::ItemIsUserCheckable);
+
+            int c = 0;
+            QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
+            while (*it) {
+                if ((*it)->text(0) == "Coach:")
+                {
+                    if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toStdString() <= team->coach)
+                        c++;
+                }
+                it++;
+            }
+            if (flag == true)
+                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
+                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+                flag = true;
+            }
         }
     }
-    ui->teamsTreeWidget->sortItems(0, Qt::AscendingOrder);
 }
 
 void MainWindow::AlphabeticalArena() {
     ui->teamsTreeWidget->clear();
-    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Arenas" << "Info on Teams");
 
-    for (auto& team : teamManagement.GetTeams().GetTree())
-    {
-        if (team != nullptr) {
-            auto *arenas = new QTreeWidgetItem;
-            arenas->setText(0, QString::fromStdString(team->arena_name));
+    bool flag = false;
+    for (auto &team: teamManagement.GetTeams().GetTree()) {
+        if (team != NULL) {
+            auto *teams = new QTreeWidgetItem;
+            teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* team_nameVal = new QLabel;
-            team_nameVal->setText(QString::fromStdString(team->team_name));
-            auto* team_name = new QTreeWidgetItem;
-            team_name->setText(0,"Team Name:");
-            arenas->addChild(team_name);
-            ui->teamsTreeWidget->setItemWidget(team_name, 1, team_nameVal);
-
-            auto* conferenceVal = new QLabel;
+            QLabel *conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
-            conference->setText(0,"Conference:");
-            arenas->addChild(conference);
+            QTreeWidgetItem *conference = new QTreeWidgetItem;
+            conference->setText(0, "Conference:");
+            teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel *divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
-            division->setText(0,"Division:");
-            arenas->addChild(division);
+            QTreeWidgetItem *division = new QTreeWidgetItem;
+            division->setText(0, "Division:");
+            teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel *locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
-            location->setText(0,"Location:");
-            arenas->addChild(location);
+            QTreeWidgetItem *location = new QTreeWidgetItem;
+            location->setText(0, "Location:");
+            teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* coachVal = new QLabel;
+            ModdedLabel* arena_nameVal = new ModdedLabel;
+            arena_nameVal->setText(QString::fromStdString(team->arena_name));
+            arena_nameVal->updateAccessibleName();
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
+            arena_name->setText(0,"Arena Name:");
+            teams->addChild(arena_name);
+            ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
+
+            QLabel *stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem *stadCap = new QTreeWidgetItem;
+            stadCap->setText(0, "Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
+
+            QLabel *joinedLeagueVal = new QLabel;
+            joinedLeagueVal->setText(QString::number(team->joinedLeague));
+            QTreeWidgetItem *joinedLeague = new QTreeWidgetItem;
+            joinedLeague->setText(0, "Joined League:");
+            teams->addChild(joinedLeague);
+            ui->teamsTreeWidget->setItemWidget(joinedLeague, 1, joinedLeagueVal);
+
+            QLabel *coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
-            coach->setText(0,"Coach:");
-            arenas->addChild(coach);
+            QTreeWidgetItem *coach = new QTreeWidgetItem;
+            coach->setText(0, "Coach:");
+            teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            arenas->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            teams->setData(0, Qt::CheckStateRole, Qt::Unchecked);
+            teams->setFlags(teams->flags() | Qt::ItemIsUserCheckable);
 
-            auto* joinedLeagueVal = new QLabel;
-            joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
-            joinedLeague->setText(0,"Joined League:");
-            arenas->addChild(joinedLeague);
-            ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
+            int c = 0;
+            QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
 
-            arenas->setData(0, Qt::CheckStateRole, Qt::Unchecked);
-            arenas->setFlags(arenas->flags() | Qt::ItemIsUserCheckable);
-            ui->teamsTreeWidget->addTopLevelItem(arenas);
+            string tempTeamArenaName = team->arena_name;
+            for (int i = 0; i < tempTeamArenaName.size(); i++)
+                tempTeamArenaName[i] = std::tolower(tempTeamArenaName[i]);
+            while (*it) {
+                if ((*it)->text(0) == "Arena Name:") {
+                    string temp = ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toStdString();
+                    for (int i = 0; i < temp.size(); i++)
+                        temp[i] = std::tolower(temp[i]);
+                    if (temp < tempTeamArenaName)
+                        c++;
+                }
+                it++;
+            }
+            if (flag == true)
+                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
+                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+                flag = true;
+            }
         }
     }
-    ui->teamsTreeWidget->sortItems(0, Qt::AscendingOrder);
 }
 
 void MainWindow::SeatingCapSort() {
     ui->teamsTreeWidget->clear();
 
     bool flag = false;
-    for (auto& team : teamManagement.GetTeams().GetTree())
+    for (auto & team : teamManagement.GetTeams().GetTree())
     {
-        if (team != nullptr) {
+        if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* conferenceVal = new QLabel;
+            QLabel* conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
+            QTreeWidgetItem* conference = new QTreeWidgetItem;
             conference->setText(0,"Conference:");
             teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel* divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
+            QTreeWidgetItem* division = new QTreeWidgetItem;
             division->setText(0,"Division:");
             teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel* locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
+            QTreeWidgetItem* location = new QTreeWidgetItem;
             location->setText(0,"Location:");
             teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            QLabel* arena_nameVal = new QLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
             teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new ModdedLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            stadiumCapVal->updateAccessibleName();
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            teams->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            ModdedLabel* stadCapVal = new ModdedLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            stadCapVal->updateAccessibleName();
+            QTreeWidgetItem* stadCap = new QTreeWidgetItem;
+            stadCap->setText(0,"Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new QLabel;
+            QLabel* joinedLeagueVal = new QLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
-            auto* joinedLeague = new QTreeWidgetItem;
+            QTreeWidgetItem* joinedLeague = new QTreeWidgetItem;
             joinedLeague->setText(0,"Joined League:");
             teams->addChild(joinedLeague);
             ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
 
-            auto* coachVal = new QLabel;
+            QLabel* coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
+            QTreeWidgetItem* coach = new QTreeWidgetItem;
             coach->setText(0,"Coach:");
             teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
@@ -606,15 +645,16 @@ void MainWindow::SeatingCapSort() {
             int c = 0;
             QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
             while (*it) {
-                if ((*it)->text(0) == "Stadium Capacity:") {
-                    if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() > team->stadiumCap)
+                if ((*it)->text(0) == "Stadium Capacity:")
+                {
+                    if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() > team->stadCap)
                         c++;
                 }
                 it++;
             }
-            if (flag)
+            if (flag == true)
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
-            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && !flag) {
+            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
                 flag = true;
             }
@@ -626,58 +666,58 @@ void MainWindow::JoinedLeagueSort() {
     ui->teamsTreeWidget->clear();
 
     bool flag = false;
-    for (auto& team : teamManagement.GetTeams().GetTree())
+    for (auto & team : teamManagement.GetTeams().GetTree())
     {
-        if (team != nullptr) {
+        if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
 
-            auto* conferenceVal = new QLabel;
+            QLabel* conferenceVal = new QLabel;
             conferenceVal->setText(QString::fromStdString(team->conference));
-            auto* conference = new QTreeWidgetItem;
+            QTreeWidgetItem* conference = new QTreeWidgetItem;
             conference->setText(0,"Conference:");
             teams->addChild(conference);
             ui->teamsTreeWidget->setItemWidget(conference, 1, conferenceVal);
 
-            auto* divisionVal = new QLabel;
+            QLabel* divisionVal = new QLabel;
             divisionVal->setText(QString::fromStdString(team->division));
-            auto* division = new QTreeWidgetItem;
+            QTreeWidgetItem* division = new QTreeWidgetItem;
             division->setText(0,"Division:");
             teams->addChild(division);
             ui->teamsTreeWidget->setItemWidget(division, 1, divisionVal);
 
-            auto* locationVal = new QLabel;
+            QLabel* locationVal = new QLabel;
             locationVal->setText(QString::fromStdString(team->location));
-            auto* location = new QTreeWidgetItem;
+            QTreeWidgetItem* location = new QTreeWidgetItem;
             location->setText(0,"Location:");
             teams->addChild(location);
             ui->teamsTreeWidget->setItemWidget(location, 1, locationVal);
 
-            auto* arena_nameVal = new QLabel;
+            QLabel* arena_nameVal = new QLabel;
             arena_nameVal->setText(QString::fromStdString(team->arena_name));
-            auto* arena_name = new QTreeWidgetItem;
+            QTreeWidgetItem* arena_name = new QTreeWidgetItem;
             arena_name->setText(0,"Arena Name:");
             teams->addChild(arena_name);
             ui->teamsTreeWidget->setItemWidget(arena_name, 1, arena_nameVal);
 
-            auto* stadiumCapVal = new QLabel;
-            stadiumCapVal->setText(QString::number(team->stadiumCap));
-            auto* stadiumCap = new QTreeWidgetItem;
-            stadiumCap->setText(0,"Stadium Capacity:");
-            teams->addChild(stadiumCap);
-            ui->teamsTreeWidget->setItemWidget(stadiumCap, 1, stadiumCapVal);
+            QLabel* stadCapVal = new QLabel;
+            stadCapVal->setText(QString::number(team->stadCap));
+            QTreeWidgetItem* stadCap = new QTreeWidgetItem;
+            stadCap->setText(0,"Stadium Capacity:");
+            teams->addChild(stadCap);
+            ui->teamsTreeWidget->setItemWidget(stadCap, 1, stadCapVal);
 
-            auto* joinedLeagueVal = new ModdedLabel;
+            ModdedLabel* joinedLeagueVal = new ModdedLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
             joinedLeagueVal->updateAccessibleName();
-            auto* joinedLeague = new QTreeWidgetItem;
+            QTreeWidgetItem* joinedLeague = new QTreeWidgetItem;
             joinedLeague->setText(0,"Joined League:");
             teams->addChild(joinedLeague);
             ui->teamsTreeWidget->setItemWidget(joinedLeague, 1,joinedLeagueVal);
 
-            auto* coachVal = new QLabel;
+            QLabel* coachVal = new QLabel;
             coachVal->setText(QString::fromStdString(team->coach));
-            auto* coach = new QTreeWidgetItem;
+            QTreeWidgetItem* coach = new QTreeWidgetItem;
             coach->setText(0,"Coach:");
             teams->addChild(coach);
             ui->teamsTreeWidget->setItemWidget(coach, 1, coachVal);
@@ -688,7 +728,8 @@ void MainWindow::JoinedLeagueSort() {
             int c = 0;
             QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
             while (*it) {
-                if ((*it)->text(0) == "Joined League:") {
+                if ((*it)->text(0) == "Joined League:")
+                {
                     if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() > team->joinedLeague)
                         c++;
                     if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() == team->joinedLeague)
@@ -697,9 +738,9 @@ void MainWindow::JoinedLeagueSort() {
                 }
                 it++;
             }
-            if (flag)
+            if (flag == true)
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
-            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && !flag) {
+            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
                 flag = true;
             }
@@ -741,7 +782,7 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
         Team* tempTeam = new Team;
         tempTeam->setTeamName(item->text(0).toStdString());
         teamManagement.AddTeam(*tempTeam);
-        for (auto& team: teamManagement.GetTravelPlan().GetTree()) cout << team->team_name << "[" << team->distance << "]" << " --> ";
+        for (auto & team: teamManagement.GetTravelPlan().GetTree()) cout << team->team_name << "[" << team->distance << "]" << " --> ";
         cout << endl;
         if (teamManagement.GetTravelPlan().GetTree().size() != 1) {
             for (auto &dot: Map::teamMap) {
@@ -754,7 +795,7 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
         Team* tempTeam2 = new Team;
         tempTeam2->setTeamName(item->text(0).toStdString());
         teamManagement.RemoveTeam(*tempTeam2);
-        for (auto& team: teamManagement.GetTravelPlan().GetTree()) cout << team->team_name << "[" << team->distance << "]" << " --> ";
+        for (auto & team: teamManagement.GetTravelPlan().GetTree()) cout << team->team_name << "[" << team->distance << "]" << " --> ";
         cout << endl;
         for (auto & dot: Map::teamMap) {
             if (dot->GetLocation() == item->text(0).toStdString()) {
@@ -767,6 +808,11 @@ void MainWindow::setPlan(QTreeWidgetItem* item, int col)
 
 void MainWindow::on_submitPlan_clicked()
 {
+    ui->submitPlan->setDisabled(true);
+    ui->submitPlan->setStyleSheet("");
+    ui->updatepurchases_pushButton->setEnabled(true);
+    ui->updatepurchases_pushButton->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))");
+
     ui->planTreeWidget->setHeaderLabels(QStringList() << "Teams & their Souvenirs" << "Cost ($)" << "Quantity to Buy");
     ui->planTreeWidget->header()->setDefaultAlignment(Qt::AlignCenter);
     ui->planTreeWidget->setColumnWidth(0, 193);
@@ -778,23 +824,23 @@ void MainWindow::on_submitPlan_clicked()
     {
         if ((*it)->checkState(0) == Qt::Checked)
         {
-            teamsToTravelTo.push_back((*it)->text(0).toStdString());
+            teamManagement.teamsToTravelTo.push_back((*it)->text(0).toStdString());
         }
         it++;
     }
-    for (auto& team : teamsToTravelTo) {
+    for (auto & team : teamManagement.teamsToTravelTo) {
         auto *teams = new QTreeWidgetItem;
         teams->setText(0, QString::fromStdString(team));
 
         Team* toSearch = new Team("", "", team, "", "", 0, 0, "");
-        for (auto & i : ManageTeams::TeamMap.search(*toSearch)->souvenirList) {
+        for (int i = 0; i < ManageTeams::TeamMap.search(*toSearch)->souvenirList.size(); i++) {
             auto* souvenir_costLineEdit = new moddedLineEdit;
             auto* quantity_souvenirLineEdit = new moddedLineEdit;
 
-            auto* temp = new QTreeWidgetItem;
-            temp->setText(0, QString(QString::fromStdString(i.souvenirName)));
+            QTreeWidgetItem* temp = new QTreeWidgetItem;
+            temp->setText(0, QString(QString::fromStdString(ManageTeams::TeamMap.search(*toSearch)->souvenirList[i].souvenirName)));
 
-            souvenir_costLineEdit->setText(QString::number(i.cost, 'f', 2));
+            souvenir_costLineEdit->setText(QString::number(ManageTeams::TeamMap.search(*toSearch)->souvenirList[i].cost, 'f', 2));
             souvenir_costLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Minimum);
 
             //check for admin perms here
@@ -822,23 +868,27 @@ void MainWindow::on_submitPlan_clicked()
     }
     connect(ui->updatepurchases_pushButton, SIGNAL(clicked()), this, SLOT(updateSpent()));
 
-    //Dijkstra's
-    double dijkstraTotalDist;
+    // dijkstra's
+    double dijkstraTotalDist = 0.0;
+    double intermediateDistance = 0.0;
     for (int i = 0; i < travelOrder.size() - 1; i++) {
         teamManagement.g.dijkstra(travelOrder[i]);
         cout << endl << endl;
         for (int c = 0; c < teamManagement.g.dist.size(); c++)
         {
             // if last city to travel to == next in travel order
-            if (!teamManagement.g.dist[c]->cities.empty() &&
+            if (teamManagement.g.dist[c]->cities.size() > 0 &&
                     teamManagement.g.dist[c]->cities[teamManagement.g.dist[c]->cities.size() - 1] == travelOrder[i + 1]) {
                 dijkstraTotalDist += teamManagement.g.dist[c]->distance;
-                auto* newPath = new QTreeWidgetItem;
+                intermediateDistance = teamManagement.g.dist[c]->distance;
+                QTreeWidgetItem* newPath = new QTreeWidgetItem;
                 newPath->setText(0, QString::fromStdString(teamManagement.g.dijkstraStart) + " to " + QString::fromStdString(teamManagement.g.dist[c]->cities[teamManagement.g.dist[c]->cities.size() - 1]));
                 int numInPath = 1;
-                for (int z = 0; z < teamManagement.g.dist[c]->cities.size(); z++) {
-                    auto* nextInPath = new QTreeWidgetItem;
-                    if (newPath->childCount() == 0) {
+                for (int z = 0; z < teamManagement.g.dist[c]->cities.size(); z++)
+                {
+                    QTreeWidgetItem* nextInPath = new QTreeWidgetItem;
+                    if (newPath->childCount() == 0)
+                    {
                         nextInPath->setText(0, QString::number(numInPath) + ". " + QString::fromStdString(teamManagement.g.dijkstraStart));
                         z--;
                     }
@@ -847,24 +897,95 @@ void MainWindow::on_submitPlan_clicked()
                     numInPath++;
                     newPath->addChild(nextInPath);
                 }
+                QTreeWidgetItem* intermediateDistanceInWidget = new QTreeWidgetItem;
+                intermediateDistanceInWidget->setText(0, "Distance: " + QString::number(intermediateDistance));
+                newPath->addChild(intermediateDistanceInWidget);
                 ui->djikstraWidget->addTopLevelItem(newPath);
             }
         }
         teamManagement.g.dist.clear();
     }
     ui->djikstraDistTraveled_LineEdit->setText(QString::number(dijkstraTotalDist));
+
+    ShortestPath(travelOrder.at(0));
+}
+
+// recursive dijkstra's
+void MainWindow::ShortestPath(string nextInPath) {
+    double min = 1000000000;
+    string from = nextInPath;
+    int nextIndex = 0;
+    if (teamManagement.teamsToTravelTo.size() != 1) {
+        teamManagement.g.dijkstra(nextInPath);
+        // left off here
+    }
+    else {
+        ui->recursiveDistTraveled_LineEdit->setText(QString::number(recursiveTotalDist));
+        recursiveTotalDist = 0.0;
+        return;
+    }
+    for (int i = 0; i < teamManagement.g.dist.size(); i++) {
+        if ( teamManagement.g.dist[i]->cities.size() > 0 && std::find(teamManagement.teamsToTravelTo.begin(), teamManagement.teamsToTravelTo.end(),
+                      teamManagement.g.dist[i]->cities.back()) != teamManagement.teamsToTravelTo.end() && teamManagement.g.dist[i]->distance < min) {
+            nextInPath = teamManagement.g.dist[i]->cities.back();
+            nextIndex = i;
+            min = teamManagement.g.dist[i]->distance;
+        }
+    }
+    recursiveTotalDist += teamManagement.g.dist[nextIndex]->distance;
+    double intermediateDistance = teamManagement.g.dist[nextIndex]->distance;
+    QTreeWidgetItem *newPath = new QTreeWidgetItem;
+    newPath->setText(0, QString::fromStdString(from) + " to " + QString::fromStdString(nextInPath));
+    int numInPath = 1;
+    for (int z = 0; z < teamManagement.g.dist[nextIndex]->cities.size(); z++)
+    {
+        QTreeWidgetItem* nextInPath = new QTreeWidgetItem;
+        if (newPath->childCount() == 0)
+        {
+            nextInPath->setText(0, QString::number(numInPath) + ". " + QString::fromStdString(from));
+            z--;
+        }
+        else
+            nextInPath->setText(0, QString::number(numInPath) + ". " + QString::fromStdString(teamManagement.g.dist[nextIndex]->cities[z]));
+        numInPath++;
+        newPath->addChild(nextInPath);
+    }
+    QTreeWidgetItem* intermediateDistanceInWidget = new QTreeWidgetItem;
+    intermediateDistanceInWidget->setText(0, "Distance: " + QString::number(intermediateDistance));
+    //intermediateDistance = 0;
+    newPath->addChild(intermediateDistanceInWidget);
+
+    ui->recursiveWidget->addTopLevelItem(newPath);
+    teamManagement.teamsToTravelTo.erase(std::find(teamManagement.teamsToTravelTo.begin(), teamManagement.teamsToTravelTo.end(), from));
+    travelOrder.erase(std::find(travelOrder.begin(), travelOrder.end(), from));
+
+    teamManagement.g.dist.clear();
+    ShortestPath(nextInPath);
+    cout << "test";
 }
 
 void MainWindow::itemChanged(QTreeWidgetItem * item, int col) {
-    if (item->checkState(0) == Qt::Checked) {
+    if (item->checkState(0) == Qt::Checked){
         travelOrder.push_back(item->text(0).toStdString());
-    } else {
-        for (int i = 0; i < travelOrder.size(); i++) {
+    }
+    else
+    {
+        for (int i = 0; i < travelOrder.size(); i++)
+        {
             if (travelOrder[i] == item->text(0).toStdString()) {
                 travelOrder.erase(travelOrder.begin() + i);
+                if (travelOrder.size() < 2)
+                {
+                    ui->submitPlan->setDisabled(true);
+                    ui->submitPlan->setStyleSheet("");
+                }
                 break;
             }
         }
+    }
+    if (travelOrder.size() >= 2) {
+        ui->submitPlan->setEnabled(true);
+        ui->submitPlan->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))");
     }
 }
 
@@ -875,20 +996,23 @@ void MainWindow::updateSpent() {
     int totalBoughtAtCity = 0;
     int index = 0;
     while (*it) {
-        if (ui->planTreeWidget->itemWidget(*it, 2)) {
+        if (ui->planTreeWidget->itemWidget(*it, 2))
+        {
             totalSpentOnTrip += ui->planTreeWidget->itemWidget(*it, 1)->accessibleName().toDouble() * ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toDouble();
             totalSpentAtCity += ui->planTreeWidget->itemWidget(*it, 1)->accessibleName().toDouble() * ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toDouble();
             totalBoughtAtCity += ui->planTreeWidget->itemWidget(*it, 2)->accessibleName().toInt();
             index++;
 
         }
-        if (repurchase && index == (*it)->parent()->childCount() - 2) {
+        if (repurchase && index == (*it)->parent()->childCount() - 2)
+        {
             (*it)->parent()->takeChild((*it)->parent()->childCount() - 1);
             (*it)->parent()->takeChild((*it)->parent()->childCount() - 1);
         }
-        if (index == (*it)->parent()->childCount() && (*it)->parent()->childCount() > 0 /*&& repurchase == false*/) {
-            auto* boughtAtCity = new QTreeWidgetItem();
-            auto* boughtAtCity_lineedit = new QLineEdit();
+        if (index == (*it)->parent()->childCount() && (*it)->parent()->childCount() > 0 /*&& repurchase == false*/)
+        {
+            QTreeWidgetItem* boughtAtCity = new QTreeWidgetItem();
+            QLineEdit* boughtAtCity_lineedit = new QLineEdit();
             boughtAtCity_lineedit->setText(QString::number(totalBoughtAtCity));
             boughtAtCity_lineedit->setReadOnly(true);
             boughtAtCity_lineedit->setAlignment(Qt::AlignHCenter);
@@ -897,8 +1021,8 @@ void MainWindow::updateSpent() {
             (*it)->parent()->addChild(boughtAtCity);
             ui->planTreeWidget->setItemWidget(boughtAtCity, 1, boughtAtCity_lineedit);
 
-            auto* spentAtCity = new QTreeWidgetItem();
-            auto* spentAtCity_lineedit = new QLineEdit();
+            QTreeWidgetItem* spentAtCity = new QTreeWidgetItem();
+            QLineEdit* spentAtCity_lineedit = new QLineEdit();
             spentAtCity_lineedit->setText(QString::number(totalSpentAtCity, 'f', 2));
             spentAtCity_lineedit->setReadOnly(true);
             spentAtCity_lineedit->setAlignment(Qt::AlignHCenter);
@@ -922,17 +1046,25 @@ void MainWindow::updateSpent() {
 
 void MainWindow::on_clearPlan_clicked() {
     repurchase = false;
-    teamsToTravelTo.clear();
+    teamManagement.teamsToTravelTo.clear();
     ui->djikstraWidget->clear();
     ui->recursiveWidget->clear();
     ui->djikstraDistTraveled_LineEdit->clear();
     ui->recursiveDistTraveled_LineEdit->clear();
     ui->totalspent_LineEdit->setText("");
+    ui->updatepurchases_pushButton->setDisabled(true);
+    ui->updatepurchases_pushButton->setStyleSheet("");
+
+    for (int i = 0; ui->teamsTreeWidget->topLevelItem(i); i++)
+        ui->teamsTreeWidget->topLevelItem(i)->setCheckState(0, Qt::Unchecked);
+
     ui->planTreeWidget->clear();
 }
 
-void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int column) {
-    ui->recursiveWidget_2->clear();
+void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int column)
+{
+
+   ui->recursiveWidget_2->clear();
     ui->recursiveWidget_3->clear();
     ui->recursiveWidget_4->clear();
     string selectedTeamName = item->text(0).toStdString();
@@ -950,31 +1082,32 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
     BFSdistance = teamManagement.g.BFS(selectedTeamName, BFScities);
     DFSdistance = teamManagement.g.DFS(selectedTeamName, DFScities);
 
-    auto* tempString1 = new QTreeWidgetItem;
-    tempString1->setText(0, QString::fromStdString("MST Distance starting with the " + selectedTeamName + " is: " + std::to_string(MSTdistance) + "\n"));
+    QTreeWidgetItem* tempString1 = new QTreeWidgetItem;
+    tempString1->setText(0, QString::fromStdString("MST Distance starting with the " + selectedTeamName + " is: " + std::to_string(MSTdistance)));
     ui->recursiveWidget_2->addTopLevelItem(tempString1);
-    for (int i = 1; i < MSTcities.size(); i += 3){
-        auto* temp = new QTreeWidgetItem;
+    for(int i = 1; i < MSTcities.size();i += 3){
+        QTreeWidgetItem* temp = new QTreeWidgetItem;
         temp->setText(0, QString::fromStdString(MSTcities[i] + " -> " + MSTcities[i+1] + " : " + MSTcities[i+2]));
         ui->recursiveWidget_2->addTopLevelItem(temp);
     }
 
 
-    auto* tempString2 = new QTreeWidgetItem;
-    tempString2->setText(0, QString::fromStdString("BFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(BFSdistance) + "\n"));
+    QTreeWidgetItem* tempString2 = new QTreeWidgetItem;
+    tempString2->setText(0, QString::fromStdString("BFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(BFSdistance)));
     ui->recursiveWidget_3->addTopLevelItem(tempString2);
-    for (auto & BFScitie : BFScities){
-        auto* temp = new QTreeWidgetItem;
-        temp->setText(0, QString::fromStdString(BFScitie));
+    for(int i = 0; i < BFScities.size();i ++){
+        QTreeWidgetItem* temp = new QTreeWidgetItem;
+        temp->setText(0, QString::fromStdString(BFScities[i]));
         ui->recursiveWidget_3->addTopLevelItem(temp);
     }
 
-    auto* tempString3 = new QTreeWidgetItem;
-    tempString3->setText(0, QString::fromStdString("DFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(DFSdistance) + "\n"));
+    QTreeWidgetItem* tempString3 = new QTreeWidgetItem;
+    tempString3->setText(0, QString::fromStdString("DFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(DFSdistance)));
     ui->recursiveWidget_4->addTopLevelItem(tempString3);
-    for (auto & DFScitie : DFScities){
-        auto* temp = new QTreeWidgetItem;
-        temp->setText(0, QString::fromStdString(DFScitie));
+    for(int i = 0; i < DFScities.size();i ++){
+        QTreeWidgetItem* temp = new QTreeWidgetItem;
+        temp->setText(0, QString::fromStdString(DFScities[i]));
         ui->recursiveWidget_4->addTopLevelItem(temp);
     }
 }
+

@@ -9,10 +9,13 @@
 
 using namespace std;
 
+
+
 template<typename T>
 class mapADT{
 private:
-    vector<T*> tree;
+    vector<T *> tree;
+
 
     int inOrderSearchForDelete(int &toReturn, int index){
         if(tree[index*2+2] == nullptr){
@@ -27,6 +30,9 @@ private:
         return toReturn;
 
     }
+
+
+
 
     int root(T &key) {
         if (tree[0] == nullptr){
@@ -51,6 +57,7 @@ private:
             return 1;
         }
         return 0;
+
     }
 
 public:
@@ -94,7 +101,7 @@ public:
 
     void insert(T &key){
         if(root(key) == 0){
-            bool exitCondition = false;
+            bool exitCondition = 0;
             int currentParent = 0;
             while(exitCondition == 0){
 
@@ -146,4 +153,7 @@ public:
         return tree;
     }
 };
+
+
+
 #endif
