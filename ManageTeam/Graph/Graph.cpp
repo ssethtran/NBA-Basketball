@@ -15,7 +15,7 @@ Graph::Graph(vector<string> inputNames)
     for (int row = 0; row < v; row++) {
         adj[row] = new double[v];
         for (int column = 0; column < v; column++) {
-            adj[row][column] = 0;
+            adj[row][column] = -1;
         }
     }
 }
@@ -47,6 +47,7 @@ void Graph::addEdge(string from, string to, double distance)
     adj[start][z] = distance;
     adj[z][start] = distance;
 }
+
 
 
 
@@ -179,6 +180,7 @@ int Graph::BFS(string start, vector<string>& passedCityNames)
     return distance;
 }
 
+
 void Graph::dijkstra(string start) {
     cout << "Finding shortest paths from " << start << endl;
     this->dijkstraStart = start;
@@ -235,7 +237,7 @@ void Graph::dijkstra(string start) {
         for (int i = 0; i < v; ++i) {
             // Get vertex label and weight of current adjacent
             // of u.
-            if (adj[uIndex][i] != 0) {
+            if (adj[uIndex][i] != -1) {
                 string z = cityNames[i];
                 int index = i;
                 double weight = adj[uIndex][i];
@@ -340,6 +342,7 @@ int Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
     return mincost;
 
 }
+
 
 void Graph::printGraph(){
     for(int i = 0; i < v; i ++){
