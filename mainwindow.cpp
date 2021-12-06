@@ -1100,17 +1100,17 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
     DFSdistance = teamManagement.g.DFS(selectedTeamName, DFScities);
 
     QTreeWidgetItem* tempString1 = new QTreeWidgetItem;
-    tempString1->setText(0, "MST Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(MSTdistance, 'f', 1) + "\n");
+    tempString1->setText(0, "MST Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(MSTdistance, 'f', 2) + "\n");
     ui->recursiveWidget_2->addTopLevelItem(tempString1);
     for(int i = 1; i < MSTcities.size();i += 3){
         QTreeWidgetItem* temp = new QTreeWidgetItem;
-        temp->setText(0, QString::fromStdString(MSTcities[i] + " -> " + MSTcities[i+1] + " : ") + QString::number(std::stod(MSTcities[i+2]), 'f', 1));
+        temp->setText(0, QString::fromStdString(MSTcities[i] + " -> " + MSTcities[i+1] + " : ") + QString::number(std::stod(MSTcities[i+2]), 'f', 2));
         ui->recursiveWidget_2->addTopLevelItem(temp);
     }
 
 
     QTreeWidgetItem* tempString2 = new QTreeWidgetItem;
-    tempString2->setText(0, "BFS Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(BFSdistance) + "\n");
+    tempString2->setText(0, "BFS Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(BFSdistance, 'f', 2) + "\n");
     ui->recursiveWidget_4->addTopLevelItem(tempString2);
     for(int i = 0; i < BFScities.size();i ++){
         QTreeWidgetItem* temp = new QTreeWidgetItem;
@@ -1119,7 +1119,7 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
     }
 
     QTreeWidgetItem* tempString3 = new QTreeWidgetItem;
-    tempString3->setText(0, "DFS Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(DFSdistance, 'f', 1) + "\n");
+    tempString3->setText(0, "DFS Distance starting with the " + QString::fromStdString(selectedTeamName) + " is: " + QString::number(DFSdistance, 'f', 2) + "\n");
     ui->recursiveWidget_3->addTopLevelItem(tempString3);
     for(int i = 0; i < DFScities.size();i ++){
         QTreeWidgetItem* temp = new QTreeWidgetItem;

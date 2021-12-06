@@ -142,9 +142,9 @@ public:
     QWidget *MSTtab;
     QGridLayout *gridLayout;
     QTreeWidget *recursiveWidget_2;
-    QWidget *BFStab;
-    QTreeWidget *recursiveWidget_3;
     QWidget *DFStab;
+    QTreeWidget *recursiveWidget_3;
+    QWidget *BFStab;
     QTreeWidget *recursiveWidget_4;
     QStatusBar *statusbar;
     QMenuBar *menubar;
@@ -761,9 +761,9 @@ public:
         gridLayout->addWidget(recursiveWidget_2, 0, 0, 1, 1);
 
         tabWidget_2->addTab(MSTtab, QString());
-        BFStab = new QWidget();
-        BFStab->setObjectName(QString::fromUtf8("BFStab"));
-        recursiveWidget_3 = new QTreeWidget(BFStab);
+        DFStab = new QWidget();
+        DFStab->setObjectName(QString::fromUtf8("DFStab"));
+        recursiveWidget_3 = new QTreeWidget(DFStab);
         recursiveWidget_3->headerItem()->setText(0, QString());
         recursiveWidget_3->setObjectName(QString::fromUtf8("recursiveWidget_3"));
         recursiveWidget_3->setGeometry(QRect(10, 10, 400, 571));
@@ -773,10 +773,10 @@ public:
         recursiveWidget_3->setAutoFillBackground(true);
         recursiveWidget_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
 "QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-        tabWidget_2->addTab(BFStab, QString());
-        DFStab = new QWidget();
-        DFStab->setObjectName(QString::fromUtf8("DFStab"));
-        recursiveWidget_4 = new QTreeWidget(DFStab);
+        tabWidget_2->addTab(DFStab, QString());
+        BFStab = new QWidget();
+        BFStab->setObjectName(QString::fromUtf8("BFStab"));
+        recursiveWidget_4 = new QTreeWidget(BFStab);
         recursiveWidget_4->headerItem()->setText(0, QString());
         recursiveWidget_4->setObjectName(QString::fromUtf8("recursiveWidget_4"));
         recursiveWidget_4->setGeometry(QRect(10, 10, 401, 571));
@@ -786,7 +786,7 @@ public:
         recursiveWidget_4->setAutoFillBackground(true);
         recursiveWidget_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 243, 222);\n"
 "QHeaderView::section { background-color: rgb(255, 243, 222); };"));
-        tabWidget_2->addTab(DFStab, QString());
+        tabWidget_2->addTab(BFStab, QString());
 
         gridLayout_14->addWidget(tabWidget_2, 0, 1, 4, 1);
 
@@ -807,7 +807,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(2);
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -875,8 +875,8 @@ public:
         label_14->setText(QCoreApplication::translate("MainWindow", "Recursion", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Distance Traveled (km)", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(MSTtab), QCoreApplication::translate("MainWindow", "MST", nullptr));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(BFStab), QCoreApplication::translate("MainWindow", "BFS", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(DFStab), QCoreApplication::translate("MainWindow", "DFS", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(BFStab), QCoreApplication::translate("MainWindow", "BFS", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("MainWindow", "Account", nullptr));
     } // retranslateUi
 
