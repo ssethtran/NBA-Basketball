@@ -103,7 +103,7 @@ double Graph::actualDFS(int start, vector<bool>& visited, vector<string>& cities
         while(adj[start][makeOrdered[i]] > adj[start][makeOrdered[j]] && j < ordered.size()){
             j++;
         }
-            ordered.insert(ordered.begin() + j, makeOrdered[i]);
+        ordered.insert(ordered.begin() + j, makeOrdered[i]);
 
 
 
@@ -111,8 +111,8 @@ double Graph::actualDFS(int start, vector<bool>& visited, vector<string>& cities
     }
     for(int i = 0; i < ordered.size(); i++){
         if(!visited[ordered[i]]){
-        distance += adj[start][ordered[i]];
-        distance += actualDFS(ordered[i], visited, citiesOrder);
+            distance += adj[start][ordered[i]];
+            distance += actualDFS(ordered[i], visited, citiesOrder);
         }
     }
 
@@ -362,7 +362,6 @@ double Graph::MST(string cityIndex, vector<string>& returnedVectorOfNames)
 
 }
 
-
 void Graph::printGraph(){
     for(int i = 0; i < v; i ++){
         for(int j = 0; j < v; j++){
@@ -372,6 +371,4 @@ void Graph::printGraph(){
 
 
     }
-
-
 }

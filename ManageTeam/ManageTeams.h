@@ -1,7 +1,7 @@
 #pragma once
-#include <deque>
 #include <vector>
 #include <string>
+#include <stack>
 #include <algorithm>
 #include <map>
 #include "Team/Team.h"

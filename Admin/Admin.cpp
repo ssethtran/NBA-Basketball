@@ -6,7 +6,7 @@
 
 void Admin::addNewTeam() {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -154,7 +154,7 @@ void Admin::changeCapacity(const string& teamName, const string& capacity) {
 
     QSqlQuery query;
     query.exec("UPDATE teamsInfo SET stadium_capacity = " + QString::fromStdString(capacity) +
-                " WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
+               " WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
 
     cerr << "Changed arena of team, " << teamName << ", to the capacity, " << capacity << endl;
 }

@@ -20,22 +20,25 @@ void ManageTeams::ReadData() {
     //Clearing data of the tree===================================
     //Clearing souvenirList vector of each team
     for (int i = 0; i < TeamMap.GetTree().size(); i++) {
-        if (TeamMap.GetTree()[i] != nullptr)
+        if (TeamMap.GetTree()[i] != NULL)
             TeamMap.GetTree()[i]->souvenirList.clear();
     }
     TeamMap.GetTree().clear(); //clearing out each team
+//    TeamMap.clearTree(); //clearing out each team
 
     g.dist.clear(); //clearing out dist vector of the g (the Graph)
     //===============================================================
 
     //Inputting data from databases===================================
     cout << "INSERTING TEAMS INTO TeamMap...\n\n";
+    stack<int> stadCaps;
     QSqlQuery query("SELECT * FROM teamsInfo");
     while (query.next()) {
         //Creating a new team based off each entry in the database
         Team* team = new Team(query.value(0).toString().toStdString(), query.value(1).toString().toStdString(), query.value(2).toString().toStdString(),
                               query.value(3).toString().toStdString(), query.value(4).toString().toStdString(), query.value(5).toInt(),
                               query.value(6).toInt(), query.value(7).toString().toStdString());
+        stadCaps.push(query.value(5).toInt());
         TeamMap.insert(*team); //inserting Team into the TeamMap
         cout << "TEAM INSERTED:\n";
         //Searching for the inserted Team in the TeamMap
@@ -43,6 +46,13 @@ void ManageTeams::ReadData() {
             TeamMap.search(*team)->printTeamInfo(); //if it's found, it would print the team's information out
         else
             cout << "NULL\n\n"; //if it's not found, it would print out NULL
+    }
+
+    // popping stack to determine total seating capacity
+    while (!stadCaps.empty())
+    {
+        totalSeatCap += stadCaps.top();
+        stadCaps.pop();
     }
 
     cout << "PRINTING OUT SOUVENIRS...\n\n";

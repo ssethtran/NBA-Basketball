@@ -1044,7 +1044,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="MSTtab">
        <attribute name="title">
@@ -1081,9 +1081,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="BFStab">
+      <widget class="QWidget" name="DFStab">
        <attribute name="title">
-        <string>BFS</string>
+        <string>DFS</string>
        </attribute>
        <widget class="QTreeWidget" name="recursiveWidget_3">
         <property name="geometry">
@@ -1120,9 +1120,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         </column>
        </widget>
       </widget>
-      <widget class="QWidget" name="DFStab">
+      <widget class="QWidget" name="BFStab">
        <attribute name="title">
-        <string>DFS</string>
+        <string>BFS</string>
        </attribute>
        <widget class="QTreeWidget" name="recursiveWidget_4">
         <property name="geometry">
