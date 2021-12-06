@@ -7,7 +7,7 @@
 DbManager::DbManager()
 {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:/Users/Hiep/NBA-Basketball/DB/nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {

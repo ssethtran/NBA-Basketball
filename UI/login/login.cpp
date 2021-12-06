@@ -9,7 +9,7 @@ login::login(QWidget *parent) :
     this->setWindowTitle("Log In");
 
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
+    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\NBA-Basketball\\DB\\user-info.sqlite");                                         // CHANGE PATH PER PROGRAMMER
 
     if (!m_db.open())
         qDebug() << "Error: connection with database failed";
@@ -30,7 +30,6 @@ void login::on_loginButton_clicked()
     QString password = ui->password->text();
 
     QSqlQuery query(m_db);
-
     query.prepare("SELECT * FROM users");
 
     QMessageBox msgBox(this);
@@ -67,6 +66,6 @@ void login::on_loginButton_clicked()
     }
 }
 
-bool login::getCred() {
+bool login::getCred() const {
     return isAdmin;
 }

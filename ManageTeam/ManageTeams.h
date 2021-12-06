@@ -6,7 +6,7 @@
 #include <map>
 #include "Team/Team.h"
 #include <QSql>
-#include "../Db/Database/DbManager.h"
+#include "../DB/Database/DbManager.h"
 #include "ManageTeam/Graph/Graph.h"
 #include "../orderedMap/orderedMap.h"
 
@@ -24,6 +24,7 @@ public:
 
 protected:
     DbManager teamManager;
+
 public:
     static mapADT<Team> TeamMap;
     static mapADT<Team> travelPlan;

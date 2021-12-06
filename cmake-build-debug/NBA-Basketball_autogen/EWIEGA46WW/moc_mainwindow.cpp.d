@@ -1,5 +1,5 @@
-C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Hiep/NBA-Basketball/mainwindow.h \
-  C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/moc_predefs.h \
+C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/mainwindow.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/moc_predefs.h \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/avx2intrin.h \
@@ -562,15 +562,14 @@ C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/EWIEGA46WW
   C:/Qt/6.2.1/mingw81_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.2.1/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.2.1/mingw81_64/include/QtWidgets/qwidget.h \
-  C:/Users/Hiep/NBA-Basketball/Admin/Admin.h \
-  C:/Users/Hiep/NBA-Basketball/DB/Database/DbManager.h \
-  C:/Users/Hiep/NBA-Basketball/Db/Database/DbManager.h \
-  C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.h \
-  C:/Users/Hiep/NBA-Basketball/ManageTeam/ManageTeams.h \
-  C:/Users/Hiep/NBA-Basketball/ManageTeam/Team/Team.h \
-  C:/Users/Hiep/NBA-Basketball/UI/Map/Map.h \
-  C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h \
-  C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h \
-  C:/Users/Hiep/NBA-Basketball/UI/login/login.h \
-  C:/Users/Hiep/NBA-Basketball/orderedMap/orderedMap.h \
-  C:/Users/Hiep/NBA-Basketball/sqlite3/sqlite3.h
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/Admin/Admin.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/DB/Database/DbManager.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/ManageTeam/Graph/Graph.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/ManageTeam/ManageTeams.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/ManageTeam/Team/Team.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/UI/Map/Map.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/UI/login/login.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/orderedMap/orderedMap.h \
+  C:/Users/4ktra/OneDrive/Desktop/College\ Work/CS\ 1D\ Homework/CS\ 1D\ Project\ 2/NBA\ Basketball\ Project/NBA-Basketball/NBA-Basketball/sqlite3/sqlite3.h

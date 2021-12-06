@@ -5,31 +5,31 @@
 		<Option title="NBA-Basketball"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\Qt\;CMake Files\..\..\..\Qt\6.2.1\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\;CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NBA-Basketball">
-				<Option output="C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option output="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -46,9 +46,9 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_SQL_LIB"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/include/QtCore"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/include"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/mkspecs/win32-g++"/>
@@ -63,15 +63,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NBA-Basketball/fast">
-				<Option output="C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option output="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -88,9 +88,9 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_SQL_LIB"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball"/>
-					<Add directory="C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball"/>
+					<Add directory="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/include/QtCore"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/include"/>
 					<Add directory="C:/Qt/6.2.1/mingw81_64/mkspecs/win32-g++"/>
@@ -105,332 +105,338 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="NBA-Basketball_autogen">
-				<Option working_dir="C:/Users/Hiep/NBA-Basketball/cmake-build-debug"/>
+				<Option working_dir="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball_autogen"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Hiep/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 NBA-Basketball_autogen"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/Admin/Admin.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/Admin/Admin.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/Admin/Admin.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/Admin/Admin.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/DB/Database/DbManager.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/DB/Database/DbManager.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/DB/Database/DbManager.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/DB/Database/DbManager.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/ManageTeam/Graph/Graph.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Graph/Graph.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/ManageTeam/Graph/Graph.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/ManageTeams.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/ManageTeam/ManageTeams.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/ManageTeams.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/ManageTeam/ManageTeams.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/ManageTeam/Team/Team.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/ManageTeam/Team/Team.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/Map/Map.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/Map/Map.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/Map/Map.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/Map/Map.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/ModdedLabel/ModdedLabel.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/ModdedLabel/ModdedLabel.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/ModdedLineEdit/moddedlineedit.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/login/login.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/login/login.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/login/login.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/login/login.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/UI/login/login.ui">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/UI/login/login.ui">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/mocs_compilation.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include/ui_login.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/main.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/include/ui_mainwindow.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/mainwindow.cpp">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/cmake-build-debug/NBA-Basketball_autogen/mocs_compilation.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/mainwindow.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/main.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/mainwindow.ui">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/mainwindow.cpp">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/orderedMap/orderedMap.h">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/mainwindow.h">
 			<Option target="NBA-Basketball"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/CMakeLists.txt">
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/mainwindow.ui">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/orderedMap/orderedMap.h">
+			<Option target="NBA-Basketball"/>
+		</Unit>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/FindWrapAtomic.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/FindWrapAtomic.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Dependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Dependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtFeature.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtFeature.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtFeatureCommon.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtFeatureCommon.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6WidgetsTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6CoreTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6GuiTools\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6EntryPointPrivate/Qt6EntryPointPrivateVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6EntryPointPrivate\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/Hiep/NBA-Basketball/../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
+		<Unit filename="C:/Users/4ktra/OneDrive/Desktop/College Work/CS 1D Homework/CS 1D Project 2/NBA Basketball Project/NBA-Basketball/NBA-Basketball/../../../../../../../../../../Qt/6.2.1/mingw81_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\6.2.1\mingw81_64\lib\cmake\Qt6Sql\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

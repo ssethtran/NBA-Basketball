@@ -25,4 +25,5 @@ private:
     vector<string> readNewTeams;
     vector<string> readAvailableTeams;
     vector<string> readSouvenirs;
+    QSqlDatabase m_db;
 };

@@ -6,7 +6,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("NBA Basketball Application");
+
     teamManagement.ReadData();
+
+    ui->tabWidget->setTabEnabled(1, false);
+    ui->tabWidget->setTabEnabled(2, false);
+
     ui->totalSeatCap_LineEdit->setText(QString::number(teamManagement.totalSeatCap));
     ui->totalSeatCap_LineEdit->setReadOnly(true);
 
@@ -179,12 +185,12 @@ void MainWindow::updateDelSCB() {
 void MainWindow::adminChangeArena() {
     string arena = ui->changeArenaALE->text().toStdString();
     string capacity = ui->changeArenaCLE->text().toStdString();
-    if (!capacity.empty())
+    if (!arena.empty() && !capacity.empty())
         admin.changeArena(ui->changeArenaTeamCB->currentText().toStdString(), arena, capacity);
 }
 
 void MainWindow::on_adminSubmit_clicked() {
-//    teamManagement.ReadData();
+    teamManagement.ReadData();
     ui->tabWidget->setTabEnabled(0, true);
     ui->tabWidget->setTabEnabled(1, false);
     ui->tabWidget->setTabEnabled(2, false);
@@ -192,7 +198,7 @@ void MainWindow::on_adminSubmit_clicked() {
 }
 
 void MainWindow::on_arenaSubmit_clicked() {
-//    teamManagement.ReadData();
+    teamManagement.ReadData();
     ui->tabWidget->setTabEnabled(0, true);
     ui->tabWidget->setTabEnabled(1, false);
     ui->tabWidget->setTabEnabled(2, false);
@@ -1083,7 +1089,7 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
     DFSdistance = teamManagement.g.DFS(selectedTeamName, DFScities);
 
     QTreeWidgetItem* tempString1 = new QTreeWidgetItem;
-    tempString1->setText(0, QString::fromStdString("MST Distance starting with the " + selectedTeamName + " is: " + std::to_string(MSTdistance)));
+    tempString1->setText(0, QString::fromStdString("MST Distance starting with the " + selectedTeamName + " is: " + std::to_string(MSTdistance) + "\n"));
     ui->recursiveWidget_2->addTopLevelItem(tempString1);
     for(int i = 1; i < MSTcities.size();i += 3){
         QTreeWidgetItem* temp = new QTreeWidgetItem;
@@ -1093,7 +1099,7 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
 
 
     QTreeWidgetItem* tempString2 = new QTreeWidgetItem;
-    tempString2->setText(0, QString::fromStdString("BFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(BFSdistance)));
+    tempString2->setText(0, QString::fromStdString("BFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(BFSdistance) + "\n"));
     ui->recursiveWidget_3->addTopLevelItem(tempString2);
     for(int i = 0; i < BFScities.size();i ++){
         QTreeWidgetItem* temp = new QTreeWidgetItem;
@@ -1102,7 +1108,7 @@ void MainWindow::on_teamsTreeWidget_itemClicked(QTreeWidgetItem *item, int colum
     }
 
     QTreeWidgetItem* tempString3 = new QTreeWidgetItem;
-    tempString3->setText(0, QString::fromStdString("DFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(DFSdistance)));
+    tempString3->setText(0, QString::fromStdString("DFS Distance starting with the " + selectedTeamName + " is: " + std::to_string(DFSdistance) + "\n"));
     ui->recursiveWidget_4->addTopLevelItem(tempString3);
     for(int i = 0; i < DFScities.size();i ++){
         QTreeWidgetItem* temp = new QTreeWidgetItem;

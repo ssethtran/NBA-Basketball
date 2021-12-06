@@ -20,7 +20,7 @@ class login : public QDialog
 public:
     explicit login(QWidget *parent = nullptr);
     ~login();
-    bool getCred();
+    bool getCred() const;
 
 private slots:
     void on_loginButton_clicked();

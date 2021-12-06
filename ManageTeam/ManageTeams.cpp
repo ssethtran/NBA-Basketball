@@ -17,48 +17,55 @@ ManageTeams::ManageTeams() {
 }
 
 void ManageTeams::ReadData() {
-    //euroCities.clear();
-//    dataManager.printTeams();
-
-    QSqlQuery query("SELECT * FROM teamsInfo");
-    while (query.next())
-    {
-        Team* testTeam = new Team(query.value(0).toString().toStdString(), query.value(1).toString().toStdString(), query.value(2).toString().toStdString(),
-                                  query.value(3).toString().toStdString(), query.value(4).toString().toStdString(), query.value(5).toInt(),
-                                  query.value(6).toInt(), query.value(7).toString().toStdString());
-        TeamMap.insert(*testTeam);
-        totalSeatCap += testTeam->stadCap;
-        cout << "Inserting team into TeamMap...\nTEAM INSERTED:\n";
-        if ((TeamMap.search(*testTeam)))
-        {
-            TeamMap.search(*testTeam)->printTeamInfo();
-        }
-        else
-            cout << "null\n";
-
+    //Clearing data of the tree===================================
+    //Clearing souvenirList vector of each team
+    for (int i = 0; i < TeamMap.GetTree().size(); i++) {
+        if (TeamMap.GetTree()[i] != nullptr)
+            TeamMap.GetTree()[i]->souvenirList.clear();
     }
-    cout << "PRINTING OUT SOUVENIRS...\n";
+    TeamMap.GetTree().clear(); //clearing out each team
+
+    g.dist.clear(); //clearing out dist vector of the g (the Graph)
+    //===============================================================
+
+    //Inputting data from databases===================================
+    cout << "INSERTING TEAMS INTO TeamMap...\n\n";
+    QSqlQuery query("SELECT * FROM teamsInfo");
+    while (query.next()) {
+        //Creating a new team based off each entry in the database
+        Team* team = new Team(query.value(0).toString().toStdString(), query.value(1).toString().toStdString(), query.value(2).toString().toStdString(),
+                              query.value(3).toString().toStdString(), query.value(4).toString().toStdString(), query.value(5).toInt(),
+                              query.value(6).toInt(), query.value(7).toString().toStdString());
+        TeamMap.insert(*team); //inserting Team into the TeamMap
+        cout << "TEAM INSERTED:\n";
+        //Searching for the inserted Team in the TeamMap
+        if ((TeamMap.search(*team)))
+            TeamMap.search(*team)->printTeamInfo(); //if it's found, it would print the team's information out
+        else
+            cout << "NULL\n\n"; //if it's not found, it would print out NULL
+    }
+
+    cout << "PRINTING OUT SOUVENIRS...\n\n";
     QSqlQuery souvenirsQuery1("SELECT * FROM teamsInfo");
-    while (souvenirsQuery1.next())
-    {
+    while (souvenirsQuery1.next()) {
         QSqlQuery souvenirsQuery2("SELECT * FROM souvenirs WHERE team_name IS '" + souvenirsQuery1.value(2).toString() + "';");
-        while (souvenirsQuery2.next())
-        {
+        while (souvenirsQuery2.next()) {
+            //Assigning information to the souvenir
             Souvenir souvenir;
             souvenir.souvenirName = souvenirsQuery2.value(1).toString().toStdString();
             souvenir.cost = souvenirsQuery2.value(2).toDouble();
+            //Printing souvenir information
             cout << "Team: " << souvenirsQuery2.value(0).toString().toStdString() << endl;
             souvenir.printSouvenir();
 
-            // Searching for team in the TeamMap
+            //Searching for team in the TeamMap
             Team* toSearch = new Team("", "", souvenirsQuery2.value(0).toString().toStdString(), "", "", 0, 0, "");
             TeamMap.search(*toSearch)->souvenirList.push_back(souvenir);
         }
     }
-    graphPrep();
+    //===============================================================
 
-
-
+    graphPrep(); //preparing the graph
 }
 
 void ManageTeams::AddTeam(Team& newTeam){
