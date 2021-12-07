@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1256</width>
+    <width>1295</width>
     <height>683</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout_14">
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
@@ -93,75 +93,6 @@
       </item>
      </layout>
     </item>
-    <item row="0" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_16">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_6">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_17">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Distance Traveled (km)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="bfsDistTraveled">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="0" column="2" rowspan="4">
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
@@ -171,14 +102,14 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="traveller">
        <attribute name="title">
         <string>Traveler</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_11">
-        <item row="4" column="0">
+        <item row="5" column="0">
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="2">
            <layout class="QGridLayout" name="gridLayout_4">
@@ -228,53 +159,13 @@
           </item>
          </layout>
         </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="submitPlan">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
-          </property>
-          <property name="text">
-           <string>Submit Plan</string>
-          </property>
-          <property name="checkable">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="clearPlan">
-          <property name="styleSheet">
-           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)</string>
-          </property>
-          <property name="text">
-           <string>Reset Plan</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="0">
-         <widget class="QTreeWidget" name="teamsTreeWidget">
+        <item row="6" column="0">
+         <widget class="QTreeWidget" name="planTreeWidget">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>400</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="autoFillBackground">
-           <bool>true</bool>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 243, 222);
@@ -282,7 +173,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </property>
           <column>
            <property name="text">
-            <string notr="true">1</string>
+            <string/>
            </property>
           </column>
          </widget>
@@ -352,13 +243,43 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </item>
          </layout>
         </item>
-        <item row="5" column="0">
-         <widget class="QTreeWidget" name="planTreeWidget">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="submitPlan">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Submit Plan</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QTreeWidget" name="teamsTreeWidget">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 243, 222);
@@ -366,10 +287,76 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
           </property>
           <column>
            <property name="text">
-            <string/>
+            <string notr="true">1</string>
            </property>
           </column>
          </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="clearPlan">
+          <property name="styleSheet">
+           <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)</string>
+          </property>
+          <property name="text">
+           <string>Reset Plan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Total Seating Capacity:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="totalSeatCap_LineEdit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>
@@ -382,19 +369,19 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
          <rect>
           <x>10</x>
           <y>390</y>
-          <width>441</width>
+          <width>401</width>
           <height>131</height>
          </rect>
         </property>
         <property name="title">
-         <string>Delete Traditional Foods</string>
+         <string>Delete Souvenirs</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>10</x>
            <y>30</y>
-           <width>421</width>
+           <width>381</width>
            <height>91</height>
           </rect>
          </property>
@@ -410,7 +397,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
                </sizepolicy>
               </property>
               <property name="text">
-               <string>City:</string>
+               <string>Team:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -426,7 +413,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
                </sizepolicy>
               </property>
               <property name="text">
-               <string>Traditional Food:</string>
+               <string>Souvenir:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -434,20 +421,20 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QComboBox" name="delFoodCityComboBox"/>
+             <widget class="QComboBox" name="delSTeamCB"/>
             </item>
             <item row="1" column="1">
-             <widget class="QComboBox" name="delTradFoodComboBox"/>
+             <widget class="QComboBox" name="delSSCB"/>
             </item>
            </layout>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="delFoodButton">
+           <widget class="QPushButton" name="deleteSButton">
             <property name="styleSheet">
              <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
             </property>
             <property name="text">
-             <string>Delete Traditional Food</string>
+             <string>Delete Souvenir</string>
             </property>
            </widget>
           </item>
@@ -457,9 +444,9 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
        <widget class="QGroupBox" name="groupBox">
         <property name="geometry">
          <rect>
-          <x>11</x>
-          <y>11</y>
-          <width>441</width>
+          <x>10</x>
+          <y>10</y>
+          <width>401</width>
           <height>61</height>
          </rect>
         </property>
@@ -469,15 +456,15 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>70</x>
-           <y>26</y>
+           <x>50</x>
+           <y>20</y>
            <width>301</width>
-           <height>31</height>
+           <height>41</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_10">
           <item row="0" column="0">
-           <widget class="QComboBox" name="newCityComboBox">
+           <widget class="QComboBox" name="addTeamCBox">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -490,12 +477,12 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QPushButton" name="addCityButton">
+           <widget class="QPushButton" name="addTeamButton">
             <property name="styleSheet">
              <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
             </property>
             <property name="text">
-             <string>Add City</string>
+             <string>Add Team</string>
             </property>
            </widget>
           </item>
@@ -507,57 +494,35 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
          <rect>
           <x>10</x>
           <y>240</y>
-          <width>441</width>
+          <width>401</width>
           <height>141</height>
          </rect>
         </property>
         <property name="title">
-         <string>Add Traditional Foods</string>
+         <string>Add Souvenirs</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>11</x>
-           <y>32</y>
-           <width>421</width>
+           <x>10</x>
+           <y>30</y>
+           <width>381</width>
            <height>101</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="addSButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
+            <property name="text">
+             <string>Add Souvenir</string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_2">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_6">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>City:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_7">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Traditional Food:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="2">
              <widget class="QLabel" name="label_8">
               <property name="sizePolicy">
@@ -574,11 +539,8 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QComboBox" name="addFoodCityComboBox"/>
-            </item>
             <item row="1" column="1">
-             <widget class="QLineEdit" name="newFoodLineEdit">
+             <widget class="QLineEdit" name="addSLE">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -587,20 +549,52 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
               </property>
              </widget>
             </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Team:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="addSTeamCB"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_7">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Souvenir:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="2">
-             <widget class="QDoubleSpinBox" name="addFoodPriceDoubleSpinBox"/>
+             <widget class="QLineEdit" name="addSPriceLE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
             </item>
            </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QPushButton" name="addFoodButton">
-            <property name="styleSheet">
-             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
-            </property>
-            <property name="text">
-             <string>Add Traditional Food</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>
@@ -610,57 +604,25 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
          <rect>
           <x>10</x>
           <y>80</y>
-          <width>441</width>
+          <width>401</width>
           <height>151</height>
          </rect>
         </property>
         <property name="title">
-         <string>Change Traditional Food Prices</string>
+         <string>Change Souvenir Prices</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>10</x>
            <y>30</y>
-           <width>421</width>
+           <width>381</width>
            <height>111</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
            <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_4">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>City:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="label_5">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Traditional Food:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="2">
              <widget class="QLabel" name="label_11">
               <property name="sizePolicy">
@@ -677,24 +639,63 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QComboBox" name="cityComboBox"/>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Team:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
             </item>
-            <item row="1" column="1">
-             <widget class="QComboBox" name="tradFoodComboBox"/>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="changeSPriceTeamCB"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_17">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Souvenir:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
             </item>
             <item row="1" column="2">
-             <widget class="QDoubleSpinBox" name="priceDoubleSpinBox"/>
+             <widget class="QLineEdit" name="changeSPricePLE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="changeSPriceSCB"/>
             </item>
            </layout>
           </item>
           <item row="1" column="0">
-           <widget class="QPushButton" name="changeFoodPriceButton">
+           <widget class="QPushButton" name="changeSPriceButton">
             <property name="styleSheet">
              <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
             </property>
             <property name="text">
-             <string>Change Traditional Food Price</string>
+             <string>Change Souvenir Price</string>
             </property>
            </widget>
           </item>
@@ -706,7 +707,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
          <rect>
           <x>10</x>
           <y>540</y>
-          <width>441</width>
+          <width>401</width>
           <height>31</height>
          </rect>
         </property>
@@ -716,6 +717,195 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <property name="text">
          <string>Implement Changes</string>
         </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Arena</string>
+       </attribute>
+       <widget class="QPushButton" name="arenaSubmit">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>310</y>
+          <width>401</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 #f8c485, stop:1 #f1acc8)</string>
+        </property>
+        <property name="text">
+         <string>Implement Changes</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>401</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Change Arena</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>381</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_18">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Team:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="changeArenaTCB"/>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_19">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Arena:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="changeArenaALE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="changeArenaButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
+            <property name="text">
+             <string>Change Arena</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>401</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Change Capacity</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>381</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_17">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_22">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Team:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="label_23">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Capacity:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="changeCapacityTCB"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="changeCapacityCLE">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="changeCapacityButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,   stop:0 rgba(60, 186, 162, 255), stop:1 rgba(98, 211, 162, 255))</string>
+            </property>
+            <property name="text">
+             <string>Change Capacity</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
      </widget>
@@ -743,35 +933,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
       </property>
       <column>
        <property name="text">
-        <string notr="true"> </string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QTreeWidget" name="bfsTreeWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 243, 222);
-QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true">BFS from LA Lakers</string>
+        <string notr="true"/>
        </property>
       </column>
      </widget>
@@ -845,75 +1007,6 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
       </item>
      </layout>
     </item>
-    <item row="2" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <item>
-       <spacer name="horizontalSpacer_9">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_20">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_10">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_21">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Distance Traveled (km)</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="dfsDistTraveled">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="3" column="0">
      <widget class="QTreeWidget" name="recursiveWidget">
       <property name="sizePolicy">
@@ -937,37 +1030,127 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
       </property>
       <column>
        <property name="text">
-        <string notr="true"> </string>
+        <string notr="true"/>
        </property>
       </column>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QTreeWidget" name="dfsTreeWidget">
+    <item row="0" column="1" rowspan="4">
+     <widget class="QTabWidget" name="tabWidget_2">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
+      <property name="currentIndex">
+       <number>2</number>
       </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 243, 222);
+      <widget class="QWidget" name="MSTtab">
+       <attribute name="title">
+        <string>MST</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="recursiveWidget_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
 QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
-      </property>
-      <column>
-       <property name="text">
-        <string notr="true">DFS From Orlando Magic</string>
-       </property>
-      </column>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="DFStab">
+       <attribute name="title">
+        <string>DFS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_15">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="recursiveWidget_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="BFStab">
+       <attribute name="title">
+        <string>BFS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_16">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="recursiveWidget_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 243, 222);
+QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -978,7 +1161,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1256</width>
+     <width>1295</width>
      <height>22</height>
     </rect>
    </property>
