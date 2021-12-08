@@ -4,7 +4,6 @@
 
 #pragma once
 #include <QtSql>
-#include "sqlite3/sqlite3.h"
 #include <QDebug>
 #include <QString>
 
