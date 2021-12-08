@@ -76,5 +76,6 @@ private:
     string team;
     string souvenir;
     string price;
+    bool didAdminChanges = false;
 };
 #endif // MAINWINDOW_H

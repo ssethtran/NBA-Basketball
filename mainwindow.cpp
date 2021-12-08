@@ -143,6 +143,8 @@ void MainWindow::on_lineEdit3_textEdited(const QString& args) {
 }
 
 void MainWindow::adminNewTeam() {
+    didAdminChanges = true;
+
     admin.addNewTeam();
 
     ui->addTeamCBox->clear();
@@ -172,6 +174,8 @@ void MainWindow::adminNewTeam() {
 }
 
 void MainWindow::adminChangePrice() {
+    didAdminChanges = true;
+
     team = ui->changeSPriceTeamCB->currentText().toStdString();
     souvenir = ui->changeSPriceSCB->currentText().toStdString();
     price = ui->changeSPricePLE->text().toStdString();
@@ -187,6 +191,8 @@ void MainWindow::updateChangePriceSCB() {
 }
 
 void MainWindow::adminAddSouvenir() {
+    didAdminChanges = true;
+
     team = ui->addSTeamCB->currentText().toStdString();
     souvenir = ui->addSLE->displayText().toStdString();
     price = ui->addSPriceLE->text().toStdString();
@@ -204,6 +210,8 @@ void MainWindow::adminAddSouvenir() {
 }
 
 void MainWindow::adminDeleteSouvenir() {
+    didAdminChanges = true;
+
     team = ui->delSTeamCB->currentText().toStdString();
     souvenir = ui->delSSCB->currentText().toStdString();
 
@@ -225,12 +233,16 @@ void MainWindow::updateDelSCB() {
 }
 
 void MainWindow::adminChangeArena() {
+    didAdminChanges = true;
+
     string arena = ui->changeArenaALE->text().toStdString();
     if (!arena.empty())
         admin.changeArena(ui->changeArenaTCB->currentText().toStdString(), arena);
 }
 
 void MainWindow::adminChangeCapacity() {
+    didAdminChanges = true;
+
     string capacity = ui->changeCapacityCLE->text().toStdString();
 
     if (!capacity.empty())
@@ -238,8 +250,12 @@ void MainWindow::adminChangeCapacity() {
 }
 
 void MainWindow::on_adminSubmit_clicked() {
-    teamManagement.ReadData();
-    AlphabeticalTeamAll();
+    if (didAdminChanges) {
+        teamManagement.ReadData();
+        AlphabeticalTeamAll();
+        didAdminChanges = false;
+    }
+
     ui->tabWidget->setTabEnabled(0, true);
     ui->tabWidget->setTabEnabled(1, false);
     ui->tabWidget->setTabEnabled(2, false);
@@ -247,8 +263,12 @@ void MainWindow::on_adminSubmit_clicked() {
 }
 
 void MainWindow::on_arenaSubmit_clicked() {
-    teamManagement.ReadData();
-    AlphabeticalTeamAll();
+    if (didAdminChanges) {
+        teamManagement.ReadData();
+        AlphabeticalTeamAll();
+        didAdminChanges = false;
+    }
+
     ui->tabWidget->setTabEnabled(0, true);
     ui->tabWidget->setTabEnabled(1, false);
     ui->tabWidget->setTabEnabled(2, false);
@@ -268,6 +288,8 @@ void MainWindow::on_actionLogin_triggered() {
 
 void MainWindow::AlphabeticalTeamAll() {
     ui->teamsTreeWidget->clear();
+    ui->teamsTreeWidget->setColumnCount(2);
+    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
 
     for (auto & team : teamManagement.GetTeams().GetTree())
     {
@@ -345,6 +367,8 @@ void MainWindow::AlphabeticalTeamAll() {
 
 void MainWindow::AlphabeticalTeamEastern() {
     ui->teamsTreeWidget->clear();
+    ui->teamsTreeWidget->setColumnCount(2);
+    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
 
     for (auto & team : teamManagement.GetTeams().GetTree())
     {
@@ -422,6 +446,8 @@ void MainWindow::AlphabeticalTeamEastern() {
 
 void MainWindow::AlphabeticalTeamSoutheastEastern() {
     ui->teamsTreeWidget->clear();
+    ui->teamsTreeWidget->setColumnCount(2);
+    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Info on Teams");
 
     for (auto & team : teamManagement.GetTeams().GetTree())
     {
@@ -499,9 +525,10 @@ void MainWindow::AlphabeticalTeamSoutheastEastern() {
 
 void MainWindow::AlphabeticalCoach() {
     ui->teamsTreeWidget->clear();
+    ui->teamsTreeWidget->setColumnCount(2);
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Coaches");
 
-    bool flag = false;
+//    bool flag = false;
     for (auto &team: teamManagement.GetTeams().GetTree()) {
         if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
@@ -521,19 +548,22 @@ void MainWindow::AlphabeticalCoach() {
                     c++;
                 it++;
             }
-            if (flag == true)
-                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
-            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
-                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
-                flag = true;
-            }
+            ui->teamsTreeWidget->addTopLevelItem(teams);
+//            if (flag == true)
+//                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+//            if (ui->teamsTreeWidget->topLevelItemCount() == 0 && flag == false) {
+//                ui->teamsTreeWidget->insertTopLevelItem(c, teams);
+//                flag = true;
+//            }
             ui->teamsTreeWidget->setItemWidget(teams, 1, coachVal);
         }
     }
+    ui->teamsTreeWidget->sortItems(0, Qt::AscendingOrder);
 }
 
 void MainWindow::AlphabeticalArena() {
     ui->teamsTreeWidget->clear();
+    ui->teamsTreeWidget->setColumnCount(2);
     ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Arenas");
 
     bool flag = false;
@@ -576,7 +606,10 @@ void MainWindow::AlphabeticalArena() {
 
 void MainWindow::SeatingCapSort() {
     ui->teamsTreeWidget->clear();
-    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Seating Capacities");
+    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Arenas" << "Seating Capacities");
+    ui->teamsTreeWidget->setColumnWidth(0, 180);
+    ui->teamsTreeWidget->setColumnWidth(1, 170);
+    ui->teamsTreeWidget->setColumnWidth(2, 130);
 
     bool flag = false;
     for (auto & team : teamManagement.GetTeams().GetTree())
@@ -584,6 +617,9 @@ void MainWindow::SeatingCapSort() {
         if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
+
+            QLabel* arena_nameVal = new QLabel;
+            arena_nameVal->setText(QString::fromStdString(team->arena_name));
 
             ModdedLabel* stadCapVal = new ModdedLabel;
             stadCapVal->setText(QString::number(team->stadCap));
@@ -595,7 +631,7 @@ void MainWindow::SeatingCapSort() {
             int c = 0;
             QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
             while (*it) {
-                if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() > team->stadCap)
+                if (ui->teamsTreeWidget->itemWidget(*it, 2)->accessibleName().toInt() < team->stadCap)
                     c++;
                 it++;
             }
@@ -605,14 +641,18 @@ void MainWindow::SeatingCapSort() {
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
                 flag = true;
             }
-            ui->teamsTreeWidget->setItemWidget(teams, 1, stadCapVal);
+            ui->teamsTreeWidget->setItemWidget(teams, 1, arena_nameVal);
+            ui->teamsTreeWidget->setItemWidget(teams, 2, stadCapVal);
         }
     }
 }
 
 void MainWindow::JoinedLeagueSort() {
     ui->teamsTreeWidget->clear();
-    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Year Joined League");
+    ui->teamsTreeWidget->setHeaderLabels(QStringList() << "Teams" << "Arenas" << "Year Joined League");
+    ui->teamsTreeWidget->setColumnWidth(0, 180);
+    ui->teamsTreeWidget->setColumnWidth(1, 170);
+    ui->teamsTreeWidget->setColumnWidth(2, 130);
 
     bool flag = false;
     for (auto & team : teamManagement.GetTeams().GetTree())
@@ -620,6 +660,9 @@ void MainWindow::JoinedLeagueSort() {
         if (team != NULL) {
             auto *teams = new QTreeWidgetItem;
             teams->setText(0, QString::fromStdString(team->team_name));
+
+            QLabel* arena_nameVal = new QLabel;
+            arena_nameVal->setText(QString::fromStdString(team->arena_name));
 
             ModdedLabel* joinedLeagueVal = new ModdedLabel;
             joinedLeagueVal->setText(QString::number(team->joinedLeague));
@@ -631,9 +674,9 @@ void MainWindow::JoinedLeagueSort() {
             int c = 0;
             QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
             while (*it) {
-                if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() < team->joinedLeague)
+                if (ui->teamsTreeWidget->itemWidget(*it, 2)->accessibleName().toInt() < team->joinedLeague)
                     c++;
-                if (ui->teamsTreeWidget->itemWidget(*it, 1)->accessibleName().toInt() == team->joinedLeague)
+                if (ui->teamsTreeWidget->itemWidget(*it, 2)->accessibleName().toInt() == team->joinedLeague)
                     if ((*it)->text(0).toStdString() < team->team_name)
                         c++;
                 it++;
@@ -644,7 +687,8 @@ void MainWindow::JoinedLeagueSort() {
                 ui->teamsTreeWidget->insertTopLevelItem(c, teams);
                 flag = true;
             }
-            ui->teamsTreeWidget->setItemWidget(teams, 1,joinedLeagueVal);
+            ui->teamsTreeWidget->setItemWidget(teams, 1, arena_nameVal);
+            ui->teamsTreeWidget->setItemWidget(teams, 2,joinedLeagueVal);
         }
     }
 }
@@ -658,7 +702,7 @@ void MainWindow::on_sortComboBox_currentTextChanged(const QString &sortMethod)
         AlphabeticalTeamEastern();
     else if (sortMethod == "Team Name (Southeast Eastern)")
         AlphabeticalTeamSoutheastEastern();
-    else if (sortMethod == "Coach Name")
+    else if (sortMethod == "Team Name (Show Coaches)")
         AlphabeticalCoach();
     else if (sortMethod == "Arena Name")
         AlphabeticalArena();
@@ -722,7 +766,7 @@ void MainWindow::on_submitPlan_clicked()
 
     QTreeWidgetItemIterator it(ui->teamsTreeWidget, QTreeWidgetItemIterator::HasChildren);
     if (ui->sortComboBox->currentText() == "Arena Name" ||
-            ui->sortComboBox->currentText() =="Coach Name" ||
+            ui->sortComboBox->currentText() == "Team Name (Show Coaches)" ||
             ui->sortComboBox->currentText() == "Arena Seating Capacity" ||
             ui->sortComboBox->currentText() == "Year Joined League") {
         it = QTreeWidgetItemIterator(ui->teamsTreeWidget, QTreeWidgetItemIterator::NoChildren);
@@ -922,7 +966,7 @@ void MainWindow::updateSpent() {
             boughtAtCity_lineedit->setReadOnly(true);
             boughtAtCity_lineedit->setAlignment(Qt::AlignHCenter);
             boughtAtCity_lineedit->setStyleSheet("QLineEdit {color : black; border: 1px solid black}");
-            boughtAtCity->setText(0, "# of Foods Bought:");
+            boughtAtCity->setText(0, "# of souvenirs bought:");
             (*it)->parent()->addChild(boughtAtCity);
             ui->planTreeWidget->setItemWidget(boughtAtCity, 1, boughtAtCity_lineedit);
 

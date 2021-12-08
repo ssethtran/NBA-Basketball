@@ -96,7 +96,7 @@
     <item row="0" column="2" rowspan="4">
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -216,17 +216,17 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
             </item>
             <item>
              <property name="text">
+              <string>Team Name (Show Coaches)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
               <string>Team Name (Southeast Eastern)</string>
              </property>
             </item>
             <item>
              <property name="text">
               <string>Arena Name</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Coach Name</string>
              </property>
             </item>
             <item>
@@ -267,7 +267,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
         <item row="4" column="0">
          <widget class="QTreeWidget" name="teamsTreeWidget">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -920,7 +920,7 @@ QHeaderView::section { background-color: rgb(255, 243, 222); };</string>
       </property>
       <property name="minimumSize">
        <size>
-        <width>400</width>
+        <width>300</width>
         <height>0</height>
        </size>
       </property>

@@ -160,6 +160,18 @@ void Admin::changeCapacity(const string& teamName, const string& capacity) {
 }
 
 vector<string> Admin::readingAvailableTeams() {
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
     readAvailableTeams.clear();
     QSqlQuery query("SELECT * FROM teamsInfo");
     while (query.next())
@@ -168,6 +180,18 @@ vector<string> Admin::readingAvailableTeams() {
 }
 
 vector<string> Admin::readingNewTeams() {
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
     readNewTeams.clear();
     QSqlQuery query("SELECT * FROM expansion");
     while (query.next())
@@ -176,6 +200,18 @@ vector<string> Admin::readingNewTeams() {
 }
 
 vector<string> Admin::readingSouvenirs(const string& teamName) {
+    m_db = QSqlDatabase::addDatabase("QSQLITE");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+
+    if (!m_db.open())
+    {
+        qDebug() << "Error: connection with database failed";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
     readSouvenirs.clear();
     QSqlQuery query("SELECT * FROM souvenirs WHERE team_name IS '" + QString::fromStdString(teamName) + "'");
     while (query.next())
