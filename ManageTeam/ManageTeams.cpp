@@ -20,11 +20,10 @@ void ManageTeams::ReadData() {
     //Clearing data of the tree===================================
     //Clearing souvenirList vector of each team
     for (int i = 0; i < TeamMap.GetTree().size(); i++) {
-        if (TeamMap.GetTree()[i] != NULL)
+        if (TeamMap.GetTree()[i] != nullptr)
             TeamMap.GetTree()[i]->souvenirList.clear();
     }
-    TeamMap.GetTree().clear(); //clearing out each team
-//    TeamMap.clearTree(); //clearing out each team
+    TeamMap.clearTree(); //clearing out each team
 
     g.dist.clear(); //clearing out dist vector of the g (the Graph)
     //===============================================================
@@ -49,8 +48,7 @@ void ManageTeams::ReadData() {
     }
 
     // popping stack to determine total seating capacity
-    while (!stadCaps.empty())
-    {
+    while (!stadCaps.empty()) {
         totalSeatCap += stadCaps.top();
         stadCaps.pop();
     }
@@ -114,4 +112,3 @@ void ManageTeams::setStartingTeam(const string &initial) {
 const mapADT<Team>& ManageTeams::GetTeams() const {
     return TeamMap;
 }
-

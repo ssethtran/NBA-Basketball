@@ -51,6 +51,9 @@ public slots:
     void updateDelSCB();
     void adminChangeArena();
     void adminChangeCapacity();
+    void on_lineEdit1_textEdited(const QString& args1);
+    void on_lineEdit2_textEdited(const QString& args1);
+    void on_lineEdit3_textEdited(const QString& args1);
 
 private slots:
     void on_actionLogin_triggered();

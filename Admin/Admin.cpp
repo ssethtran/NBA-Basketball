@@ -57,7 +57,7 @@ void Admin::addNewTeam() {
 
 void Admin::changePrice(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -79,7 +79,7 @@ void Admin::changePrice(const string& teamName, const string& souvenir, const st
 
 void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -102,7 +102,7 @@ void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const
 
 void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -121,7 +121,7 @@ void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
 
 void Admin::changeArena(const string& teamName, const string& arena) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -141,7 +141,7 @@ void Admin::changeArena(const string& teamName, const string& arena) {
 
 void Admin::changeCapacity(const string& teamName, const string& capacity) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\4ktra\\OneDrive\\Desktop\\College Work\\CS 1D Homework\\CS 1D Project 2\\NBA Basketball Project\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {

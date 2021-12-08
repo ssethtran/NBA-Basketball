@@ -1,4 +1,3 @@
-
 #ifndef ORDERED_MAP_H
 #define ORDERED_MAP_H
 
@@ -99,35 +98,28 @@ public:
     }
 
 
-    void insert(T &key){
+    void insert(T &key) {
         if(root(key) == 0){
             bool exitCondition = 0;
             int currentParent = 0;
-            while(exitCondition == 0){
-
-                if(currentParent*2 + 2 > tree.capacity()){
+            while(exitCondition == 0) {
+                if(currentParent*2 + 2 > tree.capacity())
                     tree.resize(currentParent*2+2 + tree.capacity());
-                }
 
                 if(*tree[currentParent] > key){
                     exitCondition = set_right(key, currentParent);
                     currentParent = currentParent * 2 + 2;
-                }
-                else
-                {
-                    if(*tree[currentParent] < key){
+                } else {
+                    if(*tree[currentParent] < key) {
                         exitCondition = set_left(key, currentParent);
                         currentParent = currentParent * 2 + 1;
-                    }
-                    else{
+                    } else {
                         tree[currentParent] = &key;
+                        exitCondition = 1;
                     }
                 }
             }
-
-
         }
-
     }
 
     T* search(T &key){
@@ -150,7 +142,8 @@ public:
     }
 
     void clearTree() {
-        tree.clear();
+        tree = vector<T*>();
+        tree.resize(1);
     }
 
     vector<T *> GetTree() const {
