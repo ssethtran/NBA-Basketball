@@ -6,7 +6,7 @@
 
 void Admin::addNewTeam() {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -57,7 +57,7 @@ void Admin::addNewTeam() {
 
 void Admin::changePrice(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -79,7 +79,7 @@ void Admin::changePrice(const string& teamName, const string& souvenir, const st
 
 void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const string& cost) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -102,7 +102,7 @@ void Admin::addNewSouvenir(const string& teamName, const string& souvenir, const
 
 void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -121,7 +121,7 @@ void Admin::removeSouvenir(const string& teamName, const string& souvenir) {
 
 void Admin::changeArena(const string& teamName, const string& arena) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -141,7 +141,7 @@ void Admin::changeArena(const string& teamName, const string& arena) {
 
 void Admin::changeCapacity(const string& teamName, const string& capacity) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -161,7 +161,7 @@ void Admin::changeCapacity(const string& teamName, const string& capacity) {
 
 vector<string> Admin::readingAvailableTeams() {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -181,7 +181,7 @@ vector<string> Admin::readingAvailableTeams() {
 
 vector<string> Admin::readingNewTeams() {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
@@ -201,7 +201,7 @@ vector<string> Admin::readingNewTeams() {
 
 vector<string> Admin::readingSouvenirs(const string& teamName) {
     m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("C:\\Users\\Hiep\\NBA-Basketball\\DB\\nba-database.sqlite");
+    m_db.setDatabaseName("DB\\nba-database.sqlite");
 
     if (!m_db.open())
     {
